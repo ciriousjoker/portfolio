@@ -12,7 +12,7 @@ class TimelineWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     List<ProjectData> projects = ProjectConfig.projects.toList();
-    projects.sort((a, b) => b.date - a.date);
+    projects.sort((a, b) => b.timestamp - a.timestamp);
 
     return FutureProvider(
       create: (_) async {

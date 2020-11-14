@@ -40,9 +40,11 @@ class TimelineTileWidget extends StatelessWidget {
     return TimelineTile(
       alignment: TimelineAlign.center,
       beforeLineStyle: LineStyle(
+        color: Theme.of(context).primaryColor,
         thickness: _widthStroke,
       ),
       afterLineStyle: LineStyle(
+        color: Theme.of(context).primaryColor,
         thickness: _widthStroke,
       ),
       indicatorStyle: IndicatorStyle(
@@ -53,20 +55,51 @@ class TimelineTileWidget extends StatelessWidget {
         ),
         height: _sizeIndicator,
         indicator: Container(
+          // foregroundDecoration: BoxDecoration(
+          //   border: Border.fromBorderSide(
+          //     BorderSide(
+          //       color: Theme.of(context).primaryColor,
+          //       width: TimelineConfig.LineThickness,
+          //     ),
+          //   ),
+          //   shape: BoxShape.circle,
+          // ),
           decoration: BoxDecoration(
-            color: Colors.white,
-            border: Border.fromBorderSide(
-              BorderSide(
-                color: Colors.grey,
-                width: TimelineConfig.LineThickness,
-              ),
-            ),
             shape: BoxShape.circle,
           ),
-          child: Center(
-            child: Text(project.date?.toString() ?? ""),
-          ),
+          clipBehavior: Clip.antiAlias,
+          child: (project.icon ?? "").isNotEmpty
+              ? Container(
+                  color: Colors.white,
+                  child: Image.asset(
+                    "assets/icons/${project.icon}",
+                    // "https://play-lh.googleusercontent.com/aEoUb80IVMui5g9xqi3BZBUUKxkPZLzFbHqoK8GgJVNqdYFibqA9QpVi0unZcmK573wD=s360-rw",
+                    height: 32,
+                    width: 32,
+                  ),
+                )
+              : SizedBox.shrink(),
+          // Image.network(
+          //   "https://play-lh.googleusercontent.com/aEoUb80IVMui5g9xqi3BZBUUKxkPZLzFbHqoK8GgJVNqdYFibqA9QpVi0unZcmK573wD=s360-rw",
+          //   height: 32,
+          //   width: 32,
+          // ),
         ),
+        // indicator: Container(
+        //   decoration: BoxDecoration(
+        //     color: Colors.white,
+        //     border: Border.fromBorderSide(
+        //       BorderSide(
+        //         color: Colors.grey,
+        //         width: TimelineConfig.LineThickness,
+        //       ),
+        //     ),
+        //     shape: BoxShape.circle,
+        //   ),
+        //   child: Center(
+        //     child: Text(project.date?.toString() ?? ""),
+        //   ),
+        // ),
       ),
       startChild: !isLeft ? projectWidget : imageWidget,
       endChild: isLeft ? projectWidget : imageWidget,

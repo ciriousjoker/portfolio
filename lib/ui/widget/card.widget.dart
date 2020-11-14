@@ -11,21 +11,36 @@ class CardWidget extends StatefulWidget {
 class _CardWidgetState extends State<CardWidget> {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: SlimyCard(
-        color: Colors.red,
-        width: 200,
-        topCardHeight: 400,
-        bottomCardHeight: 200,
-        borderRadius: 15,
-        topCardWidget: Container(
-          child: Text("Image or smth"),
-        ),
-        bottomCardWidget: Container(
-          child: Text("Contact me or smth"),
-        ),
-        slimeEnabled: true,
-      ),
+    return Column(
+      mainAxisSize: MainAxisSize.min,
+      children: [
+        // Card(
+        //   color: Colors.transparent,
+        // child:
+        SlimyCard(
+          color: Colors.white,
+          // width: 200,
+          topCardHeight: 256,
+          bottomCardHeight: 128,
+          borderRadius: 24,
+          topCardWidget: Column(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            mainAxisSize: MainAxisSize.max,
+            children: [
+              Card(child: Text("Top")),
+            ],
+          ),
+          bottomCardWidget: Card(
+            child: Column(
+              children: [
+                Card(child: Text("Contact me or smth")),
+              ],
+            ),
+          ),
+          slimeEnabled: true,
+          // ),
+        )
+      ],
     );
   }
 }

@@ -3,6 +3,32 @@ import 'package:portfolio/brand_icons/brand_icons_icons.dart';
 
 class ProjectConfig {
   static const List<ProjectData> projects = [
+    // TODO: Didactduell
+    // TODO: AlgoDat UI
+    // TODO: FridayNightSurvival
+    ProjectData(
+      title: "Tag My Knowledge",
+      description: "TODO:",
+      urlWebsite: "https://tagmyknowledge.com/",
+      urlPlaystore:
+          "https://play.google.com/store/apps/details?id=com.tagmyknowledge",
+      // Aug 2020
+      timestamp: 1596924000000,
+      tags: [
+        Tags.flutter,
+        Tags.firebase,
+        Tags.googletagmanager,
+        Tags.googleanalytics,
+      ],
+      icon: "tagmyknowledge.png",
+      // screenshots: [
+      //   "TODO:",
+      // ],
+      platforms: [
+        BrandIcons.googleplay,
+        BrandIcons.googlechrome,
+      ],
+    ),
     ProjectData(
       title: "StarClock",
       description:
@@ -11,12 +37,50 @@ class ProjectConfig {
           "My clock got a top 25 placement & I won a Lenovo Smart clock :)",
       urlDemo: "https://www.youtube.com/watch?v=ZuHLtdbaXqc",
       githubName: "star_clock",
-      date: 2019,
+      // Dec 2019
+      timestamp: 1577055600000,
       tags: [
         Tags.flutter,
       ],
-      screenshots: [
-        "TODO:",
+      icon: "starclock.png",
+      // screenshots: [
+      //   "TODO:",
+      // ],
+      platforms: [
+        BrandIcons.android,
+      ],
+    ),
+    ProjectData(
+      title: "Friday Night Survival",
+      description:
+          "Friday Night Survival was developed as a group project at the"
+          "\"Technische Hochschule Nuremberg\" (a German university of applied science).\n"
+          "It's a round based, 2D-RPG with a top-down overworld map.\n"
+          "There some ways it's similar to Pokemon, but in a nightclub,\nwith crude humor"
+          "and interesting battle mechanics based on an \"honor level\".\n"
+          "Also, sometimes your only option is to drink your opponent under the table.\n"
+          "My job was mainly to create the non-character assets as well as "
+          "the \"club feeling\" (mainly lighting & overworld animations).\n"
+          "I also balanced the game difficulty & managed our Trello board.\n",
+      // urlPlaystore:
+      //     "https://play.google.com/store/apps/details?id=com.tagmyknowledge",
+      urlDemo: "TODO:",
+      githubName: "TODO:",
+      // Nov 2019
+      timestamp: 1572735600000,
+      tags: [
+        Tags.unity,
+        Tags.csharp,
+      ],
+      icon: "fridaynightsurvival.png",
+      // screenshots: [
+      //   "TODO:",
+      // ],
+      platforms: [
+        BrandIcons.googlechrome,
+        BrandIcons.windows,
+        BrandIcons.linux,
+        // TODO: Mac os?
       ],
     ),
     ProjectData(
@@ -24,12 +88,17 @@ class ProjectConfig {
       description: "Provides an encrypted filesystem for Chrome OS."
           "TODO: ...",
       urlWebsite: "https://shadyvault.web.app/",
-      date: 2019,
+      // Apr 2019
+      timestamp: 1555538400000,
       tags: [
         Tags.aurelia,
       ],
-      screenshots: [
-        "TODO:",
+      icon: "shadyvault.png",
+      // screenshots: [
+      //   "TODO:",
+      // ],
+      platforms: [
+        BrandIcons.googlechrome,
       ],
     ),
     ProjectData(
@@ -38,12 +107,17 @@ class ProjectConfig {
           "TODO: ...",
       urlPlaystore:
           "https://play.google.com/store/apps/details?id=com.ciriousjoker.perfect_decision_finder",
-      date: 2019,
+      // Aug 2019
+      timestamp: 1567202400000,
       tags: [
         Tags.flutter,
       ],
-      screenshots: [
-        "TODO:",
+      icon: "perfectdecisionfinder.png",
+      // screenshots: [
+      //   "TODO:",
+      // ],
+      platforms: [
+        BrandIcons.googleplay,
       ],
     ),
     ProjectData(
@@ -52,12 +126,18 @@ class ProjectConfig {
           "TODO: ...",
       githubName: "pokeroute",
       urlWebsite: "https://pokeroute.web.app/",
-      date: 2019,
+      // Aug 2019
+      timestamp: 1566770400000,
       tags: [
         Tags.flutter,
+        Tags.firebase,
       ],
-      screenshots: [
-        "TODO:",
+      icon: "pokeroute.png",
+      // screenshots: [
+      //   "TODO:",
+      // ],
+      platforms: [
+        BrandIcons.googlechrome,
       ],
     ),
     ProjectData(
@@ -66,63 +146,66 @@ class ProjectConfig {
           "TODO: ...",
       githubName: "Am-I-Done-Yet",
       urlPlaystore: "TODO: ",
-      date: 2019,
+      // Mar 2019
+      timestamp: 1552604400000,
+      icon: "amidoneyet.png",
       tags: [
         Tags.flutter,
+        Tags.firebase,
       ],
-      screenshots: [
-        "assets/screenshots/projects/sidenote/1.png",
+      // TODO:
+      // screenshots: [
+      //   "assets/screenshots/projects/sidenote/1.png",
+      // ],
+      platforms: [
+        BrandIcons.googleplay,
       ],
     ),
     ProjectData(
       title: "ShufflePaper",
       description: "A wallpaper manager for Chrome OS."
           "TODO: ...",
-      // githubName: "Am-I-Done-Yet",
       urlWebsite: "https://shufflepaper.web.app/",
-      date: 2017,
+      // Mar 2017
+      timestamp: 1488668400000,
       tags: [
         Tags.javascript,
         Tags.css,
         Tags.html,
       ],
-      screenshots: [
-        "assets/screenshots/projects/sidenote/1.png",
+      icon: "shufflepaper.png",
+      // screenshots: [
+      // TODO:
+      // "assets/screenshots/projects/sidenote/1.png",
+      // ],
+      platforms: [
+        BrandIcons.googlechrome,
       ],
     ),
     ProjectData(
-      title: "Legacy Manager & Legacy Uploader",
+      title: "Legacy Manager/Uploader",
       description: "A mod manager for Super Smash Bros. Brawl Legacy XP."
           "Download & install the latest release of the game."
           "Legacy Uploader is used to package & upload new releases."
-          "While the source code still works, this tool never got support from"
+          "While the source code still works, this tool didn't catch on in"
           "the community, so now it's abandoned.",
-      githubName: "HomingCompass",
+      // TODO: Project now closed
+      githubName: "legacymanager",
       urlDownload:
-          "https://github.com/CiriousJoker/nTradeAdvanced/releases/latest",
-      date: 2017,
+          "https://github.com/CiriousJoker/legacymanager/releases/latest",
+      // Aug. 2017
+      timestamp: 1502143200000,
+      icon: "legacyxp.png",
       tags: [
         Tags.react,
-        Tags.cSharp,
+        Tags.csharp,
       ],
-      screenshots: [
-        "assets/screenshots/projects/sidenote/1.png",
-      ],
-    ),
-    ProjectData(
-      title: "HomingCompass",
-      description:
-          "A homescreen widget that always points towards home (or any other location you specify).\n\n"
-          "Was a parting gift for a friend who travelled abroad :)",
-      githubName: "HomingCompass",
-      urlDownload:
-          "https://github.com/CiriousJoker/nTradeAdvanced/releases/latest",
-      date: 2017,
-      tags: [
-        Tags.java,
-      ],
-      screenshots: [
-        "assets/screenshots/projects/sidenote/1.png",
+      // screenshots: [
+      // TODO:
+      //   "assets/screenshots/projects/sidenote/1.png",
+      // ],
+      platforms: [
+        BrandIcons.windows,
       ],
     ),
     ProjectData(
@@ -138,34 +221,80 @@ class ProjectConfig {
           "Most chose to build one of the suggested project ideas,"
           "but I always wanted one as a kid and never got it,"
           "so I used this opportunity to catch up a lot of things :)",
+      githubName: "nxtburner.png",
+      // 27th May 2017
+      timestamp: 1495843200000,
+      tags: [
+        Tags.csharp,
+        Tags.java,
+      ],
+      icon: "nxtburner.png",
+      platforms: [
+        BrandIcons.windows,
+        Icons.developer_board_outlined,
+      ],
+      // screenshots: [
+      //   "assets/screenshots/projects/sidenote/1.png",
+      // ],
+    ),
+    ProjectData(
+      title: "HomingCompass",
+      description:
+          "A homescreen widget that always points towards home (or any other location you specify).\n\n"
+          "Was a parting gift for a friend who travelled abroad :)",
       githubName: "HomingCompass",
       urlDownload:
           "https://github.com/CiriousJoker/nTradeAdvanced/releases/latest",
-      date: 2017,
+      // 23rd Sept. 2016
+      timestamp: 1474636718000,
       tags: [
         Tags.java,
       ],
-      screenshots: [
-        "assets/screenshots/projects/sidenote/1.png",
-      ],
+      icon: "homingcompass.png",
+      // screenshots: [
+      //   "assets/screenshots/projects/sidenote/1.png",
+      // ],
     ),
     ProjectData(
-      title: "nTradeAdvanced",
-      description: """
+        title: "SideNote",
+        description: """
 TODO:
 - asd
 """,
-      githubName: "nTradeAdvanced",
-      urlDownload:
-          "https://github.com/CiriousJoker/nTradeAdvanced/releases/latest",
-      date: 2016,
-      tags: [
-        Tags.c,
-      ],
-      screenshots: [
-        "TODO:",
-      ],
-    ),
+        githubName: "SideNote",
+        urlDownload: "https://github.com/CiriousJoker/SideNote/releases/latest",
+        // Nov. 2015
+        timestamp: 1446332400000,
+        tags: [
+          Tags.csharp,
+        ],
+        icon: "sidenote.png",
+        // screenshots: [
+        //   "TODO:",
+        // ],
+        platforms: [BrandIcons.windows]),
+    ProjectData(
+        title: "nTradeAdvanced",
+        description: """
+TODO:
+- asd
+""",
+        githubName: "nTradeAdvanced",
+        urlDownload:
+            "https://github.com/CiriousJoker/nTradeAdvanced/releases/latest",
+        // 25th July 2014
+        timestamp: 1406246400000,
+        tags: [
+          Tags.c,
+        ],
+        icon: "ntradeadvanced.png",
+        platforms: [
+          Icons.calculate,
+        ]
+        // screenshots: [
+        //   "TODO:",
+        // ],
+        ),
 //     ProjectData(
 //       title: "nTradeAdvanced",
 //       description: """
@@ -184,8 +313,6 @@ TODO:
 }
 
 class ProjectData {
-  // TODO: Add logo (optional?)
-
   final String title;
   final String githubName;
   final String description;
@@ -195,10 +322,14 @@ class ProjectData {
   final String urlPlaystore;
   final String urlWebsite;
 
-  // TODO: Change to DateTime
-  final int date;
+  // filename in assets/icons/*
+  final String icon;
+
+  /// Unix epoch timestamp
+  final int timestamp;
   final List<Tag> tags;
   final List<String> screenshots;
+  final List<IconData> platforms;
 
   const ProjectData({
     this.title,
@@ -209,7 +340,9 @@ class ProjectData {
     this.urlPlaystore,
     this.urlDownload,
     this.urlWebsite,
-    this.date,
+    this.timestamp,
+    this.icon,
+    this.platforms,
     this.tags = const [],
     this.screenshots = const [],
   });
@@ -241,10 +374,35 @@ class Tags {
     icon: BrandIcons.html5,
     colorHex: "#E34F26",
   );
+
+  static const Tag webpack = Tag(
+    label: "Webpack",
+    icon: BrandIcons.webpack,
+    colorHex: "#1389FD",
+  );
+
   static const Tag flutter = Tag(
     label: "Flutter",
     icon: BrandIcons.flutter,
     colorHex: "#1389FD",
+  );
+
+  static const Tag googletagmanager = Tag(
+    label: "GTM",
+    icon: BrandIcons.googletagmanager,
+    colorHex: "#246FDB",
+  );
+
+  static const Tag googleanalytics = Tag(
+    label: "Analytics",
+    icon: BrandIcons.googleanalytics,
+    colorHex: "#E8710A",
+  );
+
+  static const Tag firebase = Tag(
+    label: "Firebase",
+    icon: BrandIcons.firebase,
+    colorHex: "#FFA000",
   );
 
   static const Tag react = Tag(
@@ -252,11 +410,18 @@ class Tags {
     icon: BrandIcons.react,
     label: "React",
   );
-  static const Tag cSharp = Tag(
+  static const Tag csharp = Tag(
     label: "C#",
     icon: BrandIcons.csharp,
     colorHex: "#3A0091",
   );
+
+  static const Tag unity = Tag(
+    label: "Unity",
+    icon: BrandIcons.unity,
+    colorHex: "#000000",
+  );
+
   static const Tag c = Tag(
     label: "c",
     icon: BrandIcons.c,
@@ -279,15 +444,15 @@ class Tag {
 
   /// Github language name (to retrieve color).
   /// Only necessary if different from label.
-  final String github;
+  // final String github;
 
   /// shields.io logo name. Only necessary if different from label.
   /// https://github.com/Ileriayo/markdown-badges
   final IconData icon;
 
-  const Tag(
-      {@required this.label, @required this.colorHex, this.github, this.icon});
-
-  String get getGithub => github ?? label;
-  // String get getLogo => icon ?? label.toLowerCase();
+  const Tag({
+    @required this.label,
+    @required this.colorHex,
+    @required this.icon,
+  });
 }

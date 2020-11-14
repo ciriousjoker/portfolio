@@ -5,6 +5,7 @@ import 'package:portfolio/models/colors.model.dart';
 import 'package:portfolio/ui/helper/ui.helper.dart';
 import 'package:portfolio/ui/widget/timeline/button.widget.dart';
 import 'package:provider/provider.dart';
+import 'package:intl/intl.dart';
 
 class ProjectWidget extends StatelessWidget {
   const ProjectWidget({Key key, this.project}) : super(key: key);
@@ -89,50 +90,101 @@ class ProjectWidget extends StatelessWidget {
           : null,
     ].where((element) => element != null).toList();
 
+    DateTime date = DateTime.fromMillisecondsSinceEpoch(project.timestamp);
+
     return Card(
       color: Colors.white,
-      child: Container(
-        padding: EdgeInsets.only(
-          left: UIHelper.VerticalSpaceMedium,
-          right: UIHelper.VerticalSpaceMedium,
-          top: UIHelper.VerticalSpaceMedium,
-          bottom: UIHelper.VerticalSpaceMedium,
-        ),
-        constraints: BoxConstraints(maxWidth: 512),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.stretch,
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            Text(
-              project.title,
-              style: Theme.of(context).textTheme.headline5,
+      child: Stack(
+        // alignment: ,
+        children: [
+          // (project.platforms ?? []).length > 0
+          //     ? Align(
+          //         alignment: Alignment.topRight,
+          //         heightFactor: 1,
+          //         child: Padding(
+          //           padding: EdgeInsets.all(8.0),
+          //           child: ,
+          //         )
+          //         //
+          //         ,
+          //       )
+          //     : SizedBox.shrink(),
+          Container(
+            padding: EdgeInsets.only(
+              left: UIHelper.VerticalSpaceMedium,
+              right: UIHelper.VerticalSpaceMedium,
+              top: UIHelper.VerticalSpaceMedium,
+              bottom: UIHelper.VerticalSpaceMedium,
             ),
-            UIHelper.verticalSpaceSmall(),
-            MarkdownBody(
-              data: project.description,
-            ),
-            UIHelper.verticalSpaceSmall(),
-            Wrap(
-              runAlignment: WrapAlignment.center,
-              crossAxisAlignment: WrapCrossAlignment.center,
-              alignment: WrapAlignment.spaceBetween,
-              runSpacing: 8.0,
+            constraints: BoxConstraints(maxWidth: 512),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              mainAxisSize: MainAxisSize.min,
               children: [
-                Wrap(
-                  spacing: 8.0,
-                  runSpacing: 8,
-                  children: listChips,
+                Row(
+                  children: [
+                    Text(
+                      project.title,
+                      style: Theme.of(context).textTheme.headline5,
+                      // textAlign: TextAlign.start,
+                    ),
+                    Spacer(),
+                    ...(project?.platforms ?? [])
+                        .map((e) => Padding(
+                              padding: const EdgeInsets.only(left: 8),
+                              child: Icon(
+                                e,
+                                size: e.fontFamily == "MaterialIcons" ? 20 : 16,
+                                color: Colors.black26,
+                              ),
+                            ))
+                        .toList(),
+                    // Container(
+                    //   decoration: BoxDecoration(
+                    //     shape: BoxShape.circle,
+                    //   ),
+                    //   clipBehavior: Clip.antiAlias,
+                    //   child: Image.network(
+                    //     "https://play-lh.googleusercontent.com/aEoUb80IVMui5g9xqi3BZBUUKxkPZLzFbHqoK8GgJVNqdYFibqA9QpVi0unZcmK573wD=s360-rw",
+                    //     height: 32,
+                    //     width: 32,
+                    //   ),
+                    // ),
+                  ],
                 ),
-                UIHelper.horizontalSpaceSmall(),
+                Text(
+                  DateFormat("MMM y").format(date),
+                  style: Theme.of(context).textTheme.caption,
+                  // textAlign: TextAlign.start,
+                ),
+                UIHelper.verticalSpaceSmall(),
+                MarkdownBody(
+                  data: project.description,
+                ),
+                UIHelper.verticalSpaceSmall(),
                 Wrap(
-                  spacing: 8.0,
-                  runSpacing: 8,
-                  children: listActions,
+                  runAlignment: WrapAlignment.center,
+                  crossAxisAlignment: WrapCrossAlignment.center,
+                  alignment: WrapAlignment.spaceBetween,
+                  runSpacing: 8.0,
+                  children: [
+                    Wrap(
+                      spacing: 8.0,
+                      runSpacing: 8,
+                      children: listChips,
+                    ),
+                    UIHelper.horizontalSpaceSmall(),
+                    Wrap(
+                      spacing: 8.0,
+                      runSpacing: 8,
+                      children: listActions,
+                    ),
+                  ],
                 ),
               ],
             ),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }
