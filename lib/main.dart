@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio/ui/helper/ui.helper.dart';
+import 'package:portfolio/config/colors.config.dart';
 import 'package:portfolio/ui/screen/home.dart';
 
 void main() {
@@ -22,22 +22,11 @@ class MyApp extends StatelessWidget {
         // or simply save your changes to "hot reload" in a Flutter IDE).
         // Notice that the counter didn't reset back to zero; the application
         // is not restarted.
-        primarySwatch: Colors.blue,
-        accentColor: Colors.amberAccent,
-
-        // buttonTheme: ButtonThemeData(
-        //   colorScheme: ColorScheme.dark(),
-        //   padding: EdgeInsets.symmetric(
-        //     vertical: UIHelper.VerticalSpaceMedium,
-        //     horizontal: UIHelper.VerticalSpaceMedium,
-        //   ),
-        // ),
+        primarySwatch: ColorsConfig.primarySwatch,
+        accentColor: ColorsConfig.accent,
       ),
       // home: HomeScreen(),
-      home: Padding(
-        padding: EdgeInsets.all(UIHelper.VerticalSpaceMedium),
-        child: HomeScreen(),
-      ),
+      home: HomeScreen(),
     );
   }
 }

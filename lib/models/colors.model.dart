@@ -1,5 +1,5 @@
-class ColorModel {
+class ColorModelOld {
   dynamic colors;
 
-  ColorModel({this.colors});
+  ColorModelOld({this.colors});
 }

@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:portfolio/config/colors.config.dart';
 import 'package:portfolio/config/projects.config.dart';
-import 'package:portfolio/config/timeline.config.dart';
 import 'package:portfolio/ui/helper/ui.helper.dart';
+import 'package:portfolio/ui/widget/rounded_border.widget.dart';
 import 'package:portfolio/ui/widget/timeline/images.widget.dart';
 import 'package:portfolio/ui/widget/timeline/project.widget.dart';
 import 'package:timeline_tile/timeline_tile.dart';
+import 'package:get/get.dart';
 
 class TimelineTileWidget extends StatelessWidget {
   const TimelineTileWidget({
@@ -28,7 +30,11 @@ class TimelineTileWidget extends StatelessWidget {
     Widget projectWidget = Padding(
       padding: EdgeInsets.symmetric(vertical: 96),
       child: Align(
-        alignment: isLeft ? Alignment.centerLeft : Alignment.centerRight,
+        alignment: context.isPortrait
+            ? Alignment.center
+            : isLeft
+                ? Alignment.centerLeft
+                : Alignment.centerRight,
         child: ProjectWidget(
           project: project,
         ),
@@ -37,74 +43,54 @@ class TimelineTileWidget extends StatelessWidget {
 
     Widget imageWidget = ImagesWidget(project: project);
 
-    return TimelineTile(
-      alignment: TimelineAlign.center,
-      beforeLineStyle: LineStyle(
-        color: Theme.of(context).primaryColor,
-        thickness: _widthStroke,
-      ),
-      afterLineStyle: LineStyle(
-        color: Theme.of(context).primaryColor,
-        thickness: _widthStroke,
-      ),
-      indicatorStyle: IndicatorStyle(
-        width: _sizeIndicator,
-        padding: EdgeInsets.symmetric(
-          horizontal: UIHelper.HorizontalSpaceMedium,
-          vertical: _widthStroke,
+    return Center(
+      child: TimelineTile(
+        alignment:
+            context.isPortrait ? TimelineAlign.start : TimelineAlign.center,
+        beforeLineStyle: LineStyle(
+          color: ColorsConfig.timelineLine,
+          thickness: _widthStroke,
         ),
-        height: _sizeIndicator,
-        indicator: Container(
-          // foregroundDecoration: BoxDecoration(
-          //   border: Border.fromBorderSide(
-          //     BorderSide(
-          //       color: Theme.of(context).primaryColor,
-          //       width: TimelineConfig.LineThickness,
-          //     ),
-          //   ),
-          //   shape: BoxShape.circle,
-          // ),
-          decoration: BoxDecoration(
-            shape: BoxShape.circle,
+        afterLineStyle: LineStyle(
+          color: ColorsConfig.timelineLine,
+          thickness: _widthStroke,
+        ),
+        indicatorStyle: IndicatorStyle(
+          width: _sizeIndicator,
+          padding: EdgeInsets.only(
+            // horizontal: UIHelper.HorizontalSpaceMedium,
+            left: context.isPortrait ? 0 : UIHelper.HorizontalSpaceMedium,
+            right: context.isPortrait
+                ? UIHelper.HorizontalSpaceSmall
+                : UIHelper.HorizontalSpaceMedium,
+            // right: UIHelper.HorizontalSpaceMedium,
+            top: UIHelper.VerticalSpaceSmall,
+            bottom: UIHelper.VerticalSpaceSmall,
           ),
-          clipBehavior: Clip.antiAlias,
-          child: (project.icon ?? "").isNotEmpty
-              ? Container(
-                  color: Colors.white,
-                  child: Image.asset(
-                    "assets/icons/${project.icon}",
-                    // "https://play-lh.googleusercontent.com/aEoUb80IVMui5g9xqi3BZBUUKxkPZLzFbHqoK8GgJVNqdYFibqA9QpVi0unZcmK573wD=s360-rw",
-                    height: 32,
-                    width: 32,
-                  ),
-                )
-              : SizedBox.shrink(),
-          // Image.network(
-          //   "https://play-lh.googleusercontent.com/aEoUb80IVMui5g9xqi3BZBUUKxkPZLzFbHqoK8GgJVNqdYFibqA9QpVi0unZcmK573wD=s360-rw",
-          //   height: 32,
-          //   width: 32,
-          // ),
+          height: _sizeIndicator,
+          indicator: RoundedBorderWidget(
+            size: 2,
+            color: ColorsConfig.timelineLine,
+            child: (project.icon ?? "").isNotEmpty
+                ? Container(
+                    child: Image.asset(
+                      "assets/icons/${project.icon}",
+                      height: context.isPortrait ? 24 : 32,
+                      width: context.isPortrait ? 24 : 32,
+                    ),
+                  )
+                : SizedBox.shrink(),
+          ),
         ),
-        // indicator: Container(
-        //   decoration: BoxDecoration(
-        //     color: Colors.white,
-        //     border: Border.fromBorderSide(
-        //       BorderSide(
-        //         color: Colors.grey,
-        //         width: TimelineConfig.LineThickness,
-        //       ),
-        //     ),
-        //     shape: BoxShape.circle,
-        //   ),
-        //   child: Center(
-        //     child: Text(project.date?.toString() ?? ""),
-        //   ),
-        // ),
+        startChild: context.isPortrait
+            ? null
+            : !isLeft
+                ? projectWidget
+                : imageWidget,
+        endChild: (context.isPortrait || isLeft) ? projectWidget : imageWidget,
+        isFirst: this.index == 0,
+        isLast: this.index == this.count - 1,
       ),
-      startChild: !isLeft ? projectWidget : imageWidget,
-      endChild: isLeft ? projectWidget : imageWidget,
-      isFirst: this.index == 0,
-      isLast: this.index == this.count - 1,
     );
   }
 }

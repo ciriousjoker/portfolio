@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:portfolio/ui/helper/ui.helper.dart';
-import 'package:portfolio/ui/widget/card.widget.dart';
+import 'package:portfolio/ui/widget/card/card.widget.dart';
 import 'package:portfolio/ui/widget/timeline/timeline.widget.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -9,47 +9,49 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    if (context.orientation == Orientation.portrait) {
-      // return TimelineWidget();
-      // return Column(
-      //   children: [
-      //     CardWidget(),
-      //     UIHelper.verticalSpaceMedium(),
-      //     // TimelineWidget(),
-      //     Expanded(child: TimelineWidget())
-      //   ],
-      // );
-    } else {
-      // return Row(
-      //   children: [CardWidget()],
-      // );
-    }
     return Scaffold(
-      body: context.orientation == Orientation.portrait
-          ? Column(
-              children: [
-                CardWidget(),
-                TimelineWidget(),
-              ],
-            )
-          :
-          // TimelineWidget()
-          Row(
-              crossAxisAlignment: CrossAxisAlignment.center,
-              mainAxisSize: MainAxisSize.min,
-              children: [
-                UIHelper.horizontalSpaceLarge(),
-                Column(
-                  mainAxisSize: MainAxisSize.min,
-                  children: [
-                    CardWidget(),
-                  ],
-                ),
-                // Spacer(),
-                UIHelper.horizontalSpaceLarge(),
-                Expanded(child: TimelineWidget()),
-              ],
-            ),
+      backgroundColor: Colors.grey.shade900,
+      body: Padding(
+        padding: EdgeInsets.all(UIHelper.VerticalSpaceMedium),
+        child: context.isPortrait
+            ? CustomScrollView(
+                shrinkWrap: true,
+                slivers: <Widget>[
+                  SliverList(
+                    delegate: SliverChildListDelegate([
+                      UIHelper.verticalSpaceMedium(),
+                      Column(
+                        mainAxisSize: MainAxisSize.min,
+                        children: [
+                          CardWidget(),
+                        ],
+                      ),
+                      UIHelper.verticalSpaceMedium(),
+                    ]),
+                  ),
+                  TimelineWidget()
+                ],
+              )
+            : Row(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  UIHelper.horizontalSpaceMedium(),
+                  Column(
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      CardWidget(),
+                    ],
+                  ),
+                  UIHelper.horizontalSpaceMedium(),
+                  Expanded(
+                    child: CustomScrollView(
+                      slivers: <Widget>[TimelineWidget()],
+                    ),
+                  ),
+                ],
+              ),
+      ),
     );
   }
 }

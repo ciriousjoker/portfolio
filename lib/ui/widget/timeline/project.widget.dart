@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_markdown/flutter_markdown.dart';
 import 'package:portfolio/config/projects.config.dart';
-import 'package:portfolio/models/colors.model.dart';
 import 'package:portfolio/ui/helper/ui.helper.dart';
+import 'package:portfolio/ui/widget/icon_normalized.widget.dart';
 import 'package:portfolio/ui/widget/timeline/button.widget.dart';
-import 'package:provider/provider.dart';
 import 'package:intl/intl.dart';
 
 class ProjectWidget extends StatelessWidget {
@@ -20,9 +19,6 @@ class ProjectWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    dynamic colors = Provider.of<ColorModel>(context).colors;
-    assert(colors != null);
-
     List listChips = (project.tags.map(
       (t) {
         Color colorBg = getColorFromColorCode(t.colorHex);
@@ -91,31 +87,12 @@ class ProjectWidget extends StatelessWidget {
     ].where((element) => element != null).toList();
 
     DateTime date = DateTime.fromMillisecondsSinceEpoch(project.timestamp);
-
     return Card(
       color: Colors.white,
       child: Stack(
-        // alignment: ,
         children: [
-          // (project.platforms ?? []).length > 0
-          //     ? Align(
-          //         alignment: Alignment.topRight,
-          //         heightFactor: 1,
-          //         child: Padding(
-          //           padding: EdgeInsets.all(8.0),
-          //           child: ,
-          //         )
-          //         //
-          //         ,
-          //       )
-          //     : SizedBox.shrink(),
           Container(
-            padding: EdgeInsets.only(
-              left: UIHelper.VerticalSpaceMedium,
-              right: UIHelper.VerticalSpaceMedium,
-              top: UIHelper.VerticalSpaceMedium,
-              bottom: UIHelper.VerticalSpaceMedium,
-            ),
+            padding: EdgeInsets.all(UIHelper.VerticalSpaceMedium),
             constraints: BoxConstraints(maxWidth: 512),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -123,44 +100,37 @@ class ProjectWidget extends StatelessWidget {
               children: [
                 Row(
                   children: [
-                    Text(
-                      project.title,
-                      style: Theme.of(context).textTheme.headline5,
-                      // textAlign: TextAlign.start,
+                    Expanded(
+                      child: Text(
+                        project.title,
+                        style: Theme.of(context).textTheme.headline5,
+                        maxLines: 3,
+                      ),
                     ),
-                    Spacer(),
+                    // Spacer(),
                     ...(project?.platforms ?? [])
-                        .map((e) => Padding(
+                        .map((iconData) => Padding(
                               padding: const EdgeInsets.only(left: 8),
-                              child: Icon(
-                                e,
-                                size: e.fontFamily == "MaterialIcons" ? 20 : 16,
+                              child: IconNormalizedWidget(
+                                icon: iconData,
                                 color: Colors.black26,
                               ),
                             ))
                         .toList(),
-                    // Container(
-                    //   decoration: BoxDecoration(
-                    //     shape: BoxShape.circle,
-                    //   ),
-                    //   clipBehavior: Clip.antiAlias,
-                    //   child: Image.network(
-                    //     "https://play-lh.googleusercontent.com/aEoUb80IVMui5g9xqi3BZBUUKxkPZLzFbHqoK8GgJVNqdYFibqA9QpVi0unZcmK573wD=s360-rw",
-                    //     height: 32,
-                    //     width: 32,
-                    //   ),
-                    // ),
                   ],
                 ),
                 Text(
                   DateFormat("MMM y").format(date),
                   style: Theme.of(context).textTheme.caption,
-                  // textAlign: TextAlign.start,
                 ),
                 UIHelper.verticalSpaceSmall(),
+                // Expanded(
+                //   child:
                 MarkdownBody(
                   data: project.description,
+                  // fitContent: true,
                 ),
+                // ),
                 UIHelper.verticalSpaceSmall(),
                 Wrap(
                   runAlignment: WrapAlignment.center,
