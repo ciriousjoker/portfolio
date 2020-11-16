@@ -30,6 +30,25 @@ class ProjectConfig {
       ],
     ),
     ProjectData(
+      title: "AlgoDat GUI",
+      description:
+          "Small project that I built during a group project to showcase our datastructure implementations.\n"
+          "Now, following semesters can fork this and don't have to write console applications for that.",
+      githubName: "algodat_gui",
+      // Aug 2020
+      timestamp: 1596751200000,
+      tags: [
+        Tags.csharp,
+      ],
+      icon: "algodat_gui.png",
+      // screenshots: [
+      //   "TODO:",
+      // ],
+      platforms: [
+        BrandIcons.windows,
+      ],
+    ),
+    ProjectData(
       title: "StarClock",
       description:
           "This is my entry for the [Flutter Clock Face Contest](https://flutter.dev/clock)."
