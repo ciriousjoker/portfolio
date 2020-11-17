@@ -87,74 +87,96 @@ class ProjectWidget extends StatelessWidget {
     ].where((element) => element != null).toList();
 
     DateTime date = DateTime.fromMillisecondsSinceEpoch(project.timestamp);
-    return Card(
-      color: Colors.white,
-      child: Stack(
-        children: [
-          Container(
-            padding: EdgeInsets.all(UIHelper.VerticalSpaceMedium),
-            constraints: BoxConstraints(maxWidth: 512),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.stretch,
-              mainAxisSize: MainAxisSize.min,
-              children: [
-                Row(
+    return Padding(
+      // TODO: Parameter based on blur radius
+      padding: const EdgeInsets.all(8),
+      child: Container(
+        clipBehavior: Clip.hardEdge,
+        decoration: BoxDecoration(
+          // TODO: Parameter
+          borderRadius: BorderRadius.circular(16),
+          boxShadow: [
+            BoxShadow(
+              color: Colors.white38,
+              // TODO: Parameter
+              blurRadius: 6,
+            )
+          ],
+        ),
+        child: Material(
+          color: Colors.white,
+          child: Stack(
+            children: [
+              Container(
+                padding: EdgeInsets.all(
+                  UIHelper.VerticalSpaceMedium,
+                ).copyWith(
+                  top: UIHelper.VerticalSpaceSmall,
+                ),
+                constraints: BoxConstraints(maxWidth: 512),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.stretch,
+                  mainAxisSize: MainAxisSize.min,
                   children: [
-                    Expanded(
-                      child: Text(
-                        project.title,
-                        style: Theme.of(context).textTheme.headline5,
-                        maxLines: 3,
-                      ),
+                    Row(
+                      children: [
+                        Expanded(
+                          child: Text(
+                            project.title,
+                            style: Theme.of(context).textTheme.headline5,
+                            maxLines: 3,
+                          ),
+                        ),
+                        // Spacer(),
+                        ...(project?.platforms ?? [])
+                            .map((iconData) => Padding(
+                                  padding: const EdgeInsets.only(left: 8),
+                                  child: IconNormalizedWidget(
+                                    icon: iconData,
+                                    color: Colors.black26,
+                                  ),
+                                ))
+                            .toList(),
+                      ],
                     ),
-                    // Spacer(),
-                    ...(project?.platforms ?? [])
-                        .map((iconData) => Padding(
-                              padding: const EdgeInsets.only(left: 8),
-                              child: IconNormalizedWidget(
-                                icon: iconData,
-                                color: Colors.black26,
-                              ),
-                            ))
-                        .toList(),
+                    Text(
+                      DateFormat("MMM y").format(date),
+                      style: Theme.of(context).textTheme.caption,
+                    ),
+                    UIHelper.verticalSpaceSmall(),
+                    // Expanded(
+                    //   child:
+                    MarkdownBody(
+                      data: project.description,
+                      // fitContent: true,
+                    ),
+                    // ),
+                    UIHelper.verticalSpaceSmall(),
+                    Wrap(
+                      runAlignment: WrapAlignment.center,
+                      crossAxisAlignment: WrapCrossAlignment.center,
+                      alignment: WrapAlignment.spaceBetween,
+                      runSpacing: 8.0,
+                      children: [
+                        Wrap(
+                          spacing: 8.0,
+                          runSpacing: 8,
+                          children: listChips,
+                        ),
+                        UIHelper.horizontalSpaceSmall(),
+                        Wrap(
+                          spacing: 8.0,
+                          runSpacing: 8,
+                          children: listActions,
+                        ),
+                      ],
+                    ),
                   ],
                 ),
-                Text(
-                  DateFormat("MMM y").format(date),
-                  style: Theme.of(context).textTheme.caption,
-                ),
-                UIHelper.verticalSpaceSmall(),
-                // Expanded(
-                //   child:
-                MarkdownBody(
-                  data: project.description,
-                  // fitContent: true,
-                ),
-                // ),
-                UIHelper.verticalSpaceSmall(),
-                Wrap(
-                  runAlignment: WrapAlignment.center,
-                  crossAxisAlignment: WrapCrossAlignment.center,
-                  alignment: WrapAlignment.spaceBetween,
-                  runSpacing: 8.0,
-                  children: [
-                    Wrap(
-                      spacing: 8.0,
-                      runSpacing: 8,
-                      children: listChips,
-                    ),
-                    UIHelper.horizontalSpaceSmall(),
-                    Wrap(
-                      spacing: 8.0,
-                      runSpacing: 8,
-                      children: listActions,
-                    ),
-                  ],
-                ),
-              ],
-            ),
+              ),
+            ],
           ),
-        ],
+        ),
       ),
     );
   }

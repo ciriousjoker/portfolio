@@ -14,7 +14,7 @@ class AvatarWidget extends StatelessWidget {
   }) : super(key: key);
 
   final Color color;
-  final double sizeAction = 32;
+  final double sizeAction = 38;
   final double width;
   final double height;
 
@@ -114,11 +114,11 @@ class _Action extends StatelessWidget {
     return Container(
       width: size,
       height: size,
-      child: RoundedBorderWidget(
-        color: color,
-        size: borderWidth,
-        elevation: 4,
-        child: InkWell(
+      child: InkWell(
+        child: RoundedBorderWidget(
+          color: color,
+          size: borderWidth,
+          elevation: 4,
           child: Container(
             color: Colors.white,
             child: Padding(
@@ -126,13 +126,14 @@ class _Action extends StatelessWidget {
               child: Center(
                 child: IconNormalizedWidget(
                   icon: icon,
-                  size: 16,
+                  size: 18,
+                  color: Colors.black87,
                 ),
               ),
             ),
           ),
-          onTap: onTap,
         ),
+        onTap: onTap,
       ),
     );
   }

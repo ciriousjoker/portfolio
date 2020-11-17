@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:portfolio/ui/helper/ui.helper.dart';
 import 'package:portfolio/ui/widget/card/card.widget.dart';
+import 'package:portfolio/ui/widget/timeline/project.widget.dart';
 import 'package:portfolio/ui/widget/timeline/timeline.widget.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -10,47 +11,66 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey.shade900,
-      body: Padding(
-        padding: EdgeInsets.all(UIHelper.VerticalSpaceMedium),
-        child: context.isPortrait
-            ? CustomScrollView(
-                shrinkWrap: true,
-                slivers: <Widget>[
-                  SliverList(
-                    delegate: SliverChildListDelegate([
-                      UIHelper.verticalSpaceMedium(),
-                      Column(
-                        mainAxisSize: MainAxisSize.min,
-                        children: [
-                          CardWidget(),
+      body: Container(
+        decoration: BoxDecoration(
+          gradient: LinearGradient(
+            begin: Alignment.topLeft,
+            end: Alignment(0.8, 0.0),
+            colors: [
+              // Gold
+              // getColorFromColorCode("#fceabb"),
+              // getColorFromColorCode("#f8b500"),
+
+              // Royal
+              getColorFromColorCode("#141E30"),
+              getColorFromColorCode("#243B55"),
+            ], // red to yellow
+            tileMode: TileMode.repeated,
+          ),
+        ),
+        child: Padding(
+          padding: EdgeInsets.all(UIHelper.VerticalSpaceMedium),
+          child: context.isPortrait
+              ? CustomScrollView(
+                  shrinkWrap: true,
+                  slivers: <Widget>[
+                    SliverList(
+                      delegate: SliverChildListDelegate(
+                        [
+                          UIHelper.verticalSpaceMedium(),
+                          Column(
+                            mainAxisSize: MainAxisSize.min,
+                            children: [
+                              CardWidget(),
+                            ],
+                          ),
+                          UIHelper.verticalSpaceMedium(),
                         ],
                       ),
-                      UIHelper.verticalSpaceMedium(),
-                    ]),
-                  ),
-                  TimelineWidget()
-                ],
-              )
-            : Row(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                mainAxisSize: MainAxisSize.min,
-                children: [
-                  UIHelper.horizontalSpaceMedium(),
-                  Column(
-                    mainAxisSize: MainAxisSize.min,
-                    children: [
-                      CardWidget(),
-                    ],
-                  ),
-                  UIHelper.horizontalSpaceMedium(),
-                  Expanded(
-                    child: CustomScrollView(
-                      slivers: <Widget>[TimelineWidget()],
                     ),
-                  ),
-                ],
-              ),
+                    TimelineWidget()
+                  ],
+                )
+              : Row(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    UIHelper.horizontalSpaceMedium(),
+                    Column(
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        CardWidget(),
+                      ],
+                    ),
+                    UIHelper.horizontalSpaceMedium(),
+                    Expanded(
+                      child: CustomScrollView(
+                        slivers: <Widget>[TimelineWidget()],
+                      ),
+                    ),
+                  ],
+                ),
+        ),
       ),
     );
   }

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:portfolio/config/colors.config.dart';
 import 'package:portfolio/ui/screen/home.dart';
 
@@ -11,17 +12,40 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: "Philipp Bauer",
       theme: ThemeData(
-        // This is the theme of your application.
-        //
-        // Try running your application with "flutter run". You'll see the
-        // application has a blue toolbar. Then, without quitting the app, try
-        // changing the primarySwatch below to Colors.green and then invoke
-        // "hot reload" (press "r" in the console where you ran "flutter run",
-        // or simply save your changes to "hot reload" in a Flutter IDE).
-        // Notice that the counter didn't reset back to zero; the application
-        // is not restarted.
+        textTheme: Theme.of(context).textTheme.copyWith(
+              headline4: GoogleFonts.montserrat(
+                textStyle: Theme.of(context).textTheme.headline4.copyWith(
+                      color: Colors.purple,
+                      fontSize: 28,
+                      fontWeight: FontWeight.w200,
+                    ),
+              ),
+              headline5: GoogleFonts.catamaran(
+                textStyle: Theme.of(context).textTheme.headline5.copyWith(
+                      color: Colors.black87,
+                      fontWeight: FontWeight.w200,
+                      fontSize: 24,
+                    ),
+              ),
+              bodyText2: GoogleFonts.catamaran(
+                textStyle: Theme.of(context).textTheme.bodyText2.copyWith(
+                      color: Colors.black87,
+                      fontWeight: FontWeight.w300,
+                      height: 1.4,
+                      fontSize: 16,
+                    ),
+              ),
+              caption: GoogleFonts.catamaran(
+                textStyle: Theme.of(context).textTheme.caption.copyWith(
+                      color: Colors.black54,
+                      fontWeight: FontWeight.w400,
+                      height: 1.4,
+                      fontSize: 12,
+                    ),
+              ),
+            ),
         primarySwatch: ColorsConfig.primarySwatch,
         accentColor: ColorsConfig.accent,
       ),

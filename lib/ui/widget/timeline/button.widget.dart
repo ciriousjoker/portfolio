@@ -32,7 +32,6 @@ class ButtonWidget extends StatelessWidget {
 
     var widgetText = Text(
       label,
-      style: TextStyle(color: colorText),
     );
 
     if (icon == null) {
@@ -42,6 +41,7 @@ class ButtonWidget extends StatelessWidget {
           vertical: UIHelper.VerticalSpaceMedium,
           horizontal: 20,
         ),
+        textColor: colorText,
         child: widgetText,
         onPressed: () async {
           await launch(url);
@@ -57,6 +57,7 @@ class ButtonWidget extends StatelessWidget {
       ),
       icon: isIconTrailing ? widgetText : widgetIcon,
       label: isIconTrailing ? widgetIcon : widgetText,
+      textColor: colorText,
       onPressed: () async {
         await launch(url);
       },

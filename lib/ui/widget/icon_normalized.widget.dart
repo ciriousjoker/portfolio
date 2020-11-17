@@ -16,7 +16,7 @@ class IconNormalizedWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Icon(
       icon,
-      size: icon.fontFamily == "MaterialIcons" ? size : size * 0.87,
+      size: icon.fontFamily == "MaterialIcons" ? size : size * 0.9,
       color: color,
     );
   }

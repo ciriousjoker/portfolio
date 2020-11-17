@@ -21,7 +21,7 @@ class TimelineTileWidget extends StatelessWidget {
   final int count;
 
   final double _sizeIndicator = 64; // TimelineConfig.IndicatorSize
-  final double _widthStroke = 4.0; // TimelineConfig.LineThickness
+  final double _widthStroke = 2.5; // TimelineConfig.LineThickness
 
   bool get isLeft => index.isEven;
 
@@ -68,18 +68,31 @@ class TimelineTileWidget extends StatelessWidget {
             bottom: UIHelper.VerticalSpaceSmall,
           ),
           height: _sizeIndicator,
-          indicator: RoundedBorderWidget(
-            size: 2,
-            color: ColorsConfig.timelineLine,
-            child: (project.icon ?? "").isNotEmpty
-                ? Container(
-                    child: Image.asset(
-                      "assets/icons/${project.icon}",
-                      height: context.isPortrait ? 24 : 32,
-                      width: context.isPortrait ? 24 : 32,
-                    ),
-                  )
-                : SizedBox.shrink(),
+          indicator: Container(
+            decoration: BoxDecoration(
+              shape: BoxShape.circle,
+              boxShadow: [
+                BoxShadow(
+                  color: Colors.white38,
+                  // TODO: Parameter
+                  blurRadius: 6,
+                  spreadRadius: 0.5,
+                )
+              ],
+            ),
+            child: RoundedBorderWidget(
+              size: _widthStroke,
+              color: ColorsConfig.timelineLine,
+              child: (project.icon ?? "").isNotEmpty
+                  ? Container(
+                      child: Image.asset(
+                        "assets/icons/${project.icon}",
+                        height: context.isPortrait ? 24 : 32,
+                        width: context.isPortrait ? 24 : 32,
+                      ),
+                    )
+                  : SizedBox.shrink(),
+            ),
           ),
         ),
         startChild: context.isPortrait

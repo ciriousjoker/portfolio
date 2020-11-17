@@ -3,6 +3,8 @@ import 'dart:math';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_markdown/flutter_markdown.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:portfolio/config/card.config.dart';
 import 'package:portfolio/config/colors.config.dart';
 import 'package:portfolio/ui/helper/ui.helper.dart';
 import 'package:portfolio/ui/widget/card/avatar.widget.dart';
@@ -19,37 +21,47 @@ class CardWidget extends StatefulWidget {
 class _CardWidgetState extends State<CardWidget> {
   @override
   Widget build(BuildContext context) {
+    final Icon quotationMark = Icon(
+      Icons.format_quote_sharp,
+      color: ColorsConfig.cardText.withOpacity(0.38),
+      size: 20,
+    );
+
+    const double padding = UIHelper.HorizontalSpaceMedium;
+
     return LayoutBuilder(
       builder: (context, constraints) {
         return SlimyCard(
           color: ColorsConfig.card,
           width: min(constraints.maxWidth, 384),
-          topCardHeight: 270,
-          bottomCardHeight: 290,
+          topCardHeight: 268,
+          bottomCardHeight: 312,
           borderRadius: 24,
-          topCardWidget: Padding(
-            padding: const EdgeInsets.all(UIHelper.HorizontalSpaceMedium),
+          topCardWidget: Container(
             child: Column(
               mainAxisSize: MainAxisSize.min,
               children: [
                 Expanded(
+                  child: Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: padding)
+                        .copyWith(
+                      top: padding,
+                    ),
                   child: Stack(
                     children: [
                       Align(
                         alignment: Alignment.bottomLeft,
-                        child: Icon(
-                          Icons.format_quote,
-                          color: ColorsConfig.cardText,
-                        ),
+                          child: quotationMark,
                       ),
                       Align(
                         alignment: Alignment.center,
                         child: Text(
-                          "Code is written for humans,\nnot machines.",
-                          style: TextStyle(
-                            fontSize: 28,
-                            fontWeight: FontWeight.w200,
-                            color: ColorsConfig.cardText,
+                          style: GoogleFonts.exo2(
+                            textStyle: TextStyle(
+                              fontSize: 26,
+                              fontWeight: FontWeight.w300,
+                              color: ColorsConfig.cardText,
+                            ),
                           ),
                           textAlign: TextAlign.center,
                           maxLines: 10,
@@ -57,27 +69,27 @@ class _CardWidgetState extends State<CardWidget> {
                       ),
                       Align(
                         alignment: Alignment.topRight,
-                        child: Icon(
-                          Icons.format_quote,
-                          color: ColorsConfig.cardText,
-                        ),
+                          child: quotationMark,
                       ),
                     ],
                   ),
                 ),
+                ),
                 UIHelper.verticalSpaceSmall(),
-                Row(
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 6),
+                  child: Row(
                   children: [
                     Expanded(
                       child: Column(
                         children: [
                           Text(
-                            "Philipp Bauer",
-                            style: TextStyle(
-                              fontSize: 28,
-                              fontWeight: FontWeight.w200,
-                              color: ColorsConfig.cardText,
-                            ),
+                              style: Theme.of(context)
+                                  .textTheme
+                                  .headline4
+                                  .copyWith(
+                                      color: ColorsConfig.cardText,
+                                    ),
                             textAlign: TextAlign.center,
                           ),
                           UIHelper.verticalSpaceSmall(),
@@ -89,9 +101,9 @@ class _CardWidgetState extends State<CardWidget> {
                           ),
                           UIHelper.verticalSpaceSmall(),
                           Text(
-                            "‚Computer Science and Media’ student at Technische Hochschule Nuremberg",
-                            style: Theme.of(context).textTheme.caption.copyWith(
-                                  fontSize: 11,
+                              CardConfig.position,
+                              style:
+                                  Theme.of(context).textTheme.caption.copyWith(
                                   color: ColorsConfig.cardTextSecondary,
                                 ),
                             maxLines: 3,
@@ -100,15 +112,18 @@ class _CardWidgetState extends State<CardWidget> {
                         ],
                       ),
                     ),
-                    Align(
-                      alignment: Alignment.centerRight,
-                      child: AvatarWidget(
-                        height: 128,
-                        width: 128,
+                      Align(
+                        alignment: Alignment.centerRight,
+                        child: AvatarWidget(
+                          height: 128,
+                          width: 128,
+                        ),
                       ),
-                    ),
                   ],
                 ),
+                ),
+                UIHelper.verticalSpaceSmall(),
+                UIHelper.verticalSpace(padding),
               ],
             ),
           ),
@@ -145,9 +160,9 @@ Have a great day!
                   child: GestureDetector(
                     child: Text(
                       "ISTJ-A",
-                      style: TextStyle(
-                        color: ColorsConfig.cardTextSecondary,
-                      ),
+                      style: Theme.of(context).textTheme.caption.copyWith(
+                            color: ColorsConfig.cardTextSecondary,
+                          ),
                     ),
                     onTap: () {
                       try {

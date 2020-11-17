@@ -28,7 +28,7 @@ class RoundedBorderWidget extends StatelessWidget {
       child: Material(
         type: MaterialType.circle,
         clipBehavior: Clip.antiAlias,
-        color: Colors.white,
+        color: color,
         elevation: elevation,
         child: child,
       ),
