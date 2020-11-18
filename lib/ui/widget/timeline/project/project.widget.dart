@@ -4,6 +4,7 @@ import 'package:flip_card/flip_card.controller.dart';
 import 'package:flip_card/flip_card.dart';
 import 'package:flutter/material.dart';
 import 'package:portfolio/config/projects.config.dart';
+import 'package:portfolio/config/ui.config.dart';
 import 'package:portfolio/ui/widget/timeline/project/project_back.widget.dart';
 import 'package:portfolio/ui/widget/timeline/project/project_front.widget.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -63,8 +64,7 @@ class _ProjectWidgetState extends State<ProjectWidget> {
     return FlipCard(
       direction: FlipDirection.HORIZONTAL,
       controller: _controller,
-      // TODO: Parameter
-      speed: 750,
+      speed: UIConfig.projectFlipDuration.inMilliseconds,
       onFlip: () => isFlipping = true,
       onFlipDone: (_) => isFlipping = false,
       back: ProjectBackWidget(
@@ -87,14 +87,12 @@ class _ProjectWidgetState extends State<ProjectWidget> {
     if (isSeen) return;
 
     Timer(
-      // TODO: Parameter
-      Duration(seconds: 2),
+      UIConfig.projectHintDelay,
       () async {
         if (!mounted) return;
-        // TODO: Parameter
         _controller.hint(
-          duration: Duration(milliseconds: 300),
-          total: Duration(milliseconds: 3500),
+          duration: UIConfig.projectFlipHintDuration,
+          total: UIConfig.projectFlipHintTotal,
         );
         await prefs.setBool(key, true);
       },
@@ -109,8 +107,7 @@ class _ProjectWidgetState extends State<ProjectWidget> {
       () {
         _controller.skew(
           value,
-          // TODO: Parameter
-          duration: Duration(milliseconds: 300),
+          duration: UIConfig.projectFlipHintDuration,
           curve: Curves.easeIn,
         );
       },

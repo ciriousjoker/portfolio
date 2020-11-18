@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/config/colors.config.dart';
 import 'package:portfolio/config/projects.config.dart';
+import 'package:portfolio/config/ui.config.dart';
 import 'package:portfolio/ui/helper/ui.helper.dart';
 import 'package:portfolio/ui/widget/rounded_border.widget.dart';
 import 'package:portfolio/ui/widget/timeline/images.widget.dart';
@@ -20,15 +21,12 @@ class TimelineTileWidget extends StatelessWidget {
   final int index;
   final int count;
 
-  final double _sizeIndicator = 64; // TimelineConfig.IndicatorSize
-  final double _widthStroke = 2.5; // TimelineConfig.LineThickness
-
   bool get isLeft => index.isEven;
 
   @override
   Widget build(BuildContext context) {
     Widget projectWidget = Padding(
-      padding: EdgeInsets.symmetric(vertical: 96),
+      padding: EdgeInsets.symmetric(vertical: UIConfig.timelineProjectSpacing),
       child: Align(
         alignment: context.isPortrait
             ? Alignment.center
@@ -50,14 +48,14 @@ class TimelineTileWidget extends StatelessWidget {
             context.isPortrait ? TimelineAlign.start : TimelineAlign.center,
         beforeLineStyle: LineStyle(
           color: ColorsConfig.timelineLine,
-          thickness: _widthStroke,
+          thickness: UIConfig.timelineLineThickness,
         ),
         afterLineStyle: LineStyle(
           color: ColorsConfig.timelineLine,
-          thickness: _widthStroke,
+          thickness: UIConfig.timelineLineThickness,
         ),
         indicatorStyle: IndicatorStyle(
-          width: _sizeIndicator,
+          width: UIConfig.timelineIndicatorSize,
           padding: EdgeInsets.only(
             left: context.isPortrait ? 0 : UIHelper.HorizontalSpaceMedium,
             right: context.isPortrait
@@ -66,29 +64,24 @@ class TimelineTileWidget extends StatelessWidget {
             top: UIHelper.VerticalSpaceSmall,
             bottom: UIHelper.VerticalSpaceSmall,
           ),
-          height: _sizeIndicator,
+          height: UIConfig.timelineIndicatorSize,
           indicator: Container(
             decoration: BoxDecoration(
               shape: BoxShape.circle,
               boxShadow: [
                 BoxShadow(
-                  color: Colors.white38,
-                  // TODO: Parameter
-                  blurRadius: 6,
+                  color: ColorsConfig.timelineGlow,
+                  blurRadius: UIConfig.timelineGlowBlurRadius,
                   spreadRadius: 0.5,
                 )
               ],
             ),
             child: RoundedBorderWidget(
-              size: _widthStroke,
+              size: UIConfig.timelineLineThickness,
               color: ColorsConfig.timelineLine,
               child: (project.icon ?? "").isNotEmpty
                   ? Container(
-                      child: Image.asset(
-                        "assets/icons/${project.icon}",
-                        height: context.isPortrait ? 24 : 32,
-                        width: context.isPortrait ? 24 : 32,
-                      ),
+                      child: Image.asset("assets/icons/${project.icon}"),
                     )
                   : SizedBox.shrink(),
             ),

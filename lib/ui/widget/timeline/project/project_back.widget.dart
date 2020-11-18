@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:markdown_widget/markdown_widget.dart';
+import 'package:portfolio/config/colors.config.dart';
 import 'package:portfolio/config/projects.config.dart';
+import 'package:portfolio/config/ui.config.dart';
 import 'package:portfolio/ui/helper/ui.helper.dart';
 import 'package:portfolio/ui/widget/timeline/project/project_card.widget.dart';
 
@@ -36,8 +38,7 @@ class _ProjectBackWidgetState extends State<ProjectBackWidget> {
                         children: [
                           Expanded(
                             child: Text(
-                              // TODO: Parameter
-                              "Learnings",
+                              UIConfig.projectHeadline,
                               style: Theme.of(context).textTheme.headline5,
                             ),
                           ),
@@ -65,9 +66,8 @@ class _ProjectBackWidgetState extends State<ProjectBackWidget> {
               UIHelper.horizontalSpaceSmall(),
               Container(
                 width: 1,
-                // TODO: Parameter
-                height: 64,
-                color: Colors.black12,
+                height: UIConfig.projectDividerHeight,
+                color: ColorsConfig.projectDivider,
               ),
               UIHelper.horizontalSpaceSmall(),
               widget.flipHint,

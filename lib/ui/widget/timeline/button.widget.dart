@@ -9,11 +9,13 @@ class ButtonWidget extends StatelessWidget {
     this.url,
     this.isIconTrailing = false,
     this.icon,
+    this.tooltip,
     this.color,
   }) : super(key: key);
 
   final String label;
   final String url;
+  final String tooltip;
   final bool isIconTrailing;
   final IconData icon;
   final Color color;
@@ -35,32 +37,38 @@ class ButtonWidget extends StatelessWidget {
     );
 
     if (icon == null) {
-      return RaisedButton(
+      return Tooltip(
+        message: tooltip,
+        child: RaisedButton(
+          color: colorBg,
+          padding: EdgeInsets.symmetric(
+            vertical: UIHelper.VerticalSpaceMedium,
+            horizontal: 20,
+          ),
+          textColor: colorText,
+          child: widgetText,
+          onPressed: () async {
+            await launch(url);
+          },
+        ),
+      );
+    }
+
+    return Tooltip(
+      message: tooltip,
+      child: RaisedButton.icon(
         color: colorBg,
         padding: EdgeInsets.symmetric(
           vertical: UIHelper.VerticalSpaceMedium,
           horizontal: 20,
         ),
+        icon: isIconTrailing ? widgetText : widgetIcon,
+        label: isIconTrailing ? widgetIcon : widgetText,
         textColor: colorText,
-        child: widgetText,
         onPressed: () async {
           await launch(url);
         },
-      );
-    }
-
-    return RaisedButton.icon(
-      color: colorBg,
-      padding: EdgeInsets.symmetric(
-        vertical: UIHelper.VerticalSpaceMedium,
-        horizontal: 20,
       ),
-      icon: isIconTrailing ? widgetText : widgetIcon,
-      label: isIconTrailing ? widgetIcon : widgetText,
-      textColor: colorText,
-      onPressed: () async {
-        await launch(url);
-      },
     );
   }
 }

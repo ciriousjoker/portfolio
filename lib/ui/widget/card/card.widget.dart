@@ -4,8 +4,9 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:markdown_widget/markdown_widget.dart';
-import 'package:portfolio/config/colors.config.dart';
 import 'package:portfolio/config/general.config.dart';
+import 'package:portfolio/config/colors.config.dart';
+import 'package:portfolio/config/ui.config.dart';
 import 'package:portfolio/ui/helper/ui.helper.dart';
 import 'package:portfolio/ui/widget/card/avatar.widget.dart';
 import 'package:slimy_card/slimy_card.dart';
@@ -19,24 +20,24 @@ class CardWidget extends StatefulWidget {
 }
 
 class _CardWidgetState extends State<CardWidget> {
+  static const Icon iconQuotationmark = const Icon(
+    Icons.format_quote_sharp,
+    color: ColorsConfig.cardTextQuotationmarks,
+    size: UIConfig.cardQuotationmarkSize,
+  );
+
   @override
   Widget build(BuildContext context) {
-    final Icon quotationMark = Icon(
-      Icons.format_quote_sharp,
-      color: ColorsConfig.cardText.withOpacity(0.38),
-      size: 20,
-    );
-
     const double padding = UIHelper.HorizontalSpaceMedium;
 
     return LayoutBuilder(
       builder: (context, constraints) {
         return SlimyCard(
           color: ColorsConfig.card,
-          width: min(constraints.maxWidth, 384),
-          topCardHeight: 268,
-          bottomCardHeight: 312,
-          borderRadius: 24,
+          width: min(constraints.maxWidth, UIConfig.cardMaxWidth),
+          topCardHeight: UIConfig.cardSizeTop,
+          bottomCardHeight: UIConfig.cardSizeBottom,
+          borderRadius: UIConfig.cardRadius,
           topCardWidget: Container(
             child: Column(
               mainAxisSize: MainAxisSize.min,
@@ -51,26 +52,23 @@ class _CardWidgetState extends State<CardWidget> {
                       children: [
                         Align(
                           alignment: Alignment.bottomLeft,
-                          child: quotationMark,
+                          child: iconQuotationmark,
                         ),
                         Align(
                           alignment: Alignment.center,
                           child: Text(
                             GeneralConfig.quote,
                             style: GoogleFonts.exo2(
-                              textStyle: TextStyle(
-                                fontSize: 26,
-                                fontWeight: FontWeight.w300,
+                              textStyle: UIConfig.cardQuoteTextStyle.copyWith(
                                 color: ColorsConfig.cardText,
                               ),
                             ),
                             textAlign: TextAlign.center,
-                            maxLines: 10,
                           ),
                         ),
                         Align(
                           alignment: Alignment.topRight,
-                          child: quotationMark,
+                          child: iconQuotationmark,
                         ),
                       ],
                     ),
@@ -117,8 +115,8 @@ class _CardWidgetState extends State<CardWidget> {
                       Align(
                         alignment: Alignment.centerRight,
                         child: AvatarWidget(
-                          height: 128,
-                          width: 128,
+                          height: UIConfig.cardSizeAvatar,
+                          width: UIConfig.cardSizeAvatar,
                         ),
                       ),
                     ],
@@ -150,14 +148,15 @@ class _CardWidgetState extends State<CardWidget> {
                   alignment: Alignment.bottomRight,
                   child: GestureDetector(
                     child: Text(
-                      "ISTJ-A",
+                      GeneralConfig.myersBriggs,
                       style: Theme.of(context).textTheme.caption.copyWith(
                             color: ColorsConfig.cardTextSecondary,
                           ),
                     ),
                     onTap: () {
+                      if (GeneralConfig.myersBriggsUrl == null) return;
                       try {
-                        launch("https://example.com");
+                        launch(GeneralConfig.myersBriggsUrl);
                       } catch (e) {
                         assert(false);
                       }

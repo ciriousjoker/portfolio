@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:portfolio/config/colors.config.dart';
+import 'package:portfolio/config/ui.config.dart';
 import 'package:portfolio/ui/helper/ui.helper.dart';
 
 class ProjectCardWidget extends StatelessWidget {
@@ -12,24 +14,20 @@ class ProjectCardWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      // TODO: Parameter based on blur radius
-      padding: const EdgeInsets.all(8),
+      padding: const EdgeInsets.all(UIConfig.projectGlowBlurRadius + 1),
       child: Container(
         clipBehavior: Clip.hardEdge,
         decoration: BoxDecoration(
-          // TODO: Parameter
-          borderRadius: BorderRadius.circular(16),
+          borderRadius: BorderRadius.circular(UIConfig.projectRadius),
           boxShadow: [
             BoxShadow(
-              color: Colors.white38,
-              // TODO: Parameter
-              blurRadius: 6,
+              color: ColorsConfig.projectGlow,
+              blurRadius: UIConfig.projectGlowBlurRadius,
             )
           ],
         ),
         child: Material(
-          // TODO: Parameter
-          color: Colors.white,
+          color: ColorsConfig.projectCard,
           child: Stack(
             children: [
               Container(
@@ -38,7 +36,7 @@ class ProjectCardWidget extends StatelessWidget {
                 ).copyWith(
                   top: UIHelper.VerticalSpaceSmall,
                 ),
-                constraints: BoxConstraints(maxWidth: 512),
+                constraints: BoxConstraints(maxWidth: UIConfig.projectMaxWidth),
                 child: child,
               ),
             ],

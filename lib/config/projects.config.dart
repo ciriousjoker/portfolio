@@ -4,8 +4,7 @@ import 'package:portfolio/brand_icons/brand_icons_icons.dart';
 class ProjectConfig {
   static const List<ProjectData> projects = [
     // TODO: Didactduell
-    // TODO: AlgoDat UI
-    // TODO: FridayNightSurvival
+    // TODO: Switchboard website
     ProjectData(
       title: "Tag My Knowledge",
       description: "TODO:",

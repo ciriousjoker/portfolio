@@ -1,11 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/brand_icons/brand_icons_icons.dart';
+import 'package:portfolio/config/general.config.dart';
 import 'package:portfolio/config/colors.config.dart';
 import 'package:portfolio/ui/widget/icon_normalized.widget.dart';
 import 'package:portfolio/ui/widget/rounded_border.widget.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class AvatarWidget extends StatelessWidget {
+  static const double sizeAction = 38;
+
   const AvatarWidget({
     Key key,
     this.color = ColorsConfig.card,
@@ -14,7 +17,6 @@ class AvatarWidget extends StatelessWidget {
   }) : super(key: key);
 
   final Color color;
-  final double sizeAction = 38;
   final double width;
   final double height;
 
@@ -32,7 +34,7 @@ class AvatarWidget extends StatelessWidget {
             decoration: BoxDecoration(
               shape: BoxShape.circle,
             ),
-            child: Image.asset("assets/images/avatar.jpg"),
+            child: Image.asset(GeneralConfig.assetAvatar),
           ),
           Transform.translate(
             offset: Offset(
@@ -44,7 +46,7 @@ class AvatarWidget extends StatelessWidget {
               icon: Icons.email,
               onTap: () {
                 try {
-                  launch("mailto:ciriousjoker@gmail.com");
+                  launch("mailto:${GeneralConfig.email}");
                 } catch (e) {
                   assert(false);
                 }
@@ -61,7 +63,7 @@ class AvatarWidget extends StatelessWidget {
               icon: BrandIcons.linkedin,
               onTap: () {
                 try {
-                  launch("TODO: Linkedin");
+                  launch(GeneralConfig.linkedin);
                 } catch (e) {
                   assert(false);
                 }
@@ -78,7 +80,7 @@ class AvatarWidget extends StatelessWidget {
               icon: BrandIcons.github,
               onTap: () {
                 try {
-                  launch("http://github.com/CiriousJoker/");
+                  launch(GeneralConfig.githubUrl);
                 } catch (e) {
                   assert(false);
                 }
@@ -92,22 +94,29 @@ class AvatarWidget extends StatelessWidget {
 }
 
 class _Action extends StatelessWidget {
+  static const double borderWidth = 4;
+  static const double sizeIcon = 18;
+  static const Color colorFab = Colors.white;
+  static const Color colorIcon = Colors.black87;
+
   const _Action({
     Key key,
     this.alignment,
     @required this.icon,
-    this.color = ColorsConfig.card,
+
+    /// Total size of this widget
     @required this.size,
+
+    /// Color behind the action
+    this.colorBackground = ColorsConfig.card,
     this.onTap,
   }) : super(key: key);
 
   final IconData icon;
   final Alignment alignment;
   final Function onTap;
-  final Color color;
+  final Color colorBackground;
   final double size;
-
-  final double borderWidth = 4;
 
   @override
   Widget build(BuildContext context) {
@@ -116,18 +125,18 @@ class _Action extends StatelessWidget {
       height: size,
       child: InkWell(
         child: RoundedBorderWidget(
-          color: color,
+          color: colorBackground,
           size: borderWidth,
           elevation: 4,
           child: Container(
-            color: Colors.white,
+            color: colorFab,
             child: Padding(
               padding: EdgeInsets.all(borderWidth),
               child: Center(
                 child: IconNormalizedWidget(
                   icon: icon,
-                  size: 18,
-                  color: Colors.black87,
+                  size: sizeIcon,
+                  color: colorIcon,
                 ),
               ),
             ),
