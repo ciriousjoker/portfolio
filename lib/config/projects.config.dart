@@ -9,6 +9,20 @@ class ProjectConfig {
     ProjectData(
       title: "Tag My Knowledge",
       description: "TODO:",
+      learningsTldr: "UX, web design, analytics",
+      learnings: """
+- Some bullet
+- points
+- wohoo!2
+- wohoo!
+- wohoo!1
+- wohoo!
+- wohoo!2
+- wohoo!
+- wohoo!2
+- wohoo!
+- wohoo!1
+""",
       urlWebsite: "https://tagmyknowledge.com/",
       urlPlaystore:
           "https://play.google.com/store/apps/details?id=com.tagmyknowledge",
@@ -298,6 +312,9 @@ TODO:
 TODO:
 - asd
 """,
+        learnings: """
+
+""",
         githubName: "nTradeAdvanced",
         urlDownload:
             "https://github.com/CiriousJoker/nTradeAdvanced/releases/latest",
@@ -335,6 +352,8 @@ class ProjectData {
   final String title;
   final String githubName;
   final String description;
+  final String learningsTldr;
+  final String learnings;
   final String urlImage;
   final String urlDownload;
   final String urlDemo;
@@ -351,17 +370,19 @@ class ProjectData {
   final List<IconData> platforms;
 
   const ProjectData({
-    this.title,
+    @required this.title,
+    @required this.timestamp,
+    @required this.icon,
     this.githubName,
     this.description = "",
+    this.learningsTldr = "",
+    this.learnings = "",
     this.urlImage,
     this.urlDemo,
     this.urlPlaystore,
     this.urlDownload,
     this.urlWebsite,
-    this.timestamp,
-    this.icon,
-    this.platforms,
+    this.platforms = const [],
     this.tags = const [],
     this.screenshots = const [],
   });

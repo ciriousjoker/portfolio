@@ -3,6 +3,7 @@ import 'package:flutter_swiper/flutter_swiper.dart';
 import 'package:ndialog/ndialog.dart';
 import 'package:portfolio/config/projects.config.dart';
 
+// TODO: Remove this completely
 class ImagesWidget extends StatelessWidget {
   const ImagesWidget({Key key, this.project}) : super(key: key);
 

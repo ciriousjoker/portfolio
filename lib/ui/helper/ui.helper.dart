@@ -50,4 +50,9 @@ class UIHelper {
   static Widget horizontalSpace(double width) {
     return Container(width: width, height: 0);
   }
+
+  // https://stackoverflow.com/questions/50081213/how-do-i-use-hexadecimal-color-strings-in-flutter
+  static Color getColorFromColorCode(String code) {
+    return Color(int.parse(code.substring(1, 7), radix: 16) + 0xFF000000);
+  }
 }

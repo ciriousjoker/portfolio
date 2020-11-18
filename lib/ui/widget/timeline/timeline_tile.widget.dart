@@ -4,7 +4,7 @@ import 'package:portfolio/config/projects.config.dart';
 import 'package:portfolio/ui/helper/ui.helper.dart';
 import 'package:portfolio/ui/widget/rounded_border.widget.dart';
 import 'package:portfolio/ui/widget/timeline/images.widget.dart';
-import 'package:portfolio/ui/widget/timeline/project.widget.dart';
+import 'package:portfolio/ui/widget/timeline/project/project.widget.dart';
 import 'package:timeline_tile/timeline_tile.dart';
 import 'package:get/get.dart';
 
@@ -37,6 +37,7 @@ class TimelineTileWidget extends StatelessWidget {
                 : Alignment.centerRight,
         child: ProjectWidget(
           project: project,
+          index: index,
         ),
       ),
     );
@@ -58,12 +59,10 @@ class TimelineTileWidget extends StatelessWidget {
         indicatorStyle: IndicatorStyle(
           width: _sizeIndicator,
           padding: EdgeInsets.only(
-            // horizontal: UIHelper.HorizontalSpaceMedium,
             left: context.isPortrait ? 0 : UIHelper.HorizontalSpaceMedium,
             right: context.isPortrait
                 ? UIHelper.HorizontalSpaceSmall
                 : UIHelper.HorizontalSpaceMedium,
-            // right: UIHelper.HorizontalSpaceMedium,
             top: UIHelper.VerticalSpaceSmall,
             bottom: UIHelper.VerticalSpaceSmall,
           ),

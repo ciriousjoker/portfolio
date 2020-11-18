@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:portfolio/ui/helper/ui.helper.dart';
 import 'package:portfolio/ui/widget/card/card.widget.dart';
-import 'package:portfolio/ui/widget/timeline/project.widget.dart';
 import 'package:portfolio/ui/widget/timeline/timeline.widget.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -22,8 +21,8 @@ class HomeScreen extends StatelessWidget {
               // getColorFromColorCode("#f8b500"),
 
               // Royal
-              getColorFromColorCode("#141E30"),
-              getColorFromColorCode("#243B55"),
+              UIHelper.getColorFromColorCode("#141E30"),
+              UIHelper.getColorFromColorCode("#243B55"),
             ], // red to yellow
             tileMode: TileMode.repeated,
           ),

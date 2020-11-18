@@ -2,10 +2,10 @@ import 'dart:math';
 
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_markdown/flutter_markdown.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:portfolio/config/card.config.dart';
+import 'package:markdown_widget/markdown_widget.dart';
 import 'package:portfolio/config/colors.config.dart';
+import 'package:portfolio/config/general.config.dart';
 import 'package:portfolio/ui/helper/ui.helper.dart';
 import 'package:portfolio/ui/widget/card/avatar.widget.dart';
 import 'package:slimy_card/slimy_card.dart';
@@ -47,71 +47,73 @@ class _CardWidgetState extends State<CardWidget> {
                         .copyWith(
                       top: padding,
                     ),
-                  child: Stack(
-                    children: [
-                      Align(
-                        alignment: Alignment.bottomLeft,
+                    child: Stack(
+                      children: [
+                        Align(
+                          alignment: Alignment.bottomLeft,
                           child: quotationMark,
-                      ),
-                      Align(
-                        alignment: Alignment.center,
-                        child: Text(
-                          style: GoogleFonts.exo2(
-                            textStyle: TextStyle(
-                              fontSize: 26,
-                              fontWeight: FontWeight.w300,
-                              color: ColorsConfig.cardText,
-                            ),
-                          ),
-                          textAlign: TextAlign.center,
-                          maxLines: 10,
                         ),
-                      ),
-                      Align(
-                        alignment: Alignment.topRight,
+                        Align(
+                          alignment: Alignment.center,
+                          child: Text(
+                            GeneralConfig.quote,
+                            style: GoogleFonts.exo2(
+                              textStyle: TextStyle(
+                                fontSize: 26,
+                                fontWeight: FontWeight.w300,
+                                color: ColorsConfig.cardText,
+                              ),
+                            ),
+                            textAlign: TextAlign.center,
+                            maxLines: 10,
+                          ),
+                        ),
+                        Align(
+                          alignment: Alignment.topRight,
                           child: quotationMark,
-                      ),
-                    ],
+                        ),
+                      ],
+                    ),
                   ),
-                ),
                 ),
                 UIHelper.verticalSpaceSmall(),
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 6),
                   child: Row(
-                  children: [
-                    Expanded(
-                      child: Column(
-                        children: [
-                          Text(
+                    children: [
+                      Expanded(
+                        child: Column(
+                          children: [
+                            Text(
+                              GeneralConfig.name,
                               style: Theme.of(context)
                                   .textTheme
                                   .headline4
                                   .copyWith(
-                                      color: ColorsConfig.cardText,
-                                    ),
-                            textAlign: TextAlign.center,
-                          ),
-                          UIHelper.verticalSpaceSmall(),
-                          SizedBox(
-                            width: 48,
-                            child: Divider(
-                              color: ColorsConfig.cardTextSecondary,
+                                    color: ColorsConfig.cardText,
+                                  ),
+                              textAlign: TextAlign.center,
                             ),
-                          ),
-                          UIHelper.verticalSpaceSmall(),
-                          Text(
-                              CardConfig.position,
+                            UIHelper.verticalSpaceSmall(),
+                            SizedBox(
+                              width: 48,
+                              child: Divider(
+                                color: ColorsConfig.cardTextSecondary,
+                              ),
+                            ),
+                            UIHelper.verticalSpaceSmall(),
+                            Text(
+                              GeneralConfig.position,
                               style:
                                   Theme.of(context).textTheme.caption.copyWith(
-                                  color: ColorsConfig.cardTextSecondary,
-                                ),
-                            maxLines: 3,
-                            textAlign: TextAlign.center,
-                          ),
-                        ],
+                                        color: ColorsConfig.cardTextSecondary,
+                                      ),
+                              maxLines: 3,
+                              textAlign: TextAlign.center,
+                            ),
+                          ],
+                        ),
                       ),
-                    ),
                       Align(
                         alignment: Alignment.centerRight,
                         child: AvatarWidget(
@@ -119,8 +121,8 @@ class _CardWidgetState extends State<CardWidget> {
                           width: 128,
                         ),
                       ),
-                  ],
-                ),
+                    ],
+                  ),
                 ),
                 UIHelper.verticalSpaceSmall(),
                 UIHelper.verticalSpace(padding),
@@ -131,28 +133,17 @@ class _CardWidgetState extends State<CardWidget> {
             padding: const EdgeInsets.all(UIHelper.HorizontalSpaceMedium),
             child: Stack(
               children: [
-                SingleChildScrollView(
-                  child: Column(
-                    children: [
-                      MarkdownBody(
-                        data: """
-I develop websites, apps and sometimes random things that spark my interest :)\n\n
-I have tried lots of languages and frameworks over the years. Right now, I like a combination of Flutter, Typescript, and Firebase the most.
-As you can guess by the quote above, I value code quality very highly, but a great UI/UX is also a requirement for everything I do.\n
-\n
-Don't take my word for it, feel free to check our the projects yourself.\n\n
-
-Have a great day!
-""",
-                        styleSheet: MarkdownStyleSheet(
-                          p: TextStyle(
-                            fontSize: 17,
-                            color: ColorsConfig.cardText,
-                            fontWeight: FontWeight.w300,
-                          ),
-                        ),
+                MarkdownWidget(
+                  data: GeneralConfig.aboutMe,
+                  styleConfig: StyleConfig(
+                    pConfig: PConfig(
+                      textStyle: TextStyle(
+                        fontSize: 17,
+                        color: ColorsConfig.cardText,
+                        fontWeight: FontWeight.w300,
+                        height: 1.25,
                       ),
-                    ],
+                    ),
                   ),
                 ),
                 Align(
