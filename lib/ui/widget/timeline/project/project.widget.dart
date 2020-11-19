@@ -5,6 +5,7 @@ import 'package:flip_card/flip_card.dart';
 import 'package:flutter/material.dart';
 import 'package:portfolio/config/projects.config.dart';
 import 'package:portfolio/config/ui.config.dart';
+import 'package:portfolio/ui/helper/ui.helper.dart';
 import 'package:portfolio/ui/widget/timeline/project/project_back.widget.dart';
 import 'package:portfolio/ui/widget/timeline/project/project_front.widget.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -61,19 +62,23 @@ class _ProjectWidgetState extends State<ProjectWidget> {
 
   @override
   Widget build(BuildContext context) {
-    return FlipCard(
-      direction: FlipDirection.HORIZONTAL,
-      controller: _controller,
-      speed: UIConfig.projectFlipDuration.inMilliseconds,
-      onFlip: () => isFlipping = true,
-      onFlipDone: (_) => isFlipping = false,
-      back: ProjectBackWidget(
-        project: widget.project,
-        flipHint: _btnFlipHint,
-      ),
-      front: ProjectFrontWidget(
-        project: widget.project,
-        flipHint: _btnFlipHint,
+    return Padding(
+      padding:
+          const EdgeInsets.symmetric(horizontal: UIHelper.HorizontalSpaceSmall),
+      child: FlipCard(
+        direction: FlipDirection.HORIZONTAL,
+        controller: _controller,
+        speed: UIConfig.projectFlipDuration.inMilliseconds,
+        onFlip: () => isFlipping = true,
+        onFlipDone: (_) => isFlipping = false,
+        back: ProjectBackWidget(
+          project: widget.project,
+          flipHint: _btnFlipHint,
+        ),
+        front: ProjectFrontWidget(
+          project: widget.project,
+          flipHint: _btnFlipHint,
+        ),
       ),
     );
   }

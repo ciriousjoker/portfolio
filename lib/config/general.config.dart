@@ -3,7 +3,7 @@ class GeneralConfig {
   static const String name = "Philipp Bauer";
   static const String email = "ciriousjoker@gmail.com";
 
-  static const String assetAvatar = "assets/images/avatar.jpg";
+  static const String assetAvatar = "assets/images/avatar.webp";
 
   // Profiles
   static const String github = "ciriousjoker";

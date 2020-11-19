@@ -26,20 +26,18 @@ class ProjectCardWidget extends StatelessWidget {
             )
           ],
         ),
+        // BUG: This can't be enabled without causing #495b783568
+        // Try enabling this in future Flutter versions if the UI is preferred.
+        // constraints: BoxConstraints(maxWidth: UIConfig.projectMaxWidth),
         child: Material(
           color: ColorsConfig.projectCard,
-          child: Stack(
-            children: [
-              Container(
-                padding: EdgeInsets.all(
-                  UIHelper.VerticalSpaceMedium,
-                ).copyWith(
-                  top: UIHelper.VerticalSpaceSmall,
-                ),
-                constraints: BoxConstraints(maxWidth: UIConfig.projectMaxWidth),
-                child: child,
-              ),
-            ],
+          child: Container(
+            padding: EdgeInsets.all(
+              UIHelper.VerticalSpaceMedium,
+            ).copyWith(
+              top: UIHelper.VerticalSpaceSmall,
+            ),
+            child: child,
           ),
         ),
       ),

@@ -5,7 +5,7 @@ import 'package:portfolio/config/general.config.dart';
 import 'package:portfolio/config/projects.config.dart';
 import 'package:portfolio/config/ui.config.dart';
 import 'package:portfolio/ui/helper/ui.helper.dart';
-import 'package:portfolio/ui/widget/icon_normalized.widget.dart';
+import 'package:portfolio/ui/widget/util/icon_normalized.widget.dart';
 import 'package:portfolio/ui/widget/timeline/button.widget.dart';
 import 'package:portfolio/ui/widget/timeline/project/project_card.widget.dart';
 import 'package:markdown_widget/markdown_widget.dart';
@@ -148,12 +148,18 @@ class _ProjectFrontWidgetState extends State<ProjectFrontWidget> {
           ),
           UIHelper.verticalSpaceSmall(),
           Row(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            mainAxisSize: MainAxisSize.min,
             children: [
               Expanded(
-                child: Column(
+                child:
+                    // BUG: If max-width is set, this will overflow no matter what
+                    // This at least makes it scrollable. This is most likely fixed in
+                    // a future Flutter update. Once max-width works out of the box, remove this.
+                    // #495b783568
+                    //   SingleChildScrollView(
+                    // child:
+                    Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
+                  mainAxisSize: MainAxisSize.min,
                   children: MarkdownGenerator(
                     data: widget.project.description,
                     styleConfig: StyleConfig(
@@ -164,6 +170,7 @@ class _ProjectFrontWidgetState extends State<ProjectFrontWidget> {
                   ).widgets,
                 ),
               ),
+              // ),
               UIHelper.horizontalSpaceSmall(),
               Container(
                 width: 1,

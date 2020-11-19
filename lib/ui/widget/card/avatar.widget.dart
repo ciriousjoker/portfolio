@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:portfolio/brand_icons/brand_icons_icons.dart';
 import 'package:portfolio/config/general.config.dart';
 import 'package:portfolio/config/colors.config.dart';
-import 'package:portfolio/ui/widget/icon_normalized.widget.dart';
-import 'package:portfolio/ui/widget/rounded_border.widget.dart';
+import 'package:portfolio/ui/widget/util/icon_normalized.widget.dart';
+import 'package:portfolio/ui/widget/util/rounded_border.widget.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class AvatarWidget extends StatelessWidget {

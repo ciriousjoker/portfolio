@@ -3,8 +3,7 @@ import 'package:portfolio/config/colors.config.dart';
 import 'package:portfolio/config/projects.config.dart';
 import 'package:portfolio/config/ui.config.dart';
 import 'package:portfolio/ui/helper/ui.helper.dart';
-import 'package:portfolio/ui/widget/rounded_border.widget.dart';
-import 'package:portfolio/ui/widget/timeline/images.widget.dart';
+import 'package:portfolio/ui/widget/util/rounded_border.widget.dart';
 import 'package:portfolio/ui/widget/timeline/project/project.widget.dart';
 import 'package:timeline_tile/timeline_tile.dart';
 import 'package:get/get.dart';
@@ -25,7 +24,7 @@ class TimelineTileWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    Widget projectWidget = Padding(
+    Widget widgetProject = Padding(
       padding: EdgeInsets.symmetric(vertical: UIConfig.timelineProjectSpacing),
       child: Align(
         alignment: context.isPortrait
@@ -40,7 +39,7 @@ class TimelineTileWidget extends StatelessWidget {
       ),
     );
 
-    Widget imageWidget = ImagesWidget(project: project);
+    Widget widgetNotProject = SizedBox.shrink();
 
     return Center(
       child: TimelineTile(
@@ -90,9 +89,10 @@ class TimelineTileWidget extends StatelessWidget {
         startChild: context.isPortrait
             ? null
             : !isLeft
-                ? projectWidget
-                : imageWidget,
-        endChild: (context.isPortrait || isLeft) ? projectWidget : imageWidget,
+                ? widgetProject
+                : widgetNotProject,
+        endChild:
+            (context.isPortrait || isLeft) ? widgetProject : widgetNotProject,
         isFirst: this.index == 0,
         isLast: this.index == this.count - 1,
       ),
