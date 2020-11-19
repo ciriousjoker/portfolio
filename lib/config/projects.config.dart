@@ -270,18 +270,25 @@ class ProjectConfig {
       // ],
     ),
     ProjectData(
-      title: "HomingCompass",
+      title: "Homing Compass",
       description:
-          "A homescreen widget that always points towards home (or any other location you specify).\n\n"
+          "A homescreen widget that always points towards home (or any other location you specify). "
+          "You can switch between multiple locations and the widget displays the direction and distance.\n\n"
           "Was a parting gift for a friend who travelled abroad :)",
+      learningsTldr: "Android, widgets, GPS, threads",
+      learnings: "- Using GPS & the Maps api\n"
+          "- Creating widgets\n"
+          "- Update the widget from a background thread\n"
+          "- Calculating orientation & distance on a sphere\n",
       githubName: "HomingCompass",
-      urlDownload:
-          "https://github.com/CiriousJoker/nTradeAdvanced/releases/latest",
+      urlPlaystore:
+          "https://play.google.com/store/apps/details?id=com.ciriousjoker.homingcompass",
       // 23rd Sept. 2016
       timestamp: 1474636718000,
       tags: [
         Tags.java,
       ],
+      platforms: [BrandIcons.googleplay],
       icon: "homingcompass.png",
       // screenshots: [
       //   "assets/screenshots/projects/sidenote/1.png",
