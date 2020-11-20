@@ -396,7 +396,7 @@ class Tags {
   static const Tag typescript = Tag(
     label: "Typescript",
     icon: BrandIcons.typescript,
-    colorHex: "#F7DF1E",
+    colorHex: "#3178c6",
   );
   static const Tag javascript = Tag(
     label: "Javascript",
@@ -466,6 +466,7 @@ class Tags {
     icon: BrandIcons.c,
     colorHex: "#00599C",
   );
+
   static const Tag java = Tag(
     label: "Java",
     colorHex: "#ED8B00",
