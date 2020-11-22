@@ -364,8 +364,10 @@ class ProjectConfig {
       timestamp: 1502143200000,
       icon: "legacyxp.png",
       tags: [
-        Tags.react,
         Tags.csharp,
+        Tags.react,
+        Tags.electron,
+        Tags.nodejs,
       ],
       // screenshots: [
       // TODO:
@@ -614,6 +616,18 @@ class Tags {
     label: "C#",
     icon: BrandIcons.csharp,
     colorHex: "#3A0091",
+  );
+
+  static const Tag electron = Tag(
+    label: "Electron",
+    icon: BrandIcons.electron,
+    colorHex: "#2b2e3b",
+  );
+
+  static const Tag nodejs = Tag(
+    label: "NodeJS",
+    icon: BrandIcons.node_dot_js,
+    colorHex: "#026e00",
   );
 
   static const Tag unity = Tag(
