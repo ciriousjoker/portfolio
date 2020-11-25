@@ -45,8 +45,16 @@ class ProjectConfig {
     ProjectData(
       title: "AlgoDat GUI",
       description:
-          "Small project that I built during a group project to showcase our datastructure implementations.\n"
-          "Now, following semesters can fork this and don't have to write console applications for that.",
+          "This is a simple, yet beautiful GUI that I built during a group project "
+          "where we had to showcase our datastructure implementations. "
+          "Now, following semesters can clone this repository to skip the tedious and ugly console applications "
+          "and focus on their datastructure implementations (which is the only thing they're graded on). "
+          "Who knows, maybe the design and the simplicity behind it inspires some "
+          "of them to build something great in their free time :)",
+      learningsTldr: "datastructures, wpf",
+      learnings:
+          "- **Various datastructures:** We had to implement those during the project\n"
+          "- **WPF:** Build Windows GUI applications in C#",
       githubName: "algodat_gui",
       // Aug 2020
       timestamp: 1596751200000,
