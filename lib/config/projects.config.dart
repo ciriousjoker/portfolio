@@ -289,10 +289,21 @@ class ProjectConfig {
     ),
     ProjectData(
         title: "SideNote",
-        description: """
-TODO:
-- asd
-""",
+        description:
+            "This program was my first attempt at C#/.NET + WPF, after being fascinated by the UI "
+            "of a tool called Curse Voice, "
+            "which was written in it (at least according to their open hiring positions at the time).\n"
+            "**Features:**\n"
+            "- Note is automatically saved\n"
+            "- shift+tab: Slide in/out from the right screen edge\n"
+            "- Settings: font family, font size & color theme",
+        learningsTldr:
+            "Introduction to C#, .NET, WPF, animations & state management",
+        learnings: "- C# .NET development for Windows\n"
+            "- Designing a GUI in WPF\n"
+            "- Basic animations, concept of easing & animation curves\n"
+            "- Basic state management to reflect settings changes "
+            "like color themes immediately without restarting",
         githubName: "SideNote",
         urlDownload: "https://github.com/CiriousJoker/SideNote/releases/latest",
         // Nov. 2015
