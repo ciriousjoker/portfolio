@@ -88,7 +88,7 @@ class ProjectConfig {
           "Friday Night Survival was developed as a group project at the"
           "\"Technische Hochschule Nuremberg\" (a German university of applied science).\n"
           "It's a round based, 2D-RPG with a top-down overworld map.\n"
-          "There some ways it's similar to Pokemon, but in a nightclub,\nwith crude humor"
+          "There some ways it's similar to Pokémon, but in a nightclub,\nwith crude humor"
           "and interesting battle mechanics based on an \"honor level\".\n"
           "Also, sometimes your only option is to drink your opponent under the table.\n"
           "My job was mainly to create the non-character assets as well as "
@@ -154,7 +154,7 @@ class ProjectConfig {
     ),
     ProjectData(
       title: "Pokeroute",
-      description: "App for Pokemon GO players"
+      description: "App for Pokémon GO players"
           "TODO: ...",
       githubName: "pokeroute",
       urlWebsite: "https://pokeroute.web.app/",
@@ -307,12 +307,20 @@ TODO:
         platforms: [BrandIcons.windows]),
     ProjectData(
         title: "nTradeAdvanced",
-        description: """
-TODO:
-- asd
-""",
+        description:
+            "A program for the Ti-Nspire CAS calculator, which allows you to trade Pokémon between two third gen Pokémon games. "
+            "Once you've rooted your device using Ndless, you can install a GBA emulator and play Pokémon. "
+            "There is no link functionality available, but with this tool, you can trade Pokémon anyway. "
+            "Just transfer the .sav files, run this tool, and trade Pokémon between them. "
+            "I also included a little tool to fix corrupted save states, which could be caused by cheating."
+            "**Supported games:** Firered/Leafgreen, Ruby/Sapphire, Emerald",
+        learningsTldr: "c, pointer arithmetic, checksums",
         learnings: """
-
+- Developed in c
+- Basics of embedded programming with tight hardware constraints
+- Understanding inofficial reverse-engineered documentation about save formats
+- Pointer arithmetic to modify the savestates in-memory
+- Recalculating checksums to repair a corrupted save file
 """,
         githubName: "nTradeAdvanced",
         urlDownload:
