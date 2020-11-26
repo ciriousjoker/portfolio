@@ -3,12 +3,12 @@ import 'dart:math';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:markdown_widget/markdown_widget.dart';
 import 'package:portfolio/config/general.config.dart';
 import 'package:portfolio/config/colors.config.dart';
 import 'package:portfolio/config/ui.config.dart';
 import 'package:portfolio/ui/helper/ui.helper.dart';
 import 'package:portfolio/ui/widget/card/avatar.widget.dart';
+import 'package:portfolio/ui/widget/util/markdown_wrapper.widget.dart';
 import 'package:slimy_card/slimy_card.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -131,16 +131,14 @@ class _CardWidgetState extends State<CardWidget> {
             padding: const EdgeInsets.all(UIHelper.HorizontalSpaceMedium),
             child: Stack(
               children: [
-                MarkdownWidget(
-                  data: GeneralConfig.aboutMe,
-                  styleConfig: StyleConfig(
-                    pConfig: PConfig(
-                      textStyle: TextStyle(
-                        fontSize: 17,
-                        color: ColorsConfig.cardText,
-                        fontWeight: FontWeight.w300,
-                        height: 1.25,
-                      ),
+                SingleChildScrollView(
+                  child: MarkdownWrapperWidget(
+                    data: GeneralConfig.aboutMe,
+                    style: TextStyle(
+                      fontSize: 17,
+                      color: ColorsConfig.cardText,
+                      fontWeight: FontWeight.w300,
+                      height: 1.4,
                     ),
                   ),
                 ),

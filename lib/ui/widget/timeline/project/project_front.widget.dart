@@ -8,7 +8,7 @@ import 'package:portfolio/ui/helper/ui.helper.dart';
 import 'package:portfolio/ui/widget/util/icon_normalized.widget.dart';
 import 'package:portfolio/ui/widget/timeline/button.widget.dart';
 import 'package:portfolio/ui/widget/timeline/project/project_card.widget.dart';
-import 'package:markdown_widget/markdown_widget.dart';
+import 'package:portfolio/ui/widget/util/markdown_wrapper.widget.dart';
 
 class ProjectFrontWidget extends StatefulWidget {
   final ProjectData project;
@@ -155,22 +155,10 @@ class _ProjectFrontWidgetState extends State<ProjectFrontWidget> {
                     // This at least makes it scrollable. This is most likely fixed in
                     // a future Flutter update. Once max-width works out of the box, remove this.
                     // #495b783568
-                    //   SingleChildScrollView(
-                    // child:
-                    Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  mainAxisSize: MainAxisSize.min,
-                  children: MarkdownGenerator(
-                    data: widget.project.description,
-                    styleConfig: StyleConfig(
-                      pConfig: PConfig(
-                        textStyle: Theme.of(context).textTheme.bodyText2,
-                      ),
-                    ),
-                  ).widgets,
+                    MarkdownWrapperWidget(
+                  data: widget.project.description,
                 ),
               ),
-              // ),
               UIHelper.horizontalSpaceSmall(),
               Container(
                 width: 1,
