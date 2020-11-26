@@ -22,29 +22,25 @@ class MyApp extends StatelessWidget {
                       fontWeight: FontWeight.w200,
                     ),
               ),
-              headline5: GoogleFonts.catamaran(
-                textStyle: Theme.of(context).textTheme.headline5.copyWith(
-                      color: Colors.black87,
-                      fontWeight: FontWeight.w200,
-                      fontSize: 24,
-                    ),
-              ),
-              bodyText2: GoogleFonts.catamaran(
-                textStyle: Theme.of(context).textTheme.bodyText2.copyWith(
-                      color: Colors.black87,
-                      fontWeight: FontWeight.w300,
-                      height: 1.4,
-                      fontSize: 16,
-                    ),
-              ),
-              caption: GoogleFonts.catamaran(
-                textStyle: Theme.of(context).textTheme.caption.copyWith(
-                      color: Colors.black54,
-                      fontWeight: FontWeight.w400,
-                      height: 1.4,
-                      fontSize: 12,
-                    ),
-              ),
+              headline5: Theme.of(context).textTheme.headline5.copyWith(
+                    fontFamily: "Catamaran",
+                    color: Colors.black87,
+                    fontWeight: FontWeight.w200,
+                    fontSize: 24,
+                  ),
+              bodyText2: Theme.of(context).textTheme.bodyText2.copyWith(
+                    fontFamily: "Catamaran",
+                    color: Colors.black87,
+                    height: 1.4,
+                    fontSize: 16,
+                  ),
+              caption: Theme.of(context).textTheme.caption.copyWith(
+                    fontFamily: "Catamaran",
+                    color: Colors.black54,
+                    fontWeight: FontWeight.w400,
+                    height: 1.4,
+                    fontSize: 12,
+                  ),
             ),
         primarySwatch: ColorsConfig.primarySwatch,
         accentColor: ColorsConfig.accent,
