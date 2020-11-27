@@ -250,14 +250,41 @@ class ProjectConfig {
     ),
     ProjectData(
       title: "Perfect Decision Finder",
-      description: "Make the perfect decision"
-          "TODO: ...",
+      description:
+          "If you ever struggled to make the correct decision, this is the app for you.\n"
+          "**Alternative solutions you might have tried:**\n"
+          "- Pros & cons lists\n"
+          "- Score each option based on some criteria from 0 (bad) to 10 (good)\n\n"
+          "**Both of these are bad, because:**\n\n"
+          "1. You rely on your gut feeling to rank the options on a scale, "
+          "and not all pros/cons carry the same weight\n"
+          "2. None of the individual scores can be accurately determined without the full context (which might change later). "
+          "For example, once you rated an option as a 10, you can't rank any option higher than that without "
+          "changing past ratings. \n\n"
+          "**Solution:**\n"
+          "- Download Perfect Decision Finder (free) & create a new decision\n"
+          "- Add your list of options & criteria\n"
+          "- Weigh the criteria based on their relative importance\n"
+          "- Rank the pairs of options against each other for your criteria\n\n"
+          "=> By only ever comparing options 1on1, you have a much easier time ranking them accurately. "
+          "The objectively best option is then calculated using the elo rating system.\n\n"
+          "**Check it out now!**",
+      learningsTldr:
+          "flutter, various rating systems, state management, sqlite",
+      learnings: "##### The ranking system\n"
+          "It turns out, there are like a million different ways to rank things. "
+          "I chose elo because of its simplicity and because this app doesn't need the sophisticated "
+          "benefits of something like Microsoft's TrueSkill™ or bayesian approximations in general.\n\n"
+          "##### State management & persistency\n"
+          "This app was also my first attempt at proper Flutter state management using providers "
+          "and SQLite for persistency.",
       urlPlaystore:
           "https://play.google.com/store/apps/details?id=com.ciriousjoker.perfect_decision_finder",
       // Aug 2019
       timestamp: 1567202400000,
       tags: [
         Tags.flutter,
+        Tags.sqlite,
       ],
       icon: "perfectdecisionfinder.png",
       // screenshots: [
