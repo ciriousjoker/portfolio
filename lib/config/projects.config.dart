@@ -61,6 +61,47 @@ class ProjectConfig {
         BrandIcons.windows,
       ],
     ),
+
+    ProjectData(
+      title: "Website Redesign for Switchboard Live",
+      description:
+          "Switchboard Live is a multistreaming service to stream one input to multiple platforms at once. "
+          "As a freelancer, my job was (among other things) to completely redesign "
+          "their website to make the most out of the rising covid 19 traffic. "
+          "I had pretty much full control over everything (layout, graphics, text) "
+          "except for the video, which already existed. \n\n"
+          "**Here's the comparison:**<br>"
+          "[snapshot before the relaunch](https://web.archive.org/web/20200314094119/https://switchboard.live/)<br>"
+          "[snapshot right before my contract ended](https://web.archive.org/web/20200909094059/https://switchboard.live/)\n"
+          "The current website is also linked below, "
+          "although keep in mind that it might look different by now.",
+      learningsTldr: "tailwindcss, ejs, webpack, netlify, google tag manager",
+      learnings: "- **Netlify:** Deploy directly from the git repository\n"
+          "- **TailwindCss:** Styling exclusively via utility classes instead of \"real\" css\n"
+          "- **Webpack:** Build pipeline, in this case for a static website\n"
+          "- **Embedded Javascript Templating:** Build .html out of .ejs templates (which can contain js to parse Markdown etc.)\n"
+          "- **Frontmatter + Markdown:** The \"data structure\" of the blog posts.\n"
+          "\nAside from these technical details, I also improved my copywriting skills.",
+      // 20th Mar 2020
+      timestamp: 1584658800000,
+      urlWebsite: "https://switchboard.live/",
+      tags: [
+        Tags.tailwind,
+        Tags.googletagmanager,
+        Tags.webpack,
+        Tags.ejs,
+      ],
+      icon: "switchboard.png",
+      // screenshots: [
+      //   "TODO:",
+      // ],
+      platforms: [
+        BrandIcons.googlechrome,
+      ],
+    ),
+//
+//
+
     ProjectData(
       title: "StarClock",
       description:
@@ -453,7 +494,7 @@ class Tags {
   );
 
   static const Tag googletagmanager = Tag(
-    label: "GTM",
+    label: "Google Tag Manager",
     icon: BrandIcons.googletagmanager,
     colorHex: "#246FDB",
   );
@@ -497,6 +538,25 @@ class Tags {
     colorHex: "#ED8B00",
     icon: BrandIcons.java,
   );
+
+  static const Tag material_design_components = Tag(
+    label: "Material Design Components",
+    colorHex: "#6200EE",
+    icon: BrandIcons.materialdesign,
+  );
+
+  static const Tag tailwind = Tag(
+    label: "Tailwind",
+    colorHex: "#06B6D4",
+    icon: BrandIcons.tailwindcss,
+  );
+
+  static const Tag ejs = Tag(
+    label: "Embedded Javascript Templating",
+    colorHex: "#90a93a",
+    icon: BrandIcons.javascript,
+  );
+
 // Tag(colorHex: "#ff0000", label: "Java")
   // Tag(label: "C#", logo: "c-sharp"),
 }
