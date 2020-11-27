@@ -203,13 +203,28 @@ class ProjectConfig {
     ),
     ProjectData(
       title: "ShadyVault",
-      description: "Provides an encrypted filesystem for Chrome OS."
-          "TODO: ...",
+      description: "This app provides an encrypted filesystem for Chrome OS. \n"
+          "After creating a vault and linking a real folder, a new device shows up next to the external drives. "
+          "This vault only exists in-memory, so reading/writing works like any other folder, "
+          "but behind the scenes it's accessing the encrypted content of the linked folder. \n\n"
+          "Sadly, Google decided to deprecate Chrome Apps for chromebooks as well "
+          "and I doubt that Android apps can properly fill the gap anytime soon.\n\n"
+          "Until then, enjoy!\n",
+      learningsTldr: "encryption, file systems, animation",
+      learnings:
+          "- **Encryption**, specifically [AES-256 GCM](https://en.wikipedia.org/wiki/Galois/Counter_Mode)\n"
+          "- **Animations**\n\n"
+          "Animations might be a surprise, given that the software is about encrypting data, "
+          "but I really liked how the UI turned out and just had to include them.\n\n"
+          "I'm particularly proud of the transition when clicking the \"add vault\" button.\n\n"
+          "=> If I had to pick one project to submit to a design contest or something, this would be it ;)\n",
       urlWebsite: "https://shadyvault.web.app/",
       // Apr 2019
       timestamp: 1555538400000,
       tags: [
+        Tags.typescript,
         Tags.aurelia,
+        Tags.material_design_components,
       ],
       icon: "shadyvault.png",
       // screenshots: [
