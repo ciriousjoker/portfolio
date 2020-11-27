@@ -138,17 +138,44 @@ class ProjectConfig {
     ProjectData(
       title: "Friday Night Survival",
       description:
-          "Friday Night Survival was developed as a group project at the"
-          "\"Technische Hochschule Nuremberg\" (a German university of applied science).\n"
-          "It's a round based, 2D-RPG with a top-down overworld map.\n"
-          "There some ways it's similar to Pokémon, but in a nightclub,\nwith crude humor"
-          "and interesting battle mechanics based on an \"honor level\".\n"
-          "Also, sometimes your only option is to drink your opponent under the table.\n"
-          "My job was mainly to create the non-character assets as well as "
-          "the \"club feeling\" (mainly lighting & overworld animations).\n"
-          "I also balanced the game difficulty & managed our Trello board.\n",
-      urlDemo: "TODO:",
-      githubName: "TODO:",
+          "This game is a round-based, 2D-RPG with a top-down overworld map. "
+          "It was developed during a group project at the \"Technische Hochschule Nuremberg\" "
+          "(German university of applied science).\n"
+          "**If I had to describe it in one sentence:**\n"
+          "> Pokémon, but in a night club setting, with crude humor, multiple dialog options and interesting battle mechanics.\n\n"
+          "The battle system is unique because you essentially have to balance "
+          "your health points with your honor level (= damage multiplier) to survive fights. "
+          "**Example moves:**\n"
+          "- Crush a beer bottle with your bare hands to boost honor at the expense of hp\n"
+          "- Call your mum for emotional support to heal at the expense of honor\n"
+          "- Land \"honorable\" punches to slowly build honor at the expense of time\n"
+          "- Throw a beer bottle for high damage at the expense of honor\n"
+          "- Sometimes your only option is to drink your opponent under the table in a minigame\n\n"
+          "After each fight, you replace one of your moves with one you \"learn\" from your opponent. "
+          "All in all, even though the playtime is relatively short, the 13 enemies, 40+ moves and multiple "
+          "hilarious dialog options give this game great replay value. \n\n"
+          "Sadly, there's no way to directly translate the humor into English, "
+          "but if you're German or know someone who is, we highly recommend you give it a shot. "
+          "Since this game was developed in Unity, it runs in your browser, no account required. \n\n"
+          "=> Unless you get offended easily, you'll have a blast, so try it out!",
+      learningsTldr:
+          "game development, pixel art, game balance, team management",
+      learnings:
+          "- Create pixel art for everything that's not an in-battle character\n"
+          "- Set up lighting to create a realistic atmosphere\n"
+          "- Write scripts to animate the overworld\n"
+          "- **Game balance:** Balance the difficulty curve for 40+ moves across 14 unique characters\n\n"
+          "##### About game balance:\n\n"
+          "This was difficult since gut feeling isn't accurate. "
+          "To solve it, I wrote a C# program to rank all moves "
+          "on a percentage scale based on their actual strength. "
+          "This strength was calculated by a complicated formula for a few chosen reference points. "
+          "The reference points were the weakest/strongest moves and a few \"alternative moves\" "
+          " that an accurate formula should rank as equal. The result is still not truly objective, "
+          "but probably as close as you can get without using AI to figure out the game meta programmatically. \n\n"
+          "---\n"
+          "Aside from these technological aspects, I also managed our Trello and organized meetings.",
+      urlWebsite: "https://ciriousjoker.github.io/fridaynightsurvival/",
       // Nov 2019
       timestamp: 1572735600000,
       tags: [
@@ -163,7 +190,7 @@ class ProjectConfig {
         BrandIcons.googlechrome,
         BrandIcons.windows,
         BrandIcons.linux,
-        // TODO: Mac os?
+        BrandIcons.apple,
       ],
     ),
     ProjectData(
