@@ -9,11 +9,10 @@ class UIConfig {
 
   // Card
   static const double cardQuotationmarkSize = 20;
-  static const double cardTopHeight = 20;
   static const double cardRadius = 24;
   static const double cardMaxWidth = 384;
   static const double cardSizeTop = 268;
-  static const double cardSizeBottom = 312;
+  static const double cardSizeBottom = 316;
   static const double cardSizeAvatar = 128;
   static const TextStyle cardQuoteTextStyle = TextStyle(
     fontSize: 26,
