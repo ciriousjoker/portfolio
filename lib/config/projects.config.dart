@@ -52,8 +52,8 @@ class ProjectConfig {
       //   "TODO:",
       // ],
       platforms: [
-        BrandIcons.googleplay,
-        BrandIcons.googlechrome,
+        Platforms.playstore,
+        Platforms.web,
       ],
     ),
     ProjectData(
@@ -80,7 +80,7 @@ class ProjectConfig {
       //   "TODO:",
       // ],
       platforms: [
-        BrandIcons.windows,
+        Platforms.windows,
       ],
     ),
 
@@ -118,7 +118,7 @@ class ProjectConfig {
       //   "TODO:",
       // ],
       platforms: [
-        BrandIcons.googlechrome,
+        Platforms.web,
       ],
     ),
 //
@@ -154,7 +154,7 @@ class ProjectConfig {
       //   "TODO:",
       // ],
       platforms: [
-        BrandIcons.android,
+        Platforms.playstore,
       ],
     ),
     ProjectData(
@@ -209,10 +209,10 @@ class ProjectConfig {
       //   "TODO:",
       // ],
       platforms: [
-        BrandIcons.googlechrome,
-        BrandIcons.windows,
-        BrandIcons.linux,
-        BrandIcons.apple,
+        Platforms.web,
+        Platforms.windows,
+        Platforms.linux,
+        Platforms.mac,
       ],
     ),
     ProjectData(
@@ -245,7 +245,7 @@ class ProjectConfig {
       //   "TODO:",
       // ],
       platforms: [
-        BrandIcons.googlechrome,
+        Platforms.chromeos,
       ],
     ),
     ProjectData(
@@ -291,7 +291,7 @@ class ProjectConfig {
       //   "TODO:",
       // ],
       platforms: [
-        BrandIcons.googleplay,
+        Platforms.playstore,
       ],
     ),
     ProjectData(
@@ -316,7 +316,7 @@ class ProjectConfig {
       //   "TODO:",
       // ],
       platforms: [
-        BrandIcons.googlechrome,
+        Platforms.web,
       ],
     ),
     ProjectData(
@@ -358,7 +358,7 @@ class ProjectConfig {
       //   "assets/screenshots/projects/sidenote/1.png",
       // ],
       platforms: [
-        BrandIcons.googleplay,
+        Platforms.playstore,
       ],
     ),
     ProjectData(
@@ -407,9 +407,9 @@ class ProjectConfig {
       //   "assets/screenshots/projects/sidenote/1.png",
       // ],
       platforms: [
-        BrandIcons.googlechrome,
-        BrandIcons.googleplay,
-        BrandIcons.apple,
+        Platforms.web,
+        Platforms.playstore,
+        Platforms.ios,
       ],
     ),
     ProjectData(
@@ -445,7 +445,7 @@ class ProjectConfig {
       // "assets/screenshots/projects/sidenote/1.png",
       // ],
       platforms: [
-        BrandIcons.googlechrome,
+        Platforms.chromeos,
       ],
     ),
     ProjectData(
@@ -480,7 +480,7 @@ class ProjectConfig {
       //   "assets/screenshots/projects/sidenote/1.png",
       // ],
       platforms: [
-        BrandIcons.windows,
+        Platforms.embedded,
       ],
     ),
     ProjectData(
@@ -522,8 +522,8 @@ class ProjectConfig {
       ],
       icon: "nxtburner.png",
       platforms: [
-        BrandIcons.windows,
-        Icons.developer_board_outlined,
+        Platforms.windows,
+        Platforms.embedded,
       ],
       // screenshots: [
       //   "assets/screenshots/projects/sidenote/1.png",
@@ -548,7 +548,7 @@ class ProjectConfig {
       tags: [
         Tags.java,
       ],
-      platforms: [BrandIcons.googleplay],
+      platforms: [Platforms.playstore],
       icon: "homingcompass.png",
       // screenshots: [
       //   "assets/screenshots/projects/sidenote/1.png",
@@ -582,7 +582,9 @@ class ProjectConfig {
         // screenshots: [
         //   "TODO:",
         // ],
-        platforms: [BrandIcons.windows]),
+        platforms: [
+          Platforms.windows,
+        ]),
     ProjectData(
         title: "nTradeAdvanced",
         description:
@@ -610,7 +612,7 @@ class ProjectConfig {
         ],
         icon: "ntradeadvanced.png",
         platforms: [
-          Icons.calculate,
+          Platforms.calculator,
         ]
         // screenshots: [
         //   "TODO:",
@@ -652,7 +654,7 @@ class ProjectData {
   final int timestamp;
   final List<Tag> tags;
   final List<String> screenshots;
-  final List<IconData> platforms;
+  final List<Platform> platforms;
 
   const ProjectData({
     @required this.title,
@@ -858,4 +860,62 @@ class Tag {
     @required this.icon,
     @required this.url,
   });
+}
+
+class Platform {
+  final String label;
+
+  final IconData icon;
+
+  const Platform({
+    @required this.label,
+    @required this.icon,
+  });
+}
+
+class Platforms {
+  static const Platform playstore = Platform(
+    label: "Play Store",
+    icon: BrandIcons.googleplay,
+  );
+
+  static const Platform ios = Platform(
+    label: "iOS",
+    icon: BrandIcons.apple,
+  );
+
+  static const Platform web = Platform(
+    label: "Web",
+    icon: BrandIcons.googlechrome,
+  );
+
+  static const Platform windows = Platform(
+    label: "Windows",
+    icon: BrandIcons.windows,
+  );
+
+  static const Platform mac = Platform(
+    label: "Mac OS",
+    icon: BrandIcons.apple,
+  );
+
+  static const Platform linux = Platform(
+    label: "Linux",
+    icon: BrandIcons.linux,
+  );
+
+  static const Platform chromeos = Platform(
+    label: "Chrome OS",
+    icon: BrandIcons.googlechrome,
+  );
+
+  static const Platform calculator = Platform(
+    label: "Calculator",
+    icon: Icons.calculate,
+  );
+
+  static const Platform embedded = Platform(
+    label: "Embedded System",
+    icon: Icons.developer_board_outlined,
+  );
 }

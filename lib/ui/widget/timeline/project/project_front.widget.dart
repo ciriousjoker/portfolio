@@ -106,13 +106,18 @@ class _ProjectFrontWidgetState extends State<ProjectFrontWidget> {
                 ),
               ),
               ...(widget.project?.platforms ?? [])
-                  .map((iconData) => Padding(
+                  .map(
+                    (platform) => Tooltip(
+                      message: platform.label,
+                      child: Padding(
                         padding: const EdgeInsets.only(left: 8),
                         child: IconNormalizedWidget(
-                          icon: iconData,
+                          icon: platform.icon,
                           color: Colors.black26,
                         ),
-                      ))
+                      ),
+                    ),
+                  )
                   .toList(),
             ],
           ),
