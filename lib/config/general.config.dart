@@ -8,7 +8,7 @@ class GeneralConfig {
   // Profiles
   static const String github = "ciriousjoker";
   static const String githubUrl = "https://github.com/ciriousjoker";
-  static const String linkedin = "TODO: Linkedin";
+  static const String linkedin = "https://www.linkedin.com/in/bauer-philipp";
 
   // About me
   static const String quote = "Code is written for humans,\nnot machines.";
