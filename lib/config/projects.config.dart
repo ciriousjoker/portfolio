@@ -678,137 +678,162 @@ class Tags {
     label: "Aurelia",
     colorHex: "#ED2B88",
     icon: BrandIcons.aurelia,
+    url: "http://aurelia.io/",
   );
+
   static const Tag typescript = Tag(
     label: "Typescript",
     icon: BrandIcons.typescript,
     colorHex: "#3178c6",
+    url: "https://www.typescriptlang.org/",
   );
+
   static const Tag javascript = Tag(
     label: "Javascript",
     icon: BrandIcons.javascript,
     colorHex: "#F7DF1E",
+    url: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
   );
+
   static const Tag css = Tag(
     label: "CSS3",
     icon: BrandIcons.css3,
     colorHex: "#1572B6",
+    url: "https://developer.mozilla.org/en-US/docs/Web/css",
   );
+
   static const Tag html = Tag(
-    label: "html",
+    label: "HTML",
     icon: BrandIcons.html5,
     colorHex: "#E34F26",
+    url: "https://developer.mozilla.org/en-US/docs/Web/html",
   );
 
   static const Tag webpack = Tag(
     label: "Webpack",
     icon: BrandIcons.webpack,
     colorHex: "#1389FD",
+    url: "https://webpack.js.org/",
   );
 
   static const Tag flutter = Tag(
     label: "Flutter",
     icon: BrandIcons.flutter,
     colorHex: "#1389FD",
+    url: "https://flutter.dev/",
   );
 
   static const Tag googletagmanager = Tag(
     label: "Google Tag Manager",
     icon: BrandIcons.googletagmanager,
     colorHex: "#246FDB",
+    url: "https://marketingplatform.google.com/about/tag-manager/",
   );
 
   static const Tag googleanalytics = Tag(
     label: "Analytics",
     icon: BrandIcons.googleanalytics,
     colorHex: "#E8710A",
+    url: "https://marketingplatform.google.com/about/analytics/",
   );
 
   static const Tag firebase = Tag(
     label: "Firebase",
     icon: BrandIcons.firebase,
     colorHex: "#FFA000",
+    url: "https://firebase.google.com/",
   );
 
   static const Tag react = Tag(
     colorHex: "#20232a",
     icon: BrandIcons.react,
     label: "React",
+    url: "https://reactjs.org/",
   );
+
   static const Tag csharp = Tag(
     label: "C#",
     icon: BrandIcons.csharp,
     colorHex: "#3A0091",
+    url: "https://docs.microsoft.com/en-us/dotnet/csharp/",
   );
 
   static const Tag electron = Tag(
     label: "Electron",
     icon: BrandIcons.electron,
     colorHex: "#2b2e3b",
+    url: "https://www.electronjs.org/",
   );
 
   static const Tag nodejs = Tag(
     label: "NodeJS",
     icon: BrandIcons.node_dot_js,
     colorHex: "#026e00",
+    url: "https://nodejs.org/",
   );
 
   static const Tag unity = Tag(
     label: "Unity",
     icon: BrandIcons.unity,
     colorHex: "#000000",
+    url: "https://unity.com/",
   );
 
   static const Tag c = Tag(
     label: "c",
     icon: BrandIcons.c,
     colorHex: "#00599C",
+    url: "https://en.wikipedia.org/wiki/C_(programming_language)",
   );
 
   static const Tag java = Tag(
     label: "Java",
     colorHex: "#ED8B00",
     icon: BrandIcons.java,
+    url: "https://www.oracle.com/java/",
   );
 
   static const Tag material_design_lite = Tag(
     label: "Material Design Lite",
     colorHex: "#2E2E2E",
     icon: BrandIcons.materialdesign,
+    url: "https://getmdl.io/",
   );
 
   static const Tag material_design_components = Tag(
     label: "Material Design Components",
     colorHex: "#6200EE",
     icon: BrandIcons.materialdesign,
+    url: "https://material.io/develop/web/",
   );
 
   static const Tag tailwind = Tag(
     label: "Tailwind",
     colorHex: "#06B6D4",
     icon: BrandIcons.tailwindcss,
+    url: "https://tailwindcss.com/",
   );
 
   static const Tag ejs = Tag(
     label: "Embedded Javascript Templating",
     colorHex: "#90a93a",
     icon: BrandIcons.javascript,
+    url: "https://ejs.co/",
   );
 
   static const Tag sqlite = Tag(
     label: "SQLite",
     icon: BrandIcons.sqlite,
     colorHex: "#044a64",
+    url: "https://www.sqlite.org/",
   );
 
   static const Tag adobeaftereffects = Tag(
     label: "After Effects",
     icon: BrandIcons.adobeaftereffects,
     colorHex: "#00005b",
+    url: "https://www.adobe.com/products/aftereffects",
   );
-
-// Tag(colorHex: "#ff0000", label: "Java")
-  // Tag(label: "C#", logo: "c-sharp"),
 }
 
 class Tag {
@@ -825,9 +850,12 @@ class Tag {
   /// https://github.com/Ileriayo/markdown-badges
   final IconData icon;
 
+  final String url;
+
   const Tag({
     @required this.label,
     @required this.colorHex,
     @required this.icon,
+    @required this.url,
   });
 }

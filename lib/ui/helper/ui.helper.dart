@@ -28,7 +28,7 @@ class UIHelper {
 
   /// Returns a vertical space equal to the [height] supplied
   static Widget verticalSpace(double height) {
-    return Container(height: height, width: 0);
+    return SizedBox(height: height, width: 0);
   }
 
   /// Returns a vertical space with height set to [HorizontalSpaceSmall]
@@ -48,7 +48,7 @@ class UIHelper {
 
   /// Returns a vertical space equal to the [width] supplied
   static Widget horizontalSpace(double width) {
-    return Container(width: width, height: 0);
+    return SizedBox(width: width, height: 0);
   }
 
   // https://stackoverflow.com/questions/50081213/how-do-i-use-hexadecimal-color-strings-in-flutter

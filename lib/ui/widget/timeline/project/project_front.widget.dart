@@ -5,6 +5,7 @@ import 'package:portfolio/config/general.config.dart';
 import 'package:portfolio/config/projects.config.dart';
 import 'package:portfolio/config/ui.config.dart';
 import 'package:portfolio/ui/helper/ui.helper.dart';
+import 'package:portfolio/ui/widget/util/chip.widget.dart';
 import 'package:portfolio/ui/widget/util/icon_normalized.widget.dart';
 import 'package:portfolio/ui/widget/timeline/button.widget.dart';
 import 'package:portfolio/ui/widget/timeline/project/project_card.widget.dart';
@@ -26,7 +27,6 @@ class ProjectFrontWidget extends StatefulWidget {
 
 class _ProjectFrontWidgetState extends State<ProjectFrontWidget> {
   DateTime date;
-  List<Widget> listChips;
   List<Widget> listActions;
 
   bool get hasDemo => (widget.project.urlDemo ?? "").isNotEmpty;
@@ -39,32 +39,6 @@ class _ProjectFrontWidgetState extends State<ProjectFrontWidget> {
   void initState() {
     super.initState();
     date = DateTime.fromMillisecondsSinceEpoch(widget.project.timestamp);
-
-    listChips = (widget.project.tags.map(
-      (t) {
-        Color colorBg = UIHelper.getColorFromColorCode(t.colorHex);
-        Color colorText =
-            colorBg.computeLuminance() > 0.5 ? Colors.black87 : Colors.white;
-
-        return Chip(
-          backgroundColor: colorBg,
-          label: Text(
-            t.label,
-            style: TextStyle(
-              color: colorText,
-              height: 1,
-            ),
-          ),
-          labelPadding: EdgeInsets.only(left: 4, right: 8),
-          visualDensity: VisualDensity.compact,
-          avatar: Icon(
-            t.icon,
-            size: 16,
-            color: colorText,
-          ),
-        );
-      },
-    ).toList());
 
     listActions = [
       hasDemo
@@ -179,7 +153,11 @@ class _ProjectFrontWidgetState extends State<ProjectFrontWidget> {
               Wrap(
                 spacing: UIHelper.HorizontalSpaceSmall,
                 runSpacing: UIHelper.HorizontalSpaceSmall,
-                children: listChips,
+                children: widget.project.tags
+                    .map(
+                      (t) => ChipWidget(tag: t),
+                    )
+                    .toList(),
               ),
               UIHelper.horizontalSpaceSmall(),
               Wrap(
