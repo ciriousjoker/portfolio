@@ -235,6 +235,57 @@ class ProjectConfig {
       ],
     ),
     ProjectData(
+      title: "Didactduell",
+      description:
+          "Didactduell is an app for medical students I developed for a startup called Didactylus. "
+          "The goal was to make learning interesting and replace expensive flash cards. "
+          "Students could not only learn with the app via training mode but also challenge each other, "
+          "chat, and improve their ranking among other features.\n\n"
+          "Sadly, the startup ultimately failed before it launched, but the app is still available as a browser version. "
+          "It probably still has a few bugs and only a few demo questions are available, "
+          "but apart from that, this demo contains all the functionality planned for the launch.\n"
+          "Just create a new account (email verification is turned off) and play around with it.\n\n"
+          "There's also an admin panel where the team could add questions, upload images, review them, "
+          "and ultimately publish them. This admin panel is not part of the demo for obvious reasons ;)",
+      learningsTldr: "App development using Aurelia, Cordova & Firebase.",
+      learnings:
+          "This was a huge project, especially since I was the only developer working on it. "
+          "Here are all the different frameworks and technologies I learned how to use during development. "
+          "I used all of these for the first time during this project, so I can't say I did everything perfectly. "
+          "However, I still think I did a pretty good job and I learned a lot for future projects, "
+          "especially regarding code quality.\n\n"
+          "**Technologies used:**\n"
+          "- **Aurelia:** Alternative to Angular/React/Vue to build the interface in a modular way\n"
+          "- **Typescript:** Basically javascript, but objectively much better\n"
+          "- **Material Design Components for Web:** Successor to Material Design Lite\n"
+          "- **Firebase:** Auth, Firestore, Firebase Cloud Messaging, Storage, Hosting\n"
+          "- **Webpack:** Compile typescript & do the packaging\n"
+          "- **Cordova:** Wrap the web app and provide native functionality via plugins\n"
+          "- Writing custom plugins for mobile to add specific push notification functionality\n"
+          "- Writing well organized, modular and maintainable code",
+      urlDemo: "https://didactduell.web.app/",
+      // 31st Aug. 2018
+      timestamp: 1535666400000,
+      icon: "didactduell.png",
+      tags: [
+        Tags.firebase,
+        Tags.typescript,
+        Tags.aurelia,
+        Tags.webpack,
+        Tags.java,
+        Tags.material_design_components,
+      ],
+      // screenshots: [
+      // TODO:
+      //   "assets/screenshots/projects/sidenote/1.png",
+      // ],
+      platforms: [
+        BrandIcons.googlechrome,
+        BrandIcons.googleplay,
+        BrandIcons.apple,
+      ],
+    ),
+    ProjectData(
       title: "ShufflePaper",
       description: "A wallpaper manager for Chrome OS."
           "TODO: ...",
@@ -256,13 +307,20 @@ class ProjectConfig {
       ],
     ),
     ProjectData(
-      title: "Legacy Manager/Uploader",
-      description: "A mod manager for Super Smash Bros. Brawl Legacy XP."
-          "Download & install the latest release of the game."
-          "Legacy Uploader is used to package & upload new releases."
-          "While the source code still works, this tool didn't catch on in"
-          "the community, so now it's abandoned.",
-      // TODO: Project now closed
+      title: "Legacy Manager & Uploader",
+      description:
+          "A mod manager for [Super Smash Bros. Brawl Legacy XP.](http://www.smashbroslegacy.com/)\n"
+          "- [**Legacy Manager:**](https://github.com/CiriousJoker/legacymanager) To download & update the game\n"
+          "- [**Legacy Uploader:**](https://github.com/CiriousJoker/legacyuploader) For the mod team to upload new releases\n\n"
+          "Sadly, the tool didn't catch on in the community and the game was now taken down eventually "
+          "(most likely by Nintendo, but that's just speculation).",
+      learningsTldr: "google drive api, oauth, electron, nodejs",
+      learnings: "- **Google Drive Api:** Upload the game files to the cloud\n"
+          "- **OAuth:** Authorize the upload for the correct account\n"
+          "- **Electron:** Package the app for cross platform\n"
+          "- **NodeJS:** Native file system access via javascript\n\n"
+          "The cross platform functionality was never implemented, "
+          "but it would have been relatively straight forward with the technologies used.",
       githubName: "legacymanager",
       urlDownload:
           "https://github.com/CiriousJoker/legacymanager/releases/latest",
