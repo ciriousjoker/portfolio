@@ -215,10 +215,31 @@ class ProjectConfig {
     ),
     ProjectData(
       title: "Am I Done Yet",
-      description: "App for Flutter contest."
-          "TODO: ...",
-      githubName: "Am-I-Done-Yet",
-      urlPlaystore: "TODO: ",
+      description:
+          "This was my submission for the [Flutter Create challenge.](https://flutter.dev/create)\n"
+          "> Flutter Create is a contest that challenges you to build something interesting, "
+          "inspiring, and beautiful with Flutter using 5KB or less of Dart code.\n\n"
+          "The app itself is a simple todo app, but with a twist.\n\n"
+          "**Features:**\n"
+          "- Add a new item (pinned)\n"
+          "- Swipe to set priority (unpins it)\n"
+          "- Long press to delete\n\n"
+          "It doesn't get much simpler than that, but it works surprisingly well, especially for "
+          "lists of loosely prioritized todos with no exact due time.\n\n"
+          "I couldn't fit a local database within the 5120 character limit, so the app required an account to "
+          "store the data in the cloud via Firestore (which is kind of ridiculous if you think about it).\n\n"
+          "I've since rewritten the app to use a local database instead.",
+      learningsTldr: "firebase, sembast (local database), animations",
+      learnings: "Originally: \n"
+          "- Flutter (first project with flutter)\n"
+          "- Firebase (Auth, Firestore)\n"
+          "\n**During the rewrite:**\n"
+          "- **Sembast:** Local database\n"
+          "- **Flutter:** Animations & SliverLists\n"
+          "- Restructuring and modularizing code properly\n",
+      githubName: "am-i-done-yet",
+      urlPlaystore:
+          "https://play.google.com/store/apps/details?id=com.ciriousjoker.amidoneyet",
       // Mar 2019
       timestamp: 1552604400000,
       icon: "amidoneyet.png",
