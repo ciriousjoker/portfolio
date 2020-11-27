@@ -19,7 +19,7 @@ class ProjectConfig {
           "> @TagMyKnowledge save Some Title #yourtag\n\n"
           "The bot will then automatically save this tweet in your collection "
           "and match #yourtag to your closest actual tag.\n\n"
-          "Tag My Knowledge available for Android & web (PWA, beta).<br>"
+          "Tag My Knowledge available for Android & web (PWA, beta).\n"
           "*(Note that the Twitter bot can only be set up on Android for now.)*",
       learningsTldr: "UX, web design, static website generators, analytics",
       learnings:
@@ -66,6 +66,8 @@ class ProjectConfig {
       learnings:
           "- **Various datastructures:** We had to implement those during the project\n"
           "- **WPF:** Build Windows GUI applications in C#",
+      urlDownload:
+          "https://github.com/CiriousJoker/algodat_gui/releases/latest",
       githubName: "algodat_gui",
       // Aug 2020
       timestamp: 1596751200000,
@@ -85,9 +87,9 @@ class ProjectConfig {
           "their website to make the most out of the rising covid 19 traffic. "
           "I had pretty much full control over everything (layout, graphics, text) "
           "except for the video, which already existed. \n\n"
-          "**Here's the comparison:**<br>"
-          "[snapshot before the relaunch](https://web.archive.org/web/20200314094119/https://switchboard.live/)<br>"
-          "[snapshot right before my contract ended](https://web.archive.org/web/20200909094059/https://switchboard.live/)\n"
+          "#### Comparison before & after:\n\n"
+          "- [snapshot before the relaunch](https://web.archive.org/web/20200314094119/https://switchboard.live/)\n\n"
+          "- [snapshot right before my contract ended](https://web.archive.org/web/20200909094059/https://switchboard.live/)\n\n"
           "The current website is also linked below, "
           "although keep in mind that it might look different by now.",
       learningsTldr: "tailwindcss, ejs, webpack, netlify, google tag manager",
@@ -414,7 +416,7 @@ class ProjectConfig {
           "A mod manager for [Super Smash Bros. Brawl Legacy XP.](http://www.smashbroslegacy.com/)\n"
           "- [**Legacy Manager:**](https://github.com/CiriousJoker/legacymanager) To download & update the game\n"
           "- [**Legacy Uploader:**](https://github.com/CiriousJoker/legacyuploader) For the mod team to upload new releases\n\n"
-          "Sadly, the tool didn't catch on in the community and the game was now taken down eventually "
+          "Sadly, the tool didn't catch on in the community and the game was taken down eventually "
           "(most likely by Nintendo, but that's just speculation).",
       learningsTldr: "google drive api, oauth, electron, nodejs",
       learnings: "- **Google Drive Api:** Upload the game files to the cloud\n"
@@ -467,7 +469,7 @@ class ProjectConfig {
           "- Different durations per note, dotted notes as well\n\n"
           "As you can see, this quickly becomes overwhelming, "
           "so I added features like loop markers to save sections for later.\n\n"
-          "**If you're interested in how I implemented all of these in detail:**<br>"
+          "**If you're interested in how I implemented all of these in detail:** "
           "[Click here to read the documentation.](https://github.com/CiriousJoker/NXTPlayer/blob/master/DOCUMENTATION.md)",
       githubName: "nxtburner",
       // 27th May 2017

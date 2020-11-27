@@ -18,17 +18,17 @@ class MarkdownWrapperWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final styleP = style ?? Theme.of(context).textTheme.bodyText2;
+
     return MarkdownBody(
       data: data,
       builders: {
-        // Handle p tags manually to not intercept onTaps for the flip card
-        "p": BasicTextBuilder(),
         // Handle links separately:
         // https://github.com/flutter/flutter_markdown/issues/233
         "a": LinkBuilder(),
       },
       styleSheet: MarkdownStyleSheet(
-        p: style ?? Theme.of(context).textTheme.bodyText2,
+        p: styleP,
         h3: Theme.of(context).textTheme.bodyText2.copyWith(
               fontSize: 19,
             ),
@@ -38,7 +38,18 @@ class MarkdownWrapperWidget extends StatelessWidget {
               height: 1.5,
             ),
         strong: TextStyle(
-          fontWeight: FontWeight.w500,
+          fontWeight: FontWeight.w600,
+        ),
+        horizontalRuleDecoration: BoxDecoration(
+          border: Border(
+            bottom: BorderSide(color: ColorsConfig.projectDivider, width: 1),
+          ),
+        ),
+        em: TextStyle(
+          color: styleP.color.withOpacity(0.5),
+        ),
+        blockquote: TextStyle(
+          color: styleP.color.withOpacity(0.6),
         ),
         blockquoteDecoration: BoxDecoration(
           color: Colors.black.withOpacity(0.05),
@@ -54,25 +65,16 @@ class MarkdownWrapperWidget extends StatelessWidget {
   }
 }
 
-class BasicTextBuilder extends MarkdownElementBuilder {
-  @override
-  Widget visitText(md.Text text, TextStyle preferredStyle) {
-    return RichText(
-      text: TextSpan(
-        text: text.text,
-        style: preferredStyle,
-      ),
-    );
-  }
-}
-
 class LinkBuilder extends MarkdownElementBuilder {
   @override
   Widget visitElementAfter(
     md.Element element,
     TextStyle style,
   ) {
-    return MouseRegion(
+    return Transform.translate(
+      // Fix a weird alignment issue. Might be fixed by Flutter in the future
+      offset: Offset(0, -1),
+      child: MouseRegion(
       cursor: SystemMouseCursors.click,
       child: RichText(
         text: TextSpan(
@@ -87,6 +89,7 @@ class LinkBuilder extends MarkdownElementBuilder {
               }
             },
         ),
+      ),
       ),
     );
   }
