@@ -48,9 +48,6 @@ class ProjectConfig {
         Tags.googleanalytics,
       ],
       icon: "tagmyknowledge.png",
-      // screenshots: [
-      //   "TODO:",
-      // ],
       platforms: [
         Platforms.playstore,
         Platforms.web,
@@ -76,14 +73,10 @@ class ProjectConfig {
         Tags.csharp,
       ],
       icon: "algodat_gui.png",
-      // screenshots: [
-      //   "TODO:",
-      // ],
       platforms: [
         Platforms.windows,
       ],
     ),
-
     ProjectData(
       title: "Website Redesign for Switchboard Live",
       description:
@@ -114,16 +107,10 @@ class ProjectConfig {
         Tags.ejs,
       ],
       icon: "switchboard.png",
-      // screenshots: [
-      //   "TODO:",
-      // ],
       platforms: [
         Platforms.web,
       ],
     ),
-//
-//
-
     ProjectData(
       title: "Star Clock",
       description:
@@ -150,9 +137,6 @@ class ProjectConfig {
         Tags.adobeaftereffects,
       ],
       icon: "starclock.png",
-      // screenshots: [
-      //   "TODO:",
-      // ],
       platforms: [
         Platforms.playstore,
       ],
@@ -205,9 +189,6 @@ class ProjectConfig {
         Tags.csharp,
       ],
       icon: "fridaynightsurvival.png",
-      // screenshots: [
-      //   "TODO:",
-      // ],
       platforms: [
         Platforms.web,
         Platforms.windows,
@@ -241,9 +222,6 @@ class ProjectConfig {
         Tags.material_design_components,
       ],
       icon: "shadyvault.png",
-      // screenshots: [
-      //   "TODO:",
-      // ],
       platforms: [
         Platforms.chromeos,
       ],
@@ -287,9 +265,6 @@ class ProjectConfig {
         Tags.sqlite,
       ],
       icon: "perfectdecisionfinder.png",
-      // screenshots: [
-      //   "TODO:",
-      // ],
       platforms: [
         Platforms.playstore,
       ],
@@ -312,9 +287,6 @@ class ProjectConfig {
         Tags.flutter,
       ],
       icon: "pokeroute.png",
-      // screenshots: [
-      //   "TODO:",
-      // ],
       platforms: [
         Platforms.web,
       ],
@@ -353,10 +325,6 @@ class ProjectConfig {
         Tags.flutter,
         Tags.firebase,
       ],
-      // TODO:
-      // screenshots: [
-      //   "assets/screenshots/projects/sidenote/1.png",
-      // ],
       platforms: [
         Platforms.playstore,
       ],
@@ -402,10 +370,6 @@ class ProjectConfig {
         Tags.java,
         Tags.material_design_components,
       ],
-      // screenshots: [
-      // TODO:
-      //   "assets/screenshots/projects/sidenote/1.png",
-      // ],
       platforms: [
         Platforms.web,
         Platforms.playstore,
@@ -440,10 +404,6 @@ class ProjectConfig {
         Tags.material_design_lite,
       ],
       icon: "shufflepaper.png",
-      // screenshots: [
-      // TODO:
-      // "assets/screenshots/projects/sidenote/1.png",
-      // ],
       platforms: [
         Platforms.chromeos,
       ],
@@ -475,10 +435,6 @@ class ProjectConfig {
         Tags.electron,
         Tags.nodejs,
       ],
-      // screenshots: [
-      // TODO:
-      //   "assets/screenshots/projects/sidenote/1.png",
-      // ],
       platforms: [
         Platforms.embedded,
       ],
@@ -525,9 +481,6 @@ class ProjectConfig {
         Platforms.windows,
         Platforms.embedded,
       ],
-      // screenshots: [
-      //   "assets/screenshots/projects/sidenote/1.png",
-      // ],
     ),
     ProjectData(
       title: "Homing Compass",
@@ -550,88 +503,66 @@ class ProjectConfig {
       ],
       platforms: [Platforms.playstore],
       icon: "homingcompass.png",
-      // screenshots: [
-      //   "assets/screenshots/projects/sidenote/1.png",
-      // ],
     ),
     ProjectData(
-        title: "SideNote",
-        description:
-            "This program was my first attempt at C#/.NET + WPF, after being fascinated by the UI "
-            "of a tool called Curse Voice, "
-            "which was written in it (at least according to their open hiring positions at the time).\n"
-            "**Features:**\n"
-            "- Note is automatically saved\n"
-            "- shift+tab: Slide in/out from the right screen edge\n"
-            "- Settings: font family, font size & color theme",
-        learningsTldr:
-            "Introduction to C#, .NET, WPF, animations & state management",
-        learnings: "- C# .NET development for Windows\n"
-            "- Designing a GUI in WPF\n"
-            "- Basic animations, concept of easing & animation curves\n"
-            "- Basic state management to reflect settings changes "
-            "like color themes immediately without restarting",
-        githubName: "SideNote",
-        urlDownload: "https://github.com/CiriousJoker/SideNote/releases/latest",
-        // Nov. 2015
-        timestamp: 1446332400000,
-        tags: [
-          Tags.csharp,
-        ],
-        icon: "sidenote.png",
-        // screenshots: [
-        //   "TODO:",
-        // ],
-        platforms: [
-          Platforms.windows,
-        ]),
+      title: "SideNote",
+      description:
+          "This program was my first attempt at C#/.NET + WPF, after being fascinated by the UI "
+          "of a tool called Curse Voice, "
+          "which was written in it (at least according to their open hiring positions at the time).\n"
+          "**Features:**\n"
+          "- Note is automatically saved\n"
+          "- shift+tab: Slide in/out from the right screen edge\n"
+          "- Settings: font family, font size & color theme",
+      learningsTldr:
+          "Introduction to C#, .NET, WPF, animations & state management",
+      learnings: "- C# .NET development for Windows\n"
+          "- Designing a GUI in WPF\n"
+          "- Basic animations, concept of easing & animation curves\n"
+          "- Basic state management to reflect settings changes "
+          "like color themes immediately without restarting",
+      githubName: "SideNote",
+      urlDownload: "https://github.com/CiriousJoker/SideNote/releases/latest",
+      // Nov. 2015
+      timestamp: 1446332400000,
+      tags: [
+        Tags.csharp,
+      ],
+      icon: "sidenote.png",
+      platforms: [
+        Platforms.windows,
+      ],
+    ),
     ProjectData(
-        title: "nTradeAdvanced",
-        description:
-            "A program for the Ti-Nspire CAS calculator, which allows you to trade Pokémon between two third gen Pokémon games. "
-            "Once you've rooted your device using Ndless, you can install a GBA emulator and play Pokémon. "
-            "There is no link functionality available, but with this tool, you can trade Pokémon anyway. "
-            "Just transfer the .sav files, run this tool, and trade Pokémon between them. "
-            "I also included a little tool to fix corrupted save states, which could be caused by cheating."
-            "**Supported games:** Firered/Leafgreen, Ruby/Sapphire, Emerald",
-        learningsTldr: "c, pointer arithmetic, checksums",
-        learnings: """
+      title: "nTradeAdvanced",
+      description:
+          "A program for the Ti-Nspire CAS calculator, which allows you to trade Pokémon between two third gen Pokémon games. "
+          "Once you've rooted your device using Ndless, you can install a GBA emulator and play Pokémon. "
+          "There is no link functionality available, but with this tool, you can trade Pokémon anyway. "
+          "Just transfer the .sav files, run this tool, and trade Pokémon between them. "
+          "I also included a little tool to fix corrupted save states, which could be caused by cheating."
+          "**Supported games:** Firered/Leafgreen, Ruby/Sapphire, Emerald",
+      learningsTldr: "c, pointer arithmetic, checksums",
+      learnings: """
 - Developed in c
 - Basics of embedded programming with tight hardware constraints
 - Understanding inofficial reverse-engineered documentation about save formats
 - Pointer arithmetic to modify the savestates in-memory
 - Recalculating checksums to repair a corrupted save file
 """,
-        githubName: "nTradeAdvanced",
-        urlDownload:
-            "https://github.com/CiriousJoker/nTradeAdvanced/releases/latest",
-        // 25th July 2014
-        timestamp: 1406246400000,
-        tags: [
-          Tags.c,
-        ],
-        icon: "ntradeadvanced.png",
-        platforms: [
-          Platforms.calculator,
-        ]
-        // screenshots: [
-        //   "TODO:",
-        // ],
-        ),
-//     ProjectData(
-//       title: "nTradeAdvanced",
-//       description: """
-// Test
-// - asd
-// """,
-//       githubName: "nTradeAdvanced",
-//       urlDownload:
-//           "https://github.com/CiriousJoker/nTradeAdvanced/releases/latest",
-//       year: 2014,
-//       tags: [
-//         Tag(colorHex: "#ff0000", label: "C"),
-//       ],
-//     ),
+      githubName: "nTradeAdvanced",
+      urlDownload:
+          "https://github.com/CiriousJoker/nTradeAdvanced/releases/latest",
+      // 25th July 2014
+      timestamp: 1406246400000,
+      tags: [
+        Tags.c,
+      ],
+      icon: "ntradeadvanced.png",
+      platforms: [
+        Platforms.calculator,
+      ],
+    ),
   ];
 }
 
@@ -653,7 +584,6 @@ class ProjectData {
   /// Unix epoch timestamp
   final int timestamp;
   final List<Tag> tags;
-  final List<String> screenshots;
   final List<Platform> platforms;
 
   const ProjectData({
@@ -671,7 +601,6 @@ class ProjectData {
     this.urlWebsite,
     this.platforms = const [],
     this.tags = const [],
-    this.screenshots = const [],
   });
 }
 
