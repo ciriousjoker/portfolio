@@ -350,15 +350,30 @@ class ProjectConfig {
     ),
     ProjectData(
       title: "ShufflePaper",
-      description: "A wallpaper manager for Chrome OS."
-          "TODO: ...",
+      description: "ShufflePaper is a wallpaper manager for your Chromebook.\n"
+          "Chrome OS does come with a way to change the current wallpaper, "
+          "but it's pretty limited in it's functionality, even years later.\n"
+          "**Features:**\n"
+          "- Pick a folder and shuffle through it (manually or automatically)\n"
+          "- Set an interval to update the wallpaper automatically\n"
+          "- Pick the next wallpaper alphanumerically or at random\n\n"
+          "Chrome apps will be discontinued in the future, but this app bridged a functionality "
+          "gap during a time where Android apps weren't available yet.",
+      learningsTldr: "javascript, html, css, Material Design Lite",
+      learnings:
+          "This was my first real project with web technologies using html, css and vanilla js. "
+          "Originally I didn't even use Promises, since the async/await syntax wasn't widespread yet. \n"
+          "In 2019, I decided to rewrite large parts of the app clean up the code, "
+          "fix bugs, add functionality, and completely change the UI. \n"
+          "The new UI was written using Material Design Lite and parts of its successor, "
+          "Material Design Components for Web.",
       urlWebsite: "https://shufflepaper.web.app/",
+      githubName: "shufflepaper",
       // Mar 2017
       timestamp: 1488668400000,
       tags: [
         Tags.javascript,
-        Tags.css,
-        Tags.html,
+        Tags.material_design_lite,
       ],
       icon: "shufflepaper.png",
       // screenshots: [
@@ -672,6 +687,12 @@ class Tags {
     label: "Java",
     colorHex: "#ED8B00",
     icon: BrandIcons.java,
+  );
+
+  static const Tag material_design_lite = Tag(
+    label: "Material Design Lite",
+    colorHex: "#2E2E2E",
+    icon: BrandIcons.materialdesign,
   );
 
   static const Tag material_design_components = Tag(
