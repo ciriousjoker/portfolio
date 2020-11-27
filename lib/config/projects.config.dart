@@ -486,17 +486,34 @@ class ProjectConfig {
     ProjectData(
       title: "NXTProject",
       description:
-          "This project consists of two parts, the NXTBurner (Windows) & the NXTPlayer (Lego + Java)."
-          "NXTBurner is used to create disks. Once you printed them & glued them onto cardboard,"
-          "you can play them back using the NXTPlayer."
-          "You create a special disk using the NXTBurner, print it"
-          "and glue it onto cardboard. Then, you can play it back using the NXTPlayer."
-          ""
-          "This was created as part of a school project where we got to create robots with the Lego NXT."
-          "Most chose to build one of the suggested project ideas,"
-          "but I always wanted one as a kid and never got it,"
-          "so I used this opportunity to catch up a lot of things :)",
-      githubName: "nxtburner.png",
+          "This was created as part of a school project where we got to create robots with the Lego NXT. "
+          "Most chose to build one of the suggested project ideas with the Lego Mindstorms software,"
+          " but that would have been boring. I always wanted a Lego NXT as a kid and never got one, "
+          "so I used this opportunity to catch up a lot of things :)\n"
+          "**The whole thing consists of two parts:**\n"
+          "- [NXTBurner (Windows)](https://github.com/CiriousJoker/nxtburner)\n"
+          "- [NXTPlayer (Lego + Java)](https://github.com/CiriousJoker/nxtplayer)\n\n"
+          "NXTBurner is used to create special disks. Once you printed & glued them onto cardboard, "
+          "you can play them back using the NXTPlayer and the (terrible) speaker inside the NXT.\n\n"
+          "Flip this card to read how it's working and which features are included.\n\n"
+          "Photos of the lego model are available [here.](https://github.com/CiriousJoker/NXTPlayer/blob/master/gallery/GALLERY.md)",
+      learningsTldr: "music, custom audio compression algorithm",
+      learnings:
+          "Building the thing was the easy part, the hard part was figuring out how to compress the audio. "
+          "There are very tight constraints for how much information can fit on any given NXTDisk.\n"
+          "- **Maximum number of greyscale spots:** 176\n"
+          "- **Information per spot:** 9 values (3.375 bit)\n"
+          "- **Total bits:** 176 * 3.375 = 594 bits of information\n\n"
+          "**What needs to be stored:**\n"
+          "- At least 3 adjacent octaves per song should be possible\n"
+          "- A main melody as well as potential choruses\n"
+          "- 8 different notes + half tones\n"
+          "- Different durations per note, dotted notes as well\n\n"
+          "As you can see, this quickly becomes overwhelming, "
+          "so I added features like loop markers to save sections for later.\n\n"
+          "**If you're interested in how I implemented all of these in detail:**<br>"
+          "[Click here to read the documentation.](https://github.com/CiriousJoker/NXTPlayer/blob/master/DOCUMENTATION.md)",
+      githubName: "nxtburner",
       // 27th May 2017
       timestamp: 1495843200000,
       tags: [
