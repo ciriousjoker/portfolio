@@ -103,17 +103,29 @@ class ProjectConfig {
 //
 
     ProjectData(
-      title: "StarClock",
+      title: "Star Clock",
       description:
-          "This is my entry for the [Flutter Clock Face Contest](https://flutter.dev/clock)."
-          "The goal was to create a clock face for upcoming Lenovo Smart clocks."
-          "My clock got a top 25 placement & I won a Lenovo Smart clock :)",
+          "This was my entry for the [Flutter Clock Face Contest.](https://flutter.dev/clock)"
+          "The goal was to create a clock face for upcoming Lenovo Smart clocks.\n\n"
+          "**Features:**\n"
+          "- Day/night transition\n"
+          "- 7 weather conditions complete with animations\n"
+          "- Night-only mode\n\n"
+          "**Result:** I got a top 25 placement & won a Lenovo Smart clock :)\n\n"
+          "Click on \"Demo\" to watch the 30 sec demo video on YouTube!",
       urlDemo: "https://www.youtube.com/watch?v=ZuHLtdbaXqc",
+      learningsTldr: "animation, adobe after effects",
+      learnings:
+          "- **Animations:** These were created using Flare (now called Rive)\n"
+          "- **Bugfixing:** I ran into some incredibly strange bugs during this project."
+          "In the future, I'll check open flutter & rive issues more thoroughly :)\n"
+          "- **Adobe After Effects:** Creating the 30 sec demo video\n",
       githubName: "star_clock",
       // Dec 2019
       timestamp: 1577055600000,
       tags: [
         Tags.flutter,
+        Tags.adobeaftereffects,
       ],
       icon: "starclock.png",
       // screenshots: [
@@ -135,8 +147,6 @@ class ProjectConfig {
           "My job was mainly to create the non-character assets as well as "
           "the \"club feeling\" (mainly lighting & overworld animations).\n"
           "I also balanced the game difficulty & managed our Trello board.\n",
-      // urlPlaystore:
-      //     "https://play.google.com/store/apps/details?id=com.tagmyknowledge",
       urlDemo: "TODO:",
       githubName: "TODO:",
       // Nov 2019
@@ -639,6 +649,18 @@ class Tags {
     label: "Embedded Javascript Templating",
     colorHex: "#90a93a",
     icon: BrandIcons.javascript,
+  );
+
+  static const Tag sqlite = Tag(
+    label: "SQLite",
+    icon: BrandIcons.sqlite,
+    colorHex: "#044a64",
+  );
+
+  static const Tag adobeaftereffects = Tag(
+    label: "After Effects",
+    icon: BrandIcons.adobeaftereffects,
+    colorHex: "#00005b",
   );
 
 // Tag(colorHex: "#ff0000", label: "Java")
