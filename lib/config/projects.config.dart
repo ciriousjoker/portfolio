@@ -13,21 +13,22 @@ class ProjectConfig {
           "Tag My Knowledge generates a daily feed. By reading just a few random notes every day, "
           "your brain doesn't get the chance to fully forget them. "
           "Then, when it actually matters, you'll remember the advice "
-          "instead of not even knowing where to look. It even has a Twitter bot:\n\n"
-          "##### Twitter bot \n"
+          "instead of not even knowing where to look. \n"
+          "\n---\n"
+          "#### Twitter bot \n"
           "Quickly save interesting tweets by replying like this:\n"
           "> @TagMyKnowledge save Some Title #yourtag\n\n"
           "The bot will then automatically save this tweet in your collection "
           "and match #yourtag to your closest actual tag.\n\n"
-          "Tag My Knowledge available for Android & web (PWA, beta).\n"
+          "Tag My Knowledge available for Android & web (PWA, beta).\n\n"
           "*(Note that the Twitter bot can only be set up on Android for now.)*",
-      learningsTldr: "UX, web design, static website generators, analytics",
+      learningsTldr: "ux, web design, static website generators, analytics",
       learnings:
           "A big learning was definitely how to make everything more production-ready. \n"
-          "**This means (among other things):**\n"
+          "#### Making code production-ready\n"
           "- Unit & integration tests\n"
           "- Serverside database migration for old versions of the app\n\n"
-          "##### Tech stack:\n"
+          "#### Tech stack:\n"
           "- **Flutter:** Mobile & web app UI\n"
           "- **Firebase:** Auth, Firestore, Functions, Hosting, Remote Config, Analytics\n"
           "- **Twitter Api:** For writing the Twitter bot via webhooks\n"
@@ -148,12 +149,12 @@ class ProjectConfig {
       description:
           "This game is a round-based, 2D-RPG with a top-down overworld map. "
           "It was developed during a group project at the \"Technische Hochschule Nuremberg\" "
-          "(German university of applied science).\n"
-          "**If I had to describe it in one sentence:**\n"
+          "(German university of applied science).\n\n"
+          "#### If I had to describe it in one sentence:\n"
           "> Pokémon, but in a night club setting, with crude humor, multiple dialog options and interesting battle mechanics.\n\n"
           "The battle system is unique because you essentially have to balance "
-          "your health points with your honor level (= damage multiplier) to survive fights. "
-          "**Example moves:**\n"
+          "your health points with your honor level (= damage multiplier) to survive fights. \n"
+          "#### Example moves:\n"
           "- Crush a beer bottle with your bare hands to boost honor at the expense of hp\n"
           "- Call your mum for emotional support to heal at the expense of honor\n"
           "- Land \"honorable\" punches to slowly build honor at the expense of time\n"
@@ -165,7 +166,7 @@ class ProjectConfig {
           "Sadly, there's no way to directly translate the humor into English, "
           "but if you're German or know someone who is, we highly recommend you give it a shot. "
           "Since this game was developed in Unity, it runs in your browser, no account required. \n\n"
-          "=> Unless you get offended easily, you'll have a blast, so try it out!",
+          "**=> Unless you get offended easily, you'll have a blast, so try it out!**",
       learningsTldr:
           "game development, pixel art, game balance, team management",
       learnings:
@@ -173,7 +174,7 @@ class ProjectConfig {
           "- Set up lighting to create a realistic atmosphere\n"
           "- Write scripts to animate the overworld\n"
           "- **Game balance:** Balance the difficulty curve for 40+ moves across 14 unique characters\n\n"
-          "##### About game balance:\n\n"
+          "#### About game balance:\n\n"
           "This was difficult since gut feeling isn't accurate. "
           "To solve it, I wrote a C# program to rank all moves "
           "on a percentage scale based on their actual strength. "
@@ -181,6 +182,8 @@ class ProjectConfig {
           "The reference points were the weakest/strongest moves and a few \"alternative moves\" "
           " that an accurate formula should rank as equal. The result is still not truly objective, "
           "but probably as close as you can get without using AI to figure out the game meta programmatically. \n\n"
+          "In retrospect, simulating battles to calculate expected win percentages "
+          "for each character sounds interesting, so I might do that at one point.\n\n"
           "---\n"
           "Aside from these technological aspects, I also managed our Trello and organized meetings.",
       urlWebsite: "https://ciriousjoker.github.io/fridaynightsurvival/",
@@ -204,15 +207,16 @@ class ProjectConfig {
           "After creating a vault and linking a real folder, a new device shows up next to the external drives. "
           "This vault only exists in-memory, so reading/writing works like any other folder, "
           "but behind the scenes it's accessing the encrypted content of the linked folder. \n\n"
-          "Sadly, Google decided to deprecate Chrome Apps for chromebooks as well "
+          "Sadly, Google deprecated chrome apps for chromebooks as well "
           "and I doubt that Android apps can properly fill the gap anytime soon.\n\n"
           "Until then, enjoy!\n",
       learningsTldr: "encryption, file systems, animation",
       learnings:
           "- **Encryption**, specifically [AES-256 GCM](https://en.wikipedia.org/wiki/Galois/Counter_Mode)\n"
           "- **Animations**\n\n"
-          "Animations might be a surprise, given that the software is about encrypting data, "
-          "but I really liked how the UI turned out and just had to include them.\n\n"
+          "#### About animations:\n"
+          "It might be a surprise, given that the software is about encrypting data, "
+          "but I really liked how the UI turned out and just had to include animations.\n\n"
           "I'm particularly proud of the transition when clicking the \"add vault\" button.\n\n"
           "=> If I had to pick one project to submit to a design contest or something, this would be it ;)\n",
       urlWebsite: "https://shadyvault.web.app/",
@@ -240,22 +244,22 @@ class ProjectConfig {
           "and not all pros/cons carry the same weight\n"
           "2. None of the individual scores can be accurately determined without the full context (which might change later). "
           "For example, once you rated an option as a 10, you can't rank any option higher than that without "
-          "changing past ratings. \n\n"
+          "updating past ratings. \n\n"
           "**Solution:**\n"
           "- Download Perfect Decision Finder (free) & create a new decision\n"
           "- Add your list of options & criteria\n"
           "- Weigh the criteria based on their relative importance\n"
           "- Rank the pairs of options against each other for your criteria\n\n"
           "=> By only ever comparing options 1on1, you have a much easier time ranking them accurately. "
-          "The objectively best option is then calculated using the elo rating system.\n\n"
+          "The objectively best option is then calculated using a modified elo rating system.\n\n"
           "**Check it out now!**",
       learningsTldr:
           "flutter, various rating systems, state management, sqlite",
-      learnings: "##### The ranking system\n"
+      learnings: "#### The ranking system\n"
           "It turns out, there are like a million different ways to rank things. "
           "I chose elo because of its simplicity and because this app doesn't need the sophisticated "
           "benefits of something like Microsoft's TrueSkill™ or bayesian approximations in general.\n\n"
-          "##### State management & persistency\n"
+          "#### State management & persistency\n"
           "This app was also my first attempt at proper Flutter state management using providers "
           "and SQLite for persistency.",
       urlPlaystore:
@@ -279,8 +283,8 @@ class ProjectConfig {
           "It's intended for Pokémon GO spoofers to minimize their server timeout (soft ban) when teleporting.",
       learningsTldr: "rest api, gps calculations",
       learnings: "- **REST api:** The pokeapi was used to load Pokémon data\n"
-          "- GPS distance calculation\n"
-          "- Recursion to calculate the optimal route",
+          "- **GPS:** Distance calculation\n"
+          "- **Recursion:** Calculate the optimal route",
       githubName: "pokeroute",
       urlWebsite: "https://pokeroute.web.app/",
       // Aug 2019
@@ -300,9 +304,9 @@ class ProjectConfig {
           "> Flutter Create is a contest that challenges you to build something interesting, "
           "inspiring, and beautiful with Flutter using 5KB or less of Dart code.\n\n"
           "The app itself is a simple todo app, but with a twist.\n\n"
-          "**Features:**\n"
-          "- Add a new item (pinned)\n"
-          "- Swipe to set priority (unpins it)\n"
+          "#### Features:\n"
+          "- Add a new item *(pinned)*\n"
+          "- Swipe to set priority *(unpins it)*\n"
           "- Long press to delete\n\n"
           "It doesn't get much simpler than that, but it works surprisingly well, especially for "
           "lists of loosely prioritized todos with no exact due time.\n\n"
@@ -310,10 +314,10 @@ class ProjectConfig {
           "store the data in the cloud via Firestore (which is kind of ridiculous if you think about it).\n\n"
           "I've since rewritten the app to use a local database instead.",
       learningsTldr: "firebase, sembast (local database), animations",
-      learnings: "Originally: \n"
-          "- Flutter (first project with flutter)\n"
-          "- Firebase (Auth, Firestore)\n"
-          "\n**During the rewrite:**\n"
+      learnings: "#### Originally:\n"
+          "- **Flutter:** This was my first project with Flutter\n"
+          "- **Firebase:** Auth, Firestore\n"
+          "#### During the rewrite:\n"
           "- **Sembast:** Local database\n"
           "- **Flutter:** Animations & SliverLists\n"
           "- Restructuring and modularizing code properly\n",
@@ -351,7 +355,7 @@ class ProjectConfig {
           "I used all of these for the first time during this project, so I can't say I did everything perfectly. "
           "However, I still think I did a pretty good job and I learned a lot for future projects, "
           "especially regarding code quality.\n\n"
-          "**Technologies used:**\n"
+          "#### Technologies used:\n"
           "- **Aurelia:** Alternative to Angular/React/Vue to build the interface in a modular way\n"
           "- **Typescript:** Basically javascript, but objectively much better\n"
           "- **Material Design Components for Web:** Successor to Material Design Lite\n"
@@ -380,21 +384,21 @@ class ProjectConfig {
     ),
     ProjectData(
       title: "ShufflePaper",
-      description: "ShufflePaper is a wallpaper manager for your Chromebook.\n"
+      description: "This is a wallpaper manager for your Chromebook.\n"
           "Chrome OS does come with a way to change the current wallpaper, "
           "but it's pretty limited in it's functionality, even years later.\n"
-          "**Features:**\n"
+          "#### Features:\n"
           "- Pick a folder and shuffle through it (manually or automatically)\n"
           "- Set an interval to update the wallpaper automatically\n"
           "- Pick the next wallpaper alphanumerically or at random\n\n"
           "Chrome apps will be discontinued in the future, but this app bridged a functionality "
           "gap during a time where Android apps weren't available yet.",
-      learningsTldr: "javascript, html, css, Material Design Lite",
+      learningsTldr: "javascript, html, css, material design",
       learnings:
           "This was my first real project with web technologies using html, css and vanilla js. "
-          "Originally I didn't even use Promises, since the async/await syntax wasn't widespread yet. \n"
+          "Originally I didn't even use Promises, since the async/await syntax wasn't widespread yet. \n\n"
           "In 2019, I decided to rewrite large parts of the app clean up the code, "
-          "fix bugs, add functionality, and completely change the UI. \n"
+          "fix bugs, add functionality, and completely change the UI. \n\n"
           "The new UI was written using Material Design Lite and parts of its successor, "
           "Material Design Components for Web.",
       urlWebsite: "https://shufflepaper.web.app/",
@@ -448,7 +452,7 @@ class ProjectConfig {
           "Most chose to build one of the suggested project ideas with the Lego Mindstorms software,"
           " but that would have been boring. I always wanted a Lego NXT as a kid and never got one, "
           "so I used this opportunity to catch up a lot of things :)\n"
-          "**The whole thing consists of two parts:**\n"
+          "#### Two parts:\n"
           "- [NXTBurner (Windows)](https://github.com/CiriousJoker/nxtburner)\n"
           "- [NXTPlayer (Lego + Java)](https://github.com/CiriousJoker/nxtplayer)\n\n"
           "NXTBurner is used to create special disks. Once you printed & glued them onto cardboard, "
@@ -462,7 +466,7 @@ class ProjectConfig {
           "- **Maximum number of greyscale spots:** 176\n"
           "- **Information per spot:** 9 values (3.375 bit)\n"
           "- **Total bits:** 176 * 3.375 = 594 bits of information\n\n"
-          "**What needs to be stored:**\n"
+          "#### What needs to be stored:\n"
           "- At least 3 adjacent octaves per song should be possible\n"
           "- A main melody as well as potential choruses\n"
           "- 8 different notes + half tones\n"
@@ -491,10 +495,11 @@ class ProjectConfig {
           "You can switch between multiple locations and the widget displays the direction and distance.\n\n"
           "Was a parting gift for a friend who travelled abroad :)",
       learningsTldr: "Android, widgets, GPS, threads",
-      learnings: "- Using GPS & the Maps api\n"
-          "- Creating widgets\n"
-          "- Update the widget from a background thread\n"
-          "- Calculating orientation & distance on a sphere\n",
+      learnings:
+          "- **GPS & Maps Api:** Location picker & geolocation detection\n"
+          "- **Widgets:** The widget is essentially an svg icon that's being transformed\n"
+          "- **Threads:** The widget is updated through a background thread\n"
+          "- Distance calculations on a sphere aren't straightforward ;)\n",
       githubName: "HomingCompass",
       urlPlaystore:
           "https://play.google.com/store/apps/details?id=com.ciriousjoker.homingcompass",
@@ -512,16 +517,15 @@ class ProjectConfig {
           "This program was my first attempt at C#/.NET + WPF, after being fascinated by the UI "
           "of a tool called Curse Voice, "
           "which was written in it (at least according to their open hiring positions at the time).\n"
-          "**Features:**\n"
-          "- Note is automatically saved\n"
-          "- shift+tab: Slide in/out from the right screen edge\n"
-          "- Settings: font family, font size & color theme",
-      learningsTldr:
-          "Introduction to C#, .NET, WPF, animations & state management",
-      learnings: "- C# .NET development for Windows\n"
-          "- Designing a GUI in WPF\n"
-          "- Basic animations, concept of easing & animation curves\n"
-          "- Basic state management to reflect settings changes "
+          "#### Features:\n"
+          "- **Autosaving:** Note is automatically saved\n"
+          "- **shift+tab:** Slide in/out from the right screen edge\n"
+          "- **Settings:** Font family, font size & color theme",
+      learningsTldr: "c#, .net, wpf, animations & state management",
+      learnings: "- **C#:** Language of choice when developing for Windows\n"
+          "- **WPF:** Windows Presentation Foundation was used for the GUI\n"
+          "- **Animations:** Basic animations, concept of easing & animation curves\n"
+          "- **State management:** Basic state management to reflect settings changes "
           "like color themes immediately without restarting",
       githubName: "SideNote",
       urlDownload: "https://github.com/CiriousJoker/SideNote/releases/latest",
@@ -538,15 +542,15 @@ class ProjectConfig {
     ProjectData(
       title: "nTradeAdvanced",
       description:
-          "A program for the Ti-Nspire CAS calculator, which allows you to trade Pokémon between two third gen Pokémon games. "
+          "A program for the Ti-Nspire CAS calculator, which allows you to trade Pokémon between two third gen Pokémon games. \n\n"
           "Once you've rooted your device using Ndless, you can install a GBA emulator and play Pokémon. "
-          "There is no link functionality available, but with this tool, you can trade Pokémon anyway. "
+          "There is no link functionality available, but with this tool, you can trade Pokémon anyway. \n\n"
           "Just transfer the .sav files, run this tool, and trade Pokémon between them. "
-          "I also included a little tool to fix corrupted save states, which could be caused by cheating."
+          "I also included a little tool to fix corrupted save states, which could be caused by cheating.\n\n"
           "**Supported games:** Firered/Leafgreen, Ruby/Sapphire, Emerald",
       learningsTldr: "c, pointer arithmetic, checksums",
       learnings: """
-- Developed in c
+- Developed in c, c++ wasn't available in the Ndless sdk yet
 - Basics of embedded programming with tight hardware constraints
 - Understanding inofficial reverse-engineered documentation about save formats
 - Pointer arithmetic to modify the savestates in-memory
