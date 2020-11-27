@@ -195,15 +195,20 @@ class ProjectConfig {
     ),
     ProjectData(
       title: "Pokeroute",
-      description: "App for Pokémon GO players"
-          "TODO: ...",
+      description:
+          "This was a small project to evaluate how stable and usable Flutter Web was at the time. "
+          "The app allows you to optimize your route through a list of GPS coordinates. "
+          "It's intended for Pokémon GO spoofers to minimize their server timeout (soft ban) when teleporting.",
+      learningsTldr: "rest api, gps calculations",
+      learnings: "- **REST api:** The pokeapi was used to load Pokémon data\n"
+          "- GPS distance calculation\n"
+          "- Recursion to calculate the optimal route",
       githubName: "pokeroute",
       urlWebsite: "https://pokeroute.web.app/",
       // Aug 2019
       timestamp: 1566770400000,
       tags: [
         Tags.flutter,
-        Tags.firebase,
       ],
       icon: "pokeroute.png",
       // screenshots: [
