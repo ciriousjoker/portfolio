@@ -55,7 +55,7 @@ class MarkdownWrapperWidget extends StatelessWidget {
           color: Colors.black.withOpacity(0.05),
           border: Border(
             left: BorderSide(
-              color: ColorsConfig.primarySwatch,
+              color: ColorsConfig.primary,
               width: 2,
             ),
           ),
@@ -75,21 +75,21 @@ class LinkBuilder extends MarkdownElementBuilder {
       // Fix a weird alignment issue. Might be fixed by Flutter in the future
       offset: Offset(0, -1),
       child: MouseRegion(
-      cursor: SystemMouseCursors.click,
-      child: RichText(
-        text: TextSpan(
-          text: element.textContent,
-          style: style,
-          recognizer: TapGestureRecognizer()
-            ..onTap = () {
-              try {
-                launch(element.attributes["href"]);
-              } catch (_) {
-                assert(false);
-              }
-            },
+        cursor: SystemMouseCursors.click,
+        child: RichText(
+          text: TextSpan(
+            text: element.textContent,
+            style: style,
+            recognizer: TapGestureRecognizer()
+              ..onTap = () {
+                try {
+                  launch(element.attributes["href"]);
+                } catch (_) {
+                  assert(false);
+                }
+              },
+          ),
         ),
-      ),
       ),
     );
   }

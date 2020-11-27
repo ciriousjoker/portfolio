@@ -42,7 +42,7 @@ class MyApp extends StatelessWidget {
                     fontSize: 12,
                   ),
             ),
-        primarySwatch: ColorsConfig.primarySwatch,
+        primaryColor: ColorsConfig.primary,
         accentColor: ColorsConfig.accent,
       ),
       // home: HomeScreen(),

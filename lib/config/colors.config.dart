@@ -2,11 +2,16 @@ import 'package:flutter/material.dart';
 
 class ColorsConfig {
   // General
-  static const Color primarySwatch = Colors.lightBlue;
-  static const Color accent = Colors.amberAccent;
+  static const Color primary = Color(0xFFff8f00);
+  // static const Color accent = Colors.amberAccent;
+  static const Color accent = Color(0xFFff8f00);
 
   // Card
-  static const Color card = Colors.lightBlue;
+  // static const Color card = Color(0xFF2e5239);
+  // static const Color card = Color(0xFFffa000);
+  static const Color card = Color(0xFFff8f00);
+  // static const Color card = Colors.amber;
+
   static const Color cardText = Colors.white;
   static const Color cardTextSecondary = Colors.white60;
   static const Color cardTextQuotationmarks = Colors.white38;
