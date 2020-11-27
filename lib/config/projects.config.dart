@@ -3,25 +3,38 @@ import 'package:portfolio/brand_icons/brand_icons_icons.dart';
 
 class ProjectConfig {
   static const List<ProjectData> projects = [
-    // TODO: Didactduell
-    // TODO: Switchboard website
     ProjectData(
       title: "Tag My Knowledge",
-      description: "TODO:",
-      learningsTldr: "UX, web design, analytics",
-      learnings: """
-- Some bullet
-- points
-- wohoo!2
-- wohoo!
-- wohoo!1
-- wohoo!
-- wohoo!2
-- wohoo!
-- wohoo!2
-- wohoo!
-- wohoo!1
-""",
+      description: "This app is your personal knowledge feed.\n\n"
+          "With note taking apps like Google Keep, you're mostly archiving your knowledge. "
+          "Important pieces of advice get buried and are lost forever "
+          "as soon as they're pushed below your average scroll threshold. \n\n"
+          "So, instead of sorting your notes in chronological order, "
+          "Tag My Knowledge generates a daily feed. By reading just a few random notes every day, "
+          "your brain doesn't get the chance to fully forget them. "
+          "Then, when it actually matters, you'll remember the advice "
+          "instead of not even knowing where to look. It even has a Twitter bot:\n\n"
+          "##### Twitter bot \n"
+          "Quickly save interesting tweets by replying like this:\n"
+          "> @TagMyKnowledge save Some Title #yourtag\n\n"
+          "The bot will then automatically save this tweet in your collection "
+          "and match #yourtag to your closest actual tag.\n\n"
+          "Tag My Knowledge available for Android & web (PWA, beta).<br>"
+          "*(Note that the Twitter bot can only be set up on Android for now.)*",
+      learningsTldr: "UX, web design, static website generators, analytics",
+      learnings:
+          "A big learning was definitely how to make everything more production-ready. \n"
+          "**This means (among other things):**\n"
+          "- Unit & integration tests\n"
+          "- Serverside database migration for old versions of the app\n\n"
+          "##### Tech stack:\n"
+          "- **Flutter:** Mobile & web app UI\n"
+          "- **Firebase:** Auth, Firestore, Functions, Hosting, Remote Config, Analytics\n"
+          "- **Twitter Api:** For writing the Twitter bot via webhooks\n"
+          "- **Google Play IAP:** Monetization\n"
+          "- **Publii:** Static site cms\n"
+          "- **TailwindCss & Handlebars:** For building the Publii page template\n"
+          "- **Google Analytics & Google Optimize**: Page & app insights\n",
       urlWebsite: "https://tagmyknowledge.com/",
       urlPlaystore:
           "https://play.google.com/store/apps/details?id=com.tagmyknowledge",
@@ -30,6 +43,7 @@ class ProjectConfig {
       tags: [
         Tags.flutter,
         Tags.firebase,
+        Tags.tailwind,
         Tags.googletagmanager,
         Tags.googleanalytics,
       ],
