@@ -28,7 +28,9 @@ class HomeScreen extends StatelessWidget {
           ),
         ),
         child: Padding(
-          padding: EdgeInsets.all(UIHelper.VerticalSpaceMedium),
+          padding: EdgeInsets.symmetric(
+            horizontal: UIHelper.VerticalSpaceMedium,
+          ),
           child: context.isPortrait
               ? CustomScrollView(
                   shrinkWrap: true,
