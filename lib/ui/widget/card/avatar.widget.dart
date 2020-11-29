@@ -31,11 +31,15 @@ class AvatarWidget extends StatelessWidget {
           Container(
             width: width,
             height: height,
-            clipBehavior: Clip.hardEdge,
+            clipBehavior: Clip.antiAlias,
             decoration: BoxDecoration(
               shape: BoxShape.circle,
             ),
-            child: Image.asset(GeneralConfig.assetAvatar),
+            child: Image.asset(
+              GeneralConfig.assetAvatar,
+              isAntiAlias: true,
+              filterQuality: FilterQuality.high,
+            ),
           ),
           Transform.translate(
             offset: Offset(

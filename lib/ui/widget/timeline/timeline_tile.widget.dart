@@ -79,8 +79,10 @@ class TimelineTileWidget extends StatelessWidget {
               size: UIConfig.timelineLineThickness,
               color: ColorsConfig.timelineLine,
               child: (project.icon ?? "").isNotEmpty
-                  ? Container(
-                      child: Image.asset("assets/icons/${project.icon}"),
+                  ? Image.asset(
+                      "assets/icons/${project.icon}",
+                      isAntiAlias: true,
+                      filterQuality: FilterQuality.high,
                     )
                   : SizedBox.shrink(),
             ),

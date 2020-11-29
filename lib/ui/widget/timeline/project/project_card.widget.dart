@@ -16,7 +16,7 @@ class ProjectCardWidget extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.all(UIConfig.projectGlowBlurRadius + 1),
       child: Container(
-        clipBehavior: Clip.hardEdge,
+        clipBehavior: Clip.antiAlias,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(UIConfig.projectRadius),
           boxShadow: [
