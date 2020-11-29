@@ -38,7 +38,7 @@ class MarkdownWrapperWidget extends StatelessWidget {
               height: 1.5,
             ),
         strong: TextStyle(
-          fontWeight: FontWeight.w600,
+          fontWeight: FontWeight.w500,
         ),
         horizontalRuleDecoration: BoxDecoration(
           border: Border(

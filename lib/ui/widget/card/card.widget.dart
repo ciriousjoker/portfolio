@@ -92,6 +92,8 @@ class _CardWidgetState extends State<CardWidget> {
                                   .headline4
                                   .copyWith(
                                     color: ColorsConfig.cardText,
+                                    fontWeight: FontWeight.w200,
+                                    fontFamily: "Catamaran",
                                   ),
                               textAlign: TextAlign.center,
                             ),
@@ -140,7 +142,7 @@ class _CardWidgetState extends State<CardWidget> {
                     style: TextStyle(
                       fontSize: 17,
                       color: ColorsConfig.cardText,
-                      fontWeight: FontWeight.w300,
+                      fontWeight: FontWeight.w200,
                       height: 1.4,
                     ),
                   ),

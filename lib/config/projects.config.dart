@@ -120,7 +120,7 @@ class ProjectConfig {
       description:
           "This was my entry for the [Flutter Clock Face Contest.](https://flutter.dev/clock)"
           "The goal was to create a clock face for upcoming Lenovo Smart clocks.\n\n"
-          "**Features:**\n"
+          "#### Features:\n"
           "- Day/night transition\n"
           "- 7 weather conditions complete with animations\n"
           "- Night-only mode\n\n"
