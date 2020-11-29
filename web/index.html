@@ -2,29 +2,20 @@
 <html>
 
 <head>
-  <!--
-    If you are serving your web app in a path other than the root, change the
-    href value below to reflect the base path you are serving from.
-
-    The path provided below has to start and end with a slash "/" in order for
-    it to work correctly.
-
-    Fore more details:
-    * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base
-  -->
   <base href="/">
+  <link rel="preconnect" href="https://unpkg.com/">
 
   <link rel="stylesheet" href="style.css">
 
   <meta charset="UTF-8">
   <meta content="IE=Edge" http-equiv="X-UA-Compatible">
-  <meta name="description" content="A new Flutter project.">
+  <meta name="description" content="Philipp Bauer's portfolio :)">
 
   <!-- iOS meta tags & icons -->
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   <meta name="apple-mobile-web-app-title" content="portfolio">
-  <link rel="apple-touch-icon" href="icons/Icon-192.png">
+  <link rel="apple-touch-icon" href="icons/android-chrome-192x192.png">
 
   <!-- Favicon -->
   <link rel="shortcut icon" type="image/png" href="favicon.png" />
@@ -32,12 +23,12 @@
   <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
 
   <!-- Windows Tile -->
-  <meta name="msapplication-TileColor" content="#ff8f00">
+  <meta name="msapplication-TileColor" content="#03a9f4">
   <meta name="msapplication-config" content="icons/browserconfig.xml">
   <meta name="theme-color" content="#ffffff">
 
   <!-- Mac OS -->
-  <link rel="mask-icon" href="icons/safari-pinned-tab.svg" color="#ff8f00">
+  <link rel="mask-icon" href="icons/safari-pinned-tab.svg" color="#03a9f4">
   <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon.png">
 
   <title>Philipp Bauer</title>
@@ -104,13 +95,14 @@
        application. For more information, see:
        https://developers.google.com/web/fundamentals/primers/service-workers -->
   <script>
-    if ('serviceWorker' in navigator) {
-      window.addEventListener('flutter-first-frame', function () {
-        navigator.serviceWorker.register('flutter_service_worker.js');
+    if ("serviceWorker" in navigator) {
+      window.addEventListener("flutter-first-frame", function () {
+        navigator.serviceWorker.register("flutter_service_worker.js");
       });
     }
   </script>
   <script src="main.dart.js" type="application/javascript"></script>
+  <noscript>This page requires javascript.</noscript>
 </body>
 
 </html>

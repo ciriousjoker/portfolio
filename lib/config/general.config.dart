@@ -21,7 +21,7 @@ I develop websites, apps and sometimes random things that spark my interest :)\n
 I have tried lots of languages and frameworks over the years. Right now, I like a combination of Flutter, Typescript, and Firebase the most.
 As you can guess by the quote above, I value code quality very highly, but a great UI/UX is also a requirement for everything I do.\n
 \n
-Don't take my word for it, feel free to check our the projects yourself.\n\n
+Don't take my word for it. Feel free to check out the projects yourself.\n\n
 
 Have a great day!
 """;

@@ -4,7 +4,7 @@ class UIConfig {
   // Timeline
   static const double timelineLineThickness = 2.5;
   static const double timelineIndicatorSize = 64;
-  static const double timelineProjectSpacing = 96;
+  static const double timelineProjectSpacing = 24;
   static const double timelineGlowBlurRadius = 6;
 
   // Card
@@ -12,7 +12,7 @@ class UIConfig {
   static const double cardRadius = 24;
   static const double cardMaxWidth = 384;
   static const double cardSizeTop = 268;
-  static const double cardSizeBottom = 316;
+  static const double cardSizeBottom = 320;
   static const double cardSizeAvatar = 128;
   static const TextStyle cardQuoteTextStyle = TextStyle(
     fontSize: 26,
