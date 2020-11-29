@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio/brand_icons/brand_icons_icons.dart';
+import 'package:portfolio/fonts/brand_icons_minified_icons.dart';
 import 'package:portfolio/config/general.config.dart';
 import 'package:portfolio/config/colors.config.dart';
+import 'package:portfolio/fonts/material_icons_minified_icons.dart';
 import 'package:portfolio/ui/widget/util/icon_normalized.widget.dart';
 import 'package:portfolio/ui/widget/util/rounded_border.widget.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -43,7 +44,7 @@ class AvatarWidget extends StatelessWidget {
             ),
             child: _Action(
               size: sizeAction,
-              icon: Icons.email,
+              icon: MaterialIconsMinified.email,
               onTap: () {
                 try {
                   launch("mailto:${GeneralConfig.email}");
@@ -60,7 +61,7 @@ class AvatarWidget extends StatelessWidget {
             ),
             child: _Action(
               size: sizeAction,
-              icon: BrandIcons.linkedin,
+              icon: BrandIconsMinified.linkedin,
               onTap: () {
                 try {
                   launch(GeneralConfig.linkedin);
@@ -77,7 +78,7 @@ class AvatarWidget extends StatelessWidget {
             ),
             child: _Action(
               size: sizeAction,
-              icon: BrandIcons.github,
+              icon: BrandIconsMinified.github,
               onTap: () {
                 try {
                   launch(GeneralConfig.githubUrl);

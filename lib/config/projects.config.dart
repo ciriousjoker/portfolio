@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio/brand_icons/brand_icons_icons.dart';
+import 'package:portfolio/fonts/brand_icons_minified_icons.dart';
+import 'package:portfolio/fonts/material_icons_minified_icons.dart';
 
 class ProjectConfig {
   static const List<ProjectData> projects = [
@@ -119,7 +120,7 @@ class ProjectConfig {
       description:
           "This was my entry for the [Flutter Clock Face Contest.](https://flutter.dev/clock)"
           "The goal was to create a clock face for upcoming Lenovo Smart clocks.\n\n"
-          "**Features:**\n"
+          "#### Features:\n"
           "- Day/night transition\n"
           "- 7 weather conditions complete with animations\n"
           "- Night-only mode\n\n"
@@ -614,111 +615,111 @@ class Tags {
   static const Tag aurelia = Tag(
     label: "Aurelia",
     colorHex: "#ED2B88",
-    icon: BrandIcons.aurelia,
+    icon: BrandIconsMinified.aurelia,
     url: "http://aurelia.io/",
   );
 
   static const Tag typescript = Tag(
     label: "Typescript",
-    icon: BrandIcons.typescript,
+    icon: BrandIconsMinified.typescript,
     colorHex: "#3178c6",
     url: "https://www.typescriptlang.org/",
   );
 
   static const Tag javascript = Tag(
     label: "Javascript",
-    icon: BrandIcons.javascript,
+    icon: BrandIconsMinified.javascript,
     colorHex: "#F7DF1E",
     url: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
   );
 
-  static const Tag css = Tag(
-    label: "CSS3",
-    icon: BrandIcons.css3,
-    colorHex: "#1572B6",
-    url: "https://developer.mozilla.org/en-US/docs/Web/css",
-  );
+  // static const Tag css = Tag(
+  //   label: "CSS3",
+  //   icon: BrandIconsMinified.css3,
+  //   colorHex: "#1572B6",
+  //   url: "https://developer.mozilla.org/en-US/docs/Web/css",
+  // );
 
-  static const Tag html = Tag(
-    label: "HTML",
-    icon: BrandIcons.html5,
-    colorHex: "#E34F26",
-    url: "https://developer.mozilla.org/en-US/docs/Web/html",
-  );
+  // static const Tag html = Tag(
+  //   label: "HTML",
+  //   icon: BrandIconsMinified.html5,
+  //   colorHex: "#E34F26",
+  //   url: "https://developer.mozilla.org/en-US/docs/Web/html",
+  // );
 
   static const Tag webpack = Tag(
     label: "Webpack",
-    icon: BrandIcons.webpack,
+    icon: BrandIconsMinified.webpack,
     colorHex: "#1389FD",
     url: "https://webpack.js.org/",
   );
 
   static const Tag flutter = Tag(
     label: "Flutter",
-    icon: BrandIcons.flutter,
+    icon: BrandIconsMinified.flutter,
     colorHex: "#1389FD",
     url: "https://flutter.dev/",
   );
 
   static const Tag googletagmanager = Tag(
     label: "Google Tag Manager",
-    icon: BrandIcons.googletagmanager,
+    icon: BrandIconsMinified.googletagmanager,
     colorHex: "#246FDB",
     url: "https://marketingplatform.google.com/about/tag-manager/",
   );
 
   static const Tag googleanalytics = Tag(
     label: "Analytics",
-    icon: BrandIcons.googleanalytics,
+    icon: BrandIconsMinified.googleanalytics,
     colorHex: "#E8710A",
     url: "https://marketingplatform.google.com/about/analytics/",
   );
 
   static const Tag firebase = Tag(
     label: "Firebase",
-    icon: BrandIcons.firebase,
+    icon: BrandIconsMinified.firebase,
     colorHex: "#FFA000",
     url: "https://firebase.google.com/",
   );
 
   static const Tag react = Tag(
     colorHex: "#20232a",
-    icon: BrandIcons.react,
+    icon: BrandIconsMinified.react,
     label: "React",
     url: "https://reactjs.org/",
   );
 
   static const Tag csharp = Tag(
     label: "C#",
-    icon: BrandIcons.csharp,
+    icon: BrandIconsMinified.csharp,
     colorHex: "#3A0091",
     url: "https://docs.microsoft.com/en-us/dotnet/csharp/",
   );
 
   static const Tag electron = Tag(
     label: "Electron",
-    icon: BrandIcons.electron,
+    icon: BrandIconsMinified.electron,
     colorHex: "#2b2e3b",
     url: "https://www.electronjs.org/",
   );
 
   static const Tag nodejs = Tag(
     label: "NodeJS",
-    icon: BrandIcons.node_dot_js,
+    icon: BrandIconsMinified.node_dot_js,
     colorHex: "#026e00",
     url: "https://nodejs.org/",
   );
 
   static const Tag unity = Tag(
     label: "Unity",
-    icon: BrandIcons.unity,
+    icon: BrandIconsMinified.unity,
     colorHex: "#000000",
     url: "https://unity.com/",
   );
 
   static const Tag c = Tag(
     label: "c",
-    icon: BrandIcons.c,
+    icon: BrandIconsMinified.c,
     colorHex: "#00599C",
     url: "https://en.wikipedia.org/wiki/C_(programming_language)",
   );
@@ -726,48 +727,48 @@ class Tags {
   static const Tag java = Tag(
     label: "Java",
     colorHex: "#ED8B00",
-    icon: BrandIcons.java,
+    icon: BrandIconsMinified.java,
     url: "https://www.oracle.com/java/",
   );
 
   static const Tag material_design_lite = Tag(
     label: "Material Design Lite",
     colorHex: "#2E2E2E",
-    icon: BrandIcons.materialdesign,
+    icon: BrandIconsMinified.materialdesign,
     url: "https://getmdl.io/",
   );
 
   static const Tag material_design_components = Tag(
     label: "Material Design Components",
     colorHex: "#6200EE",
-    icon: BrandIcons.materialdesign,
+    icon: BrandIconsMinified.materialdesign,
     url: "https://material.io/develop/web/",
   );
 
   static const Tag tailwind = Tag(
     label: "Tailwind",
     colorHex: "#06B6D4",
-    icon: BrandIcons.tailwindcss,
+    icon: BrandIconsMinified.tailwindcss,
     url: "https://tailwindcss.com/",
   );
 
   static const Tag ejs = Tag(
     label: "Embedded Javascript Templating",
     colorHex: "#90a93a",
-    icon: BrandIcons.javascript,
+    icon: BrandIconsMinified.javascript,
     url: "https://ejs.co/",
   );
 
   static const Tag sqlite = Tag(
     label: "SQLite",
-    icon: BrandIcons.sqlite,
+    icon: BrandIconsMinified.sqlite,
     colorHex: "#044a64",
     url: "https://www.sqlite.org/",
   );
 
   static const Tag adobeaftereffects = Tag(
     label: "After Effects",
-    icon: BrandIcons.adobeaftereffects,
+    icon: BrandIconsMinified.adobeaftereffects,
     colorHex: "#00005b",
     url: "https://www.adobe.com/products/aftereffects",
   );
@@ -811,46 +812,46 @@ class Platform {
 class Platforms {
   static const Platform playstore = Platform(
     label: "Play Store",
-    icon: BrandIcons.googleplay,
+    icon: BrandIconsMinified.googleplay,
   );
 
   static const Platform ios = Platform(
     label: "iOS",
-    icon: BrandIcons.apple,
+    icon: BrandIconsMinified.apple,
   );
 
   static const Platform web = Platform(
     label: "Web",
-    icon: BrandIcons.googlechrome,
+    icon: BrandIconsMinified.googlechrome,
   );
 
   static const Platform windows = Platform(
     label: "Windows",
-    icon: BrandIcons.windows,
+    icon: BrandIconsMinified.windows,
   );
 
   static const Platform mac = Platform(
     label: "Mac OS",
-    icon: BrandIcons.apple,
+    icon: BrandIconsMinified.apple,
   );
 
   static const Platform linux = Platform(
     label: "Linux",
-    icon: BrandIcons.linux,
+    icon: BrandIconsMinified.linux,
   );
 
   static const Platform chromeos = Platform(
     label: "Chrome OS",
-    icon: BrandIcons.googlechrome,
+    icon: BrandIconsMinified.googlechrome,
   );
 
   static const Platform calculator = Platform(
     label: "Calculator",
-    icon: Icons.calculate,
+    icon: MaterialIconsMinified.calculator_variant,
   );
 
   static const Platform embedded = Platform(
     label: "Embedded System",
-    icon: Icons.developer_board_outlined,
+    icon: MaterialIconsMinified.developer_board,
   );
 }

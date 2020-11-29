@@ -4,6 +4,7 @@ import 'package:portfolio/config/colors.config.dart';
 import 'package:portfolio/config/general.config.dart';
 import 'package:portfolio/config/projects.config.dart';
 import 'package:portfolio/config/ui.config.dart';
+import 'package:portfolio/fonts/material_icons_minified_icons.dart';
 import 'package:portfolio/ui/helper/ui.helper.dart';
 import 'package:portfolio/ui/widget/util/chip.widget.dart';
 import 'package:portfolio/ui/widget/util/icon_normalized.widget.dart';
@@ -50,7 +51,7 @@ class _ProjectFrontWidgetState extends State<ProjectFrontWidget> {
           : null,
       hasDownload
           ? ButtonWidget(
-              icon: Icons.file_download,
+              icon: MaterialIconsMinified.download,
               label: "Download",
               tooltip: "Download the latest release",
               url: widget.project.urlDownload,
@@ -58,7 +59,7 @@ class _ProjectFrontWidgetState extends State<ProjectFrontWidget> {
           : null,
       hasPlaystore
           ? ButtonWidget(
-              icon: Icons.open_in_new,
+              icon: MaterialIconsMinified.open_in_new,
               isIconTrailing: true,
               label: "Play Store",
               tooltip: "Available in the Play Store",
@@ -67,7 +68,7 @@ class _ProjectFrontWidgetState extends State<ProjectFrontWidget> {
           : null,
       hasGithub
           ? ButtonWidget(
-              icon: Icons.open_in_new,
+              icon: MaterialIconsMinified.open_in_new,
               isIconTrailing: true,
               label: "Github",
               tooltip: "View the source code",
@@ -79,7 +80,7 @@ class _ProjectFrontWidgetState extends State<ProjectFrontWidget> {
           : null,
       hasWebsite
           ? ButtonWidget(
-              icon: Icons.open_in_new,
+              icon: MaterialIconsMinified.open_in_new,
               isIconTrailing: true,
               label: "Website",
               tooltip: "This project has a website",
