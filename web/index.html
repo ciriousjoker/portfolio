@@ -14,6 +14,8 @@
   -->
   <base href="/">
 
+  <link rel="stylesheet" href="style.css">
+
   <meta charset="UTF-8">
   <meta content="IE=Edge" http-equiv="X-UA-Compatible">
   <meta name="description" content="A new Flutter project.">
@@ -43,6 +45,61 @@
 </head>
 
 <body>
+  <!-- Loading animation -->
+  <div class="loading">
+    <!-- Google Chrome -->
+    <div class="infinityChrome">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+
+    <!-- Safari and others -->
+    <div class="infinity">
+      <div>
+        <span></span>
+      </div>
+      <div>
+        <span></span>
+      </div>
+      <div>
+        <span></span>
+      </div>
+    </div>
+
+    <!-- Stuff -->
+    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" style="display: none;">
+      <defs>
+        <filter id="goo">
+          <feGaussianBlur in="SourceGraphic" stdDeviation="6" result="blur" />
+          <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo" />
+          <feBlend in="SourceGraphic" in2="goo" />
+        </filter>
+      </defs>
+    </svg>
+  </div>
+
+  <script>
+    (() => {
+      var isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
+
+      if (!isChrome) {
+        document.getElementsByClassName("infinityChrome")[0].style.display = "none";
+        document.getElementsByClassName("infinity")[0].style.display = "block";
+      }
+    })();
+
+    function stopLoading() {
+      const elemChrome = document.getElementsByClassName("infinityChrome")[0];
+      const elem = document.getElementsByClassName("infinity")[0];
+      if (elemChrome) {
+        elemChrome.remove();
+      }
+      if (elem) {
+        elem.remove();
+      }
+    }
+  </script>
   <!-- This script installs service_worker.js to provide PWA functionality to
        application. For more information, see:
        https://developers.google.com/web/fundamentals/primers/service-workers -->
