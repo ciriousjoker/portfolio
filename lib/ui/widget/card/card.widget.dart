@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:portfolio/config/general.config.dart';
 import 'package:portfolio/config/colors.config.dart';
 import 'package:portfolio/config/ui.config.dart';
+import 'package:portfolio/fonts/material_icons_minified_icons.dart';
 import 'package:portfolio/ui/helper/ui.helper.dart';
 import 'package:portfolio/ui/widget/card/avatar.widget.dart';
 import 'package:portfolio/ui/widget/util/markdown_wrapper.widget.dart';
@@ -20,7 +21,7 @@ class CardWidget extends StatefulWidget {
 
 class _CardWidgetState extends State<CardWidget> {
   static const Icon iconQuotationmark = const Icon(
-    Icons.format_quote_sharp,
+    MaterialIconsMinified.format_quote_close,
     color: ColorsConfig.cardTextQuotationmarks,
     size: UIConfig.cardQuotationmarkSize,
   );
@@ -32,6 +33,10 @@ class _CardWidgetState extends State<CardWidget> {
     return LayoutBuilder(
       builder: (context, constraints) {
         return SlimyCard(
+          icon: Icon(
+            MaterialIconsMinified.chevron_down,
+            color: Colors.black87,
+          ),
           color: ColorsConfig.card,
           width: min(constraints.maxWidth, UIConfig.cardMaxWidth),
           topCardHeight: UIConfig.cardSizeTop,

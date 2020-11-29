@@ -5,6 +5,7 @@ import 'package:flip_card/flip_card.dart';
 import 'package:flutter/material.dart';
 import 'package:portfolio/config/projects.config.dart';
 import 'package:portfolio/config/ui.config.dart';
+import 'package:portfolio/fonts/material_icons_minified_icons.dart';
 import 'package:portfolio/ui/helper/ui.helper.dart';
 import 'package:portfolio/ui/widget/timeline/project/project_back.widget.dart';
 import 'package:portfolio/ui/widget/timeline/project/project_front.widget.dart';
@@ -44,7 +45,7 @@ class _ProjectWidgetState extends State<ProjectWidget> {
   MouseRegion widgetBtnFlipHint() {
     return MouseRegion(
       child: IconButton(
-        icon: Icon(Icons.flip),
+        icon: Icon(MaterialIconsMinified.flip_horizontal),
         color: Colors.black12,
         tooltip: "Flip",
         onPressed: () {

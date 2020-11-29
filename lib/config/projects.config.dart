@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/fonts/brand_icons_minified_icons.dart';
+import 'package:portfolio/fonts/material_icons_minified_icons.dart';
 
 class ProjectConfig {
   static const List<ProjectData> projects = [
@@ -846,11 +847,11 @@ class Platforms {
 
   static const Platform calculator = Platform(
     label: "Calculator",
-    icon: Icons.calculate,
+    icon: MaterialIconsMinified.calculator_variant,
   );
 
   static const Platform embedded = Platform(
     label: "Embedded System",
-    icon: Icons.developer_board_outlined,
+    icon: MaterialIconsMinified.developer_board,
   );
 }
