@@ -72,6 +72,9 @@ flutter:
     - family: Exo2
       fonts:
         - asset: fonts/Exo2-Regular.ttf
+    - family: BrandIconsMinified
+      fonts:
+        - asset: fonts/BrandIconsMinified.ttf
   #   - family: Trajan Pro
   #     fonts:
   #       - asset: fonts/TrajanPro.ttf

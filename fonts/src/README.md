@@ -1,0 +1,1 @@
+- Upload these .zip files to https://www.fluttericon.com/ to import them
