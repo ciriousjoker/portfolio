@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class UIHelper {
   // Vertical spacing constants. Adjust to your liking.
@@ -54,5 +55,13 @@ class UIHelper {
   // https://stackoverflow.com/questions/50081213/how-do-i-use-hexadecimal-color-strings-in-flutter
   static Color getColorFromColorCode(String code) {
     return Color(int.parse(code.substring(1, 7), radix: 16) + 0xFF000000);
+  }
+
+  static bool isVertical(BuildContext context) {
+    return context.isPortrait || context.width < 1280;
+  }
+
+  static bool isDense(BuildContext context) {
+    return isVertical(context) || context.width < 1600;
   }
 }

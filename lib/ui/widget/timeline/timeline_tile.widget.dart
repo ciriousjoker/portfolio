@@ -6,7 +6,6 @@ import 'package:portfolio/ui/helper/ui.helper.dart';
 import 'package:portfolio/ui/widget/util/rounded_border.widget.dart';
 import 'package:portfolio/ui/widget/timeline/project/project.widget.dart';
 import 'package:timeline_tile/timeline_tile.dart';
-import 'package:get/get.dart';
 
 class TimelineTileWidget extends StatelessWidget {
   const TimelineTileWidget({
@@ -24,10 +23,12 @@ class TimelineTileWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final bool isDense = UIHelper.isDense(context);
+
     Widget widgetProject = Padding(
       padding: EdgeInsets.symmetric(vertical: UIConfig.timelineProjectSpacing),
       child: Align(
-        alignment: context.isPortrait
+        alignment: isDense
             ? Alignment.center
             : isLeft
                 ? Alignment.centerLeft
@@ -43,8 +44,7 @@ class TimelineTileWidget extends StatelessWidget {
 
     return Center(
       child: TimelineTile(
-        alignment:
-            context.isPortrait ? TimelineAlign.start : TimelineAlign.center,
+        alignment: isDense ? TimelineAlign.start : TimelineAlign.center,
         beforeLineStyle: LineStyle(
           color: ColorsConfig.timelineLine,
           thickness: UIConfig.timelineLineThickness,
@@ -56,8 +56,8 @@ class TimelineTileWidget extends StatelessWidget {
         indicatorStyle: IndicatorStyle(
           width: UIConfig.timelineIndicatorSize,
           padding: EdgeInsets.only(
-            left: context.isPortrait ? 0 : UIHelper.HorizontalSpaceMedium,
-            right: context.isPortrait
+            left: isDense ? 0 : UIHelper.HorizontalSpaceMedium,
+            right: isDense
                 ? UIHelper.HorizontalSpaceSmall
                 : UIHelper.HorizontalSpaceMedium,
             top: UIHelper.VerticalSpaceSmall,
@@ -88,13 +88,12 @@ class TimelineTileWidget extends StatelessWidget {
             ),
           ),
         ),
-        startChild: context.isPortrait
+        startChild: isDense
             ? null
             : !isLeft
                 ? widgetProject
                 : widgetNotProject,
-        endChild:
-            (context.isPortrait || isLeft) ? widgetProject : widgetNotProject,
+        endChild: (isDense || isLeft) ? widgetProject : widgetNotProject,
         isFirst: this.index == 0,
         isLast: this.index == this.count - 1,
       ),
