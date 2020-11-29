@@ -2,7 +2,6 @@ import 'dart:math';
 
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:portfolio/config/general.config.dart';
 import 'package:portfolio/config/colors.config.dart';
 import 'package:portfolio/config/ui.config.dart';
@@ -58,10 +57,9 @@ class _CardWidgetState extends State<CardWidget> {
                           alignment: Alignment.center,
                           child: Text(
                             GeneralConfig.quote,
-                            style: GoogleFonts.exo2(
-                              textStyle: UIConfig.cardQuoteTextStyle.copyWith(
-                                color: ColorsConfig.cardText,
-                              ),
+                            style: UIConfig.cardQuoteTextStyle.copyWith(
+                              color: ColorsConfig.cardText,
+                              fontFamily: "Exo2",
                             ),
                             textAlign: TextAlign.center,
                           ),
