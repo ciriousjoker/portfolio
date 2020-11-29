@@ -3,11 +3,13 @@ const MANIFEST = 'flutter-app-manifest';
 const TEMP = 'flutter-temp-cache';
 const CACHE_NAME = 'flutter-app-cache';
 const RESOURCES = {
-  "version.json": "d7a12af99b6d061b75d07669e5796ff4",
-"index.html": "7d7d016836eedcb6dc1f82a937eb63e7",
-"/": "7d7d016836eedcb6dc1f82a937eb63e7",
-"main.dart.js": "676c0e3a0832c7235d35e83297f0512e",
+  "version.json": "1a2a81f86dec1318ec1bfcf393fff92b",
+"index.html": "a2a107f4c6b0928b2f66d30b0873146a",
+"/": "a2a107f4c6b0928b2f66d30b0873146a",
+"main.dart.js": "4f2f5372400c3e0e81fcd99446765510",
+"style.css.map": "ddc42bf925f2933f501ee9f7c6daf708",
 "favicon.png": "bb0107d24d6e2d23499705b538213c7d",
+"style.scss": "e0851c1d4288655c0549d8918102440c",
 "icons/favicon-16x16.png": "e7d46605326e2b8be4b7a5ac289ae221",
 "icons/safari-pinned-tab.svg": "2e8325a91d5aef2cad49e9e2d223b260",
 "icons/favicon.ico": "5f80233cc2f34779c32c78e0ee7222c2",
@@ -18,8 +20,9 @@ const RESOURCES = {
 "icons/mstile-150x150.png": "cada11d0673f2305eb5ed5e98b292a0d",
 "icons/browserconfig.xml": "6ec9b8795226e72d4b6315221b2fedbd",
 "icons/favicon-32x32.png": "bb0107d24d6e2d23499705b538213c7d",
+"style.css": "70cf1a10ef116411fcd6c13ea4783951",
 "assets/AssetManifest.json": "ced1ca04f46c420bad29e1cf45d91204",
-"assets/NOTICES": "1b2f585acbb1fc2d601ea5c99fe3b032",
+"assets/NOTICES": "3eda3112cde776df9b351a4548e9cc1d",
 "assets/FontManifest.json": "92213c3c1148a368eaa8c9930f77e433",
 "assets/packages/flutter_markdown/assets/logo.png": "67642a0b80f3d50277c44cde8f450e50",
 "assets/packages/slimy_card/assets/flare/topSlime.flr": "65ff491b065af4abfb7379c91edad2f7",
