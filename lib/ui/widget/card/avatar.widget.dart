@@ -49,6 +49,7 @@ class AvatarWidget extends StatelessWidget {
             child: _Action(
               size: sizeAction,
               icon: MaterialIconsMinified.email,
+              tooltip: "Email",
               onTap: () {
                 try {
                   launch("mailto:${GeneralConfig.email}");
@@ -66,6 +67,7 @@ class AvatarWidget extends StatelessWidget {
             child: _Action(
               size: sizeAction,
               icon: BrandIconsMinified.linkedin,
+              tooltip: "LinkedIn",
               onTap: () {
                 try {
                   launch(GeneralConfig.linkedin);
@@ -83,6 +85,7 @@ class AvatarWidget extends StatelessWidget {
             child: _Action(
               size: sizeAction,
               icon: BrandIconsMinified.github,
+              tooltip: "Github",
               onTap: () {
                 try {
                   launch(GeneralConfig.githubUrl);
@@ -114,6 +117,7 @@ class _Action extends StatelessWidget {
 
     /// Color behind the action
     this.colorBackground = ColorsConfig.card,
+    this.tooltip = "",
     this.onTap,
   }) : super(key: key);
 
@@ -122,6 +126,7 @@ class _Action extends StatelessWidget {
   final Function onTap;
   final Color colorBackground;
   final double size;
+  final String tooltip;
 
   @override
   Widget build(BuildContext context) {
@@ -133,15 +138,18 @@ class _Action extends StatelessWidget {
           color: colorBackground,
           size: borderWidth,
           elevation: 4,
-          child: Container(
-            color: colorFab,
-            child: Padding(
-              padding: EdgeInsets.all(borderWidth),
-              child: Center(
-                child: IconNormalizedWidget(
-                  icon: icon,
-                  size: sizeIcon,
-                  color: colorIcon,
+          child: Tooltip(
+            message: tooltip,
+            child: Container(
+              color: colorFab,
+              child: Padding(
+                padding: EdgeInsets.all(borderWidth),
+                child: Center(
+                  child: IconNormalizedWidget(
+                    icon: icon,
+                    size: sizeIcon,
+                    color: colorIcon,
+                  ),
                 ),
               ),
             ),
