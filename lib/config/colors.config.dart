@@ -2,14 +2,15 @@ import 'package:flutter/material.dart';
 
 class ColorsConfig {
   // General
-  static const Color primary = Color(0xFFff8f00);
+  static const Color primary = Color(0xFF03a9f4);
   // static const Color accent = Colors.amberAccent;
-  static const Color accent = Color(0xFFff8f00);
+  static const Color accent = Color(0xFFffc400);
 
   // Card
   // static const Color card = Color(0xFF2e5239);
   // static const Color card = Color(0xFFffa000);
-  static const Color card = Color(0xFFff8f00);
+  // static const Color card = Color(0xFFff8f00);
+  static const Color card = ColorsConfig.primary;
   // static const Color card = Colors.amber;
 
   static const Color cardText = Colors.white;
