@@ -187,7 +187,7 @@ class ProjectConfig {
           "for each character sounds interesting, so I might do that at one point.\n\n"
           "---\n"
           "Aside from these technological aspects, I also managed our Trello and organized meetings.",
-      urlWebsite: "https://ciriousjoker.github.io/fridaynightsurvival/",
+      urlWebsite: "https://fridaynightsurvival.philippbauer.me/",
       // Nov 2019
       timestamp: 1572735600000,
       tags: [
