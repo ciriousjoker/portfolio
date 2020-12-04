@@ -25,4 +25,5 @@ class ColorsConfig {
   // Timeline
   static const Color timelineLine = Colors.white;
   static const Color timelineGlow = Colors.white38;
+  static const Color timelineHint = Colors.white24;
 }

@@ -41,6 +41,22 @@ class TimelineTileWidget extends StatelessWidget {
     );
 
     Widget widgetNotProject = SizedBox.shrink();
+    if (index == 0) {
+      widgetNotProject = Center(
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            Text(
+              "Click on the cards to view technical details and learnings",
+              style: Theme.of(context).textTheme.headline4.copyWith(
+                    fontSize: 20,
+                    color: ColorsConfig.timelineHint,
+                  ),
+            ),
+          ],
+        ),
+      );
+    }
 
     return Center(
       child: TimelineTile(
