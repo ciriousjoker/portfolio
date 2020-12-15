@@ -3,10 +3,10 @@ const MANIFEST = 'flutter-app-manifest';
 const TEMP = 'flutter-temp-cache';
 const CACHE_NAME = 'flutter-app-cache';
 const RESOURCES = {
-  "version.json": "b4b7b871335d454c237726eb02691db8",
-"index.html": "e76e887ae2807677517c0f4921610140",
-"/": "e76e887ae2807677517c0f4921610140",
-"main.dart.js": "4bed2fcc4fe2d2ce27276c5cc39706e0",
+  "version.json": "77558fb05c0fb27a95a910f97ff807a7",
+"index.html": "93770dd1524a0babcebcc208e7ee6521",
+"/": "93770dd1524a0babcebcc208e7ee6521",
+"main.dart.js": "2ac03b428b08522f2a1ca87afb630bd3",
 "style.css.map": "ddc42bf925f2933f501ee9f7c6daf708",
 "favicon.png": "bb0107d24d6e2d23499705b538213c7d",
 "style.scss": "e0851c1d4288655c0549d8918102440c",
@@ -21,7 +21,7 @@ const RESOURCES = {
 "icons/browserconfig.xml": "6ec9b8795226e72d4b6315221b2fedbd",
 "icons/favicon-32x32.png": "bb0107d24d6e2d23499705b538213c7d",
 "style.css": "70cf1a10ef116411fcd6c13ea4783951",
-"assets/AssetManifest.json": "ced1ca04f46c420bad29e1cf45d91204",
+"assets/AssetManifest.json": "cd8f74d5e8671a0da38bb7e6f14046c9",
 "assets/NOTICES": "3eda3112cde776df9b351a4548e9cc1d",
 "assets/FontManifest.json": "92213c3c1148a368eaa8c9930f77e433",
 "assets/packages/flutter_markdown/assets/logo.png": "67642a0b80f3d50277c44cde8f450e50",
@@ -33,6 +33,7 @@ const RESOURCES = {
 "assets/fonts/Catamaran/static/Catamaran-Light.ttf": "7af00944494a4d42781ae7207466e9ab",
 "assets/fonts/Catamaran/static/Catamaran-Regular.ttf": "6d96a0d79326c05382895c87346c92ca",
 "assets/fonts/MaterialIconsMinified.ttf": "b775b1128306d1c47ee230e218dd0a2e",
+"assets/assets/images/opengraph.png": "77e02ca7ea090dff76b91103ad24204b",
 "assets/assets/images/avatar.webp": "796ec281b58bc5722e6b7a552bc7a54b",
 "assets/assets/images/favicon_src.png": "ac33c76699cce52c0b2817a4023e4f14",
 "assets/assets/icons/fridaynightsurvival.png": "f294f3c03fee4e9b20b64662c8ef1fce",

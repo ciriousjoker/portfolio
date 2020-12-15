@@ -16,13 +16,11 @@
   </script>
   <!-- End Google Tag Manager -->
 
-  <link rel="preconnect" href="https://unpkg.com/">
-
-  <link rel="stylesheet" href="style.css">
-
   <meta charset="UTF-8">
   <meta content="IE=Edge" http-equiv="X-UA-Compatible">
-  <meta name="description" content="Philipp Bauer's portfolio :)">
+  <meta name="robots" content="index, follow">
+  <link rel="stylesheet" href="style.css">
+  <link rel="manifest" href="icons/site.webmanifest">
 
   <!-- iOS meta tags & icons -->
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -44,8 +42,53 @@
   <link rel="mask-icon" href="icons/safari-pinned-tab.svg" color="#03a9f4">
   <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon.png">
 
-  <title>Philipp Bauer</title>
-  <link rel="manifest" href="icons/site.webmanifest">
+  <!-- General info -->
+  <title>Philipp Bauer - Portfolio</title>
+  <meta name="description"
+    content="Web developer, Flutter developer, Firebase as the backend of choice, experienced with Google Tag Manager + Google Analytics. 👋">
+  <meta name="author" content="Philipp Bauer">
+
+  <!-- JSON-LD -->
+  <script type="application/ld+json">
+    {
+      "@context": "http://schema.org/",
+      "@type": "Person",
+      "name": "Philipp Bauer",
+      "jobTitle": "Web & Flutter developer",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "undefined",
+        "addressRegion": "Germany"
+      }
+    }
+    </script>
+
+  <!-- OpenGraph Tags -->
+  <meta property="og:type" content="profile">
+  <meta property="og:title" content="Portfolio">
+  <meta property="og:url" content="https://philippbauer.me/">
+  <meta property="og:image" content="https://philippbauer.me/assets/assets/images/opengraph.png">
+  <meta property="profile:first_name" content="Philipp">
+  <meta property="profile:last_name" content="Bauer">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@ciriousjoker">
+  <meta name="twitter:title" content="Philipp Bauer - Portfolio">
+  <meta name="twitter:description"
+    content="Web developer, Flutter developer, Firebase as the backend of choice, experienced with Google Tag Manager + Google Analytics. 👋">
+  <meta name="twitter:image" content="https://philippbauer.me/assets/assets/images/opengraph.png">
+
+  <!-- Microdata -->
+  <meta itemprop="speakable" itemscope itemtype="http://schema.org/Person" itemref="mdName mdJobTitle" content>
+  <meta id="mdName" itemprop="name" content="Philipp Bauer">
+  <meta id="mdJobTitle" itemprop="jobTitle" content="Web & Flutter developer">
+
+  <meta itemprop="speakable" itemscope itemtype="http://schema.org/PostalAddress" itemref="mdAdressRegion" content>
+  <meta id="mdAdressRegion" itemprop="addressRegion" content="Germany">
+
+  <!-- Preconnect -->
+  <link rel="preconnect" href="https://unpkg.com/">
 </head>
 
 <body>
