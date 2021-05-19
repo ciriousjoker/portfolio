@@ -21,11 +21,20 @@ class MarkdownWrapperWidget extends StatelessWidget {
     final styleP = style ?? Theme.of(context).textTheme.bodyText2;
 
     return MarkdownBody(
+      listItemCrossAxisAlignment: MarkdownListItemCrossAxisAlignment.start,
       data: data,
       builders: {
         // Handle links separately:
         // https://github.com/flutter/flutter_markdown/issues/233
-        "a": LinkBuilder(),
+        // "a": LinkBuilder(),
+      },
+      extensionSet: md.ExtensionSet.gitHubWeb,
+      onTapLink: (text, href, title) {
+        try {
+          launch(href);
+        } catch (_) {
+          assert(false);
+        }
       },
       styleSheet: MarkdownStyleSheet(
         p: styleP,

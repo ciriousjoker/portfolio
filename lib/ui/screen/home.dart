@@ -53,6 +53,8 @@ class HomeScreen extends StatelessWidget {
                   Expanded(
                     child: _delayed(
                       CustomScrollView(
+                        scrollDirection: Axis.vertical,
+                        shrinkWrap: true,
                         slivers: <Widget>[TimelineWidget()],
                       ),
                     ),

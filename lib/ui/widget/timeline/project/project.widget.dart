@@ -1,6 +1,6 @@
 import 'dart:async';
 
-import 'package:flip_card/flip_card.controller.dart';
+import 'package:flip_card/flip_card_controller.dart';
 import 'package:flip_card/flip_card.dart';
 import 'package:flutter/material.dart';
 import 'package:portfolio/config/projects.config.dart';
