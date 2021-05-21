@@ -39,13 +39,15 @@ class ButtonWidget extends StatelessWidget {
     if (icon == null) {
       return Tooltip(
         message: tooltip,
-        child: RaisedButton(
-          color: colorBg,
+        child: ElevatedButton(
+          style: ElevatedButton.styleFrom(
+            primary: colorBg,
+            onPrimary: colorText,
           padding: EdgeInsets.symmetric(
             vertical: UIHelper.VerticalSpaceMedium,
             horizontal: 20,
           ),
-          textColor: colorText,
+          ),
           child: widgetText,
           onPressed: () async {
             await launch(url);
@@ -56,15 +58,17 @@ class ButtonWidget extends StatelessWidget {
 
     return Tooltip(
       message: tooltip,
-      child: RaisedButton.icon(
-        color: colorBg,
+      child: ElevatedButton.icon(
+        style: ElevatedButton.styleFrom(
+          onPrimary: colorText,
+          primary: colorBg,
         padding: EdgeInsets.symmetric(
           vertical: UIHelper.VerticalSpaceMedium,
           horizontal: 20,
         ),
+        ),
         icon: isIconTrailing ? widgetText : widgetIcon,
         label: isIconTrailing ? widgetIcon : widgetText,
-        textColor: colorText,
         onPressed: () async {
           await launch(url);
         },
