@@ -575,15 +575,15 @@ class ProjectConfig {
 
 class ProjectData {
   final String title;
-  final String githubName;
+  final String? githubName;
   final String description;
   final String learningsTldr;
   final String learnings;
-  final String urlImage;
-  final String urlDownload;
-  final String urlDemo;
-  final String urlPlaystore;
-  final String urlWebsite;
+  final String? urlImage;
+  final String? urlDownload;
+  final String? urlDemo;
+  final String? urlPlaystore;
+  final String? urlWebsite;
 
   // filename in assets/icons/*
   final String icon;
@@ -594,13 +594,13 @@ class ProjectData {
   final List<Platform> platforms;
 
   const ProjectData({
-    @required this.title,
-    @required this.timestamp,
-    @required this.icon,
+    required this.title,
+    required this.timestamp,
+    required this.icon,
     this.githubName,
-    this.description = "",
-    this.learningsTldr = "",
-    this.learnings = "",
+    required this.description,
+    required this.learningsTldr,
+    required this.learnings,
     this.urlImage,
     this.urlDemo,
     this.urlPlaystore,
@@ -791,10 +791,10 @@ class Tag {
   final String url;
 
   const Tag({
-    @required this.label,
-    @required this.colorHex,
-    @required this.icon,
-    @required this.url,
+    required this.label,
+    required this.colorHex,
+    required this.icon,
+    required this.url,
   });
 }
 
@@ -804,8 +804,8 @@ class Platform {
   final IconData icon;
 
   const Platform({
-    @required this.label,
-    @required this.icon,
+    required this.label,
+    required this.icon,
   });
 }
 

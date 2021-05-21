@@ -8,10 +8,10 @@ import 'package:url_launcher/url_launcher.dart';
 
 class MarkdownWrapperWidget extends StatelessWidget {
   final String data;
-  final TextStyle style;
+  final TextStyle? style;
 
   const MarkdownWrapperWidget({
-    Key key,
+    Key? key,
     this.data = "",
     this.style,
   }) : super(key: key);
@@ -28,20 +28,19 @@ class MarkdownWrapperWidget extends StatelessWidget {
         // https://github.com/flutter/flutter_markdown/issues/233
         // "a": LinkBuilder(),
       },
-      extensionSet: md.ExtensionSet.gitHubWeb,
       onTapLink: (text, href, title) {
         try {
-          launch(href);
+          launch(href!);
         } catch (_) {
           assert(false);
         }
       },
       styleSheet: MarkdownStyleSheet(
         p: styleP,
-        h3: Theme.of(context).textTheme.bodyText2.copyWith(
+        h3: Theme.of(context).textTheme.bodyText2?.copyWith(
               fontSize: 19,
             ),
-        h4: Theme.of(context).textTheme.bodyText2.copyWith(
+        h4: Theme.of(context).textTheme.bodyText2?.copyWith(
               fontSize: 17,
               fontWeight: FontWeight.w500,
               height: 1.5,
@@ -55,10 +54,10 @@ class MarkdownWrapperWidget extends StatelessWidget {
           ),
         ),
         em: TextStyle(
-          color: styleP.color.withOpacity(0.5),
+          color: styleP?.color?.withOpacity(0.5),
         ),
         blockquote: TextStyle(
-          color: styleP.color.withOpacity(0.6),
+          color: styleP?.color?.withOpacity(0.6),
         ),
         blockquoteDecoration: BoxDecoration(
           color: Colors.black.withOpacity(0.05),
@@ -78,7 +77,7 @@ class LinkBuilder extends MarkdownElementBuilder {
   @override
   Widget visitElementAfter(
     md.Element element,
-    TextStyle style,
+    TextStyle? style,
   ) {
     return Transform.translate(
       // Fix a weird alignment issue. Might be fixed by Flutter in the future
@@ -92,7 +91,7 @@ class LinkBuilder extends MarkdownElementBuilder {
             recognizer: TapGestureRecognizer()
               ..onTap = () {
                 try {
-                  launch(element.attributes["href"]);
+                  launch(element.attributes["href"]!);
                 } catch (_) {
                   assert(false);
                 }

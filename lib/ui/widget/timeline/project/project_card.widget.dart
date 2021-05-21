@@ -7,8 +7,8 @@ class ProjectCardWidget extends StatelessWidget {
   final Widget child;
 
   const ProjectCardWidget({
-    Key key,
-    @required this.child,
+    Key? key,
+    required this.child,
   }) : super(key: key);
 
   @override

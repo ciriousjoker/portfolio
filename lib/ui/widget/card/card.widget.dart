@@ -13,7 +13,7 @@ import 'package:slimy_card/slimy_card.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class CardWidget extends StatefulWidget {
-  CardWidget({Key key}) : super(key: key);
+  CardWidget({Key? key}) : super(key: key);
 
   @override
   _CardWidgetState createState() => _CardWidgetState();
@@ -90,7 +90,7 @@ class _CardWidgetState extends State<CardWidget> {
                               style: Theme.of(context)
                                   .textTheme
                                   .headline4
-                                  .copyWith(
+                                  ?.copyWith(
                                     color: ColorsConfig.cardText,
                                     fontWeight: FontWeight.w200,
                                     fontFamily: "Catamaran",
@@ -108,7 +108,7 @@ class _CardWidgetState extends State<CardWidget> {
                             Text(
                               GeneralConfig.position,
                               style:
-                                  Theme.of(context).textTheme.caption.copyWith(
+                                  Theme.of(context).textTheme.caption?.copyWith(
                                         color: ColorsConfig.cardTextSecondary,
                                       ),
                               maxLines: 3,
@@ -152,16 +152,17 @@ class _CardWidgetState extends State<CardWidget> {
                   child: GestureDetector(
                     child: Text(
                       GeneralConfig.myersBriggs,
-                      style: Theme.of(context).textTheme.caption.copyWith(
+                      style: Theme.of(context).textTheme.caption?.copyWith(
                             color: ColorsConfig.cardTextSecondary,
                           ),
                     ),
                     onTap: () {
-                      if (GeneralConfig.myersBriggsUrl == null) return;
-                      try {
-                        launch(GeneralConfig.myersBriggsUrl);
-                      } catch (e) {
-                        assert(false);
+                      if (GeneralConfig.myersBriggsUrl != null) {
+                        try {
+                          launch(GeneralConfig.myersBriggsUrl!);
+                        } catch (e) {
+                          assert(false);
+                        }
                       }
                     },
                   ),

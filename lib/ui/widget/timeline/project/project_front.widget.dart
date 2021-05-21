@@ -17,9 +17,9 @@ class ProjectFrontWidget extends StatefulWidget {
   final Widget flipHint;
 
   const ProjectFrontWidget({
-    Key key,
-    @required this.project,
-    this.flipHint,
+    Key? key,
+    required this.project,
+    required this.flipHint,
   }) : super(key: key);
 
   @override
@@ -27,8 +27,8 @@ class ProjectFrontWidget extends StatefulWidget {
 }
 
 class _ProjectFrontWidgetState extends State<ProjectFrontWidget> {
-  DateTime date;
-  List<Widget> listActions;
+  late DateTime date;
+  late List<Widget> listActions;
 
   bool get hasDemo => (widget.project.urlDemo ?? "").isNotEmpty;
   bool get hasDownload => (widget.project.urlDownload ?? "").isNotEmpty;
@@ -41,53 +41,56 @@ class _ProjectFrontWidgetState extends State<ProjectFrontWidget> {
     super.initState();
     date = DateTime.fromMillisecondsSinceEpoch(widget.project.timestamp);
 
-    listActions = [
-      hasDemo
-          ? ButtonWidget(
-              label: "Demo",
-              tooltip: "Try a demo on your browser",
-              url: widget.project.urlDemo,
-            )
-          : null,
-      hasDownload
-          ? ButtonWidget(
-              icon: MaterialIconsMinified.download,
-              label: "Download",
-              tooltip: "Download the latest release",
-              url: widget.project.urlDownload,
-            )
-          : null,
-      hasPlaystore
-          ? ButtonWidget(
-              icon: MaterialIconsMinified.open_in_new,
-              isIconTrailing: true,
-              label: "Play Store",
-              tooltip: "Available in the Play Store",
-              url: widget.project.urlPlaystore,
-            )
-          : null,
-      hasGithub
-          ? ButtonWidget(
-              icon: MaterialIconsMinified.open_in_new,
-              isIconTrailing: true,
-              label: "Github",
-              tooltip: "View the source code",
-              // Github brand color
-              color: Color(0xFF333333),
-              url:
-                  "https://github.com/${GeneralConfig.github}/${widget.project.githubName}",
-            )
-          : null,
-      hasWebsite
-          ? ButtonWidget(
-              icon: MaterialIconsMinified.open_in_new,
-              isIconTrailing: true,
-              label: "Website",
-              tooltip: "This project has a website",
-              url: widget.project.urlWebsite,
-            )
-          : null,
-    ].where((element) => element != null).toList();
+    listActions = [];
+    if (hasDemo) {
+      listActions.add(ButtonWidget(
+        label: "Demo",
+        tooltip: "Try a demo on your browser",
+        url: widget.project.urlDemo!,
+      ));
+    }
+
+    if (hasDownload) {
+      listActions.add(ButtonWidget(
+        icon: MaterialIconsMinified.download,
+        label: "Download",
+        tooltip: "Download the latest release",
+        url: widget.project.urlDownload!,
+      ));
+    }
+
+    if (hasPlaystore) {
+      listActions.add(ButtonWidget(
+        icon: MaterialIconsMinified.open_in_new,
+        isIconTrailing: true,
+        label: "Play Store",
+        tooltip: "Available in the Play Store",
+        url: widget.project.urlPlaystore!,
+      ));
+    }
+
+    if (hasGithub) {
+      listActions.add(ButtonWidget(
+        icon: MaterialIconsMinified.open_in_new,
+        isIconTrailing: true,
+        label: "Github",
+        tooltip: "View the source code",
+        // Github brand color
+        color: Color(0xFF333333),
+        url:
+            "https://github.com/${GeneralConfig.github}/${widget.project.githubName}",
+      ));
+    }
+
+    if (hasWebsite) {
+      listActions.add(ButtonWidget(
+        icon: MaterialIconsMinified.open_in_new,
+        isIconTrailing: true,
+        label: "Website",
+        tooltip: "This project has a website",
+        url: widget.project.urlWebsite!,
+      ));
+    }
   }
 
   @override
@@ -106,7 +109,7 @@ class _ProjectFrontWidgetState extends State<ProjectFrontWidget> {
                   maxLines: 3,
                 ),
               ),
-              ...(widget.project?.platforms ?? [])
+              ...widget.project.platforms
                   .map(
                     (platform) => Tooltip(
                       message: platform.label,

@@ -6,8 +6,8 @@ import 'package:url_launcher/url_launcher.dart';
 
 class ChipWidget extends StatelessWidget {
   const ChipWidget({
-    Key key,
-    @required this.tag,
+    Key? key,
+    required this.tag,
   }) : super(key: key);
 
   final Tag tag;

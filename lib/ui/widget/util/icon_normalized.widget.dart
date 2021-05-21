@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 
 class IconNormalizedWidget extends StatelessWidget {
   const IconNormalizedWidget({
-    Key key,
-    this.icon,
+    Key? key,
+    required this.icon,
     this.size = 20,
-    this.color,
+    required this.color,
   }) : super(key: key);
 
   final IconData icon;

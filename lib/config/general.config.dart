@@ -27,5 +27,5 @@ Have a great day!
 """;
 
   static const String myersBriggs = "ISTJ-A";
-  static const String myersBriggsUrl = null;
+  static const String? myersBriggsUrl = null;
 }

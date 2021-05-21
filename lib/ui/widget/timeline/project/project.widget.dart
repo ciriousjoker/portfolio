@@ -13,9 +13,9 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 class ProjectWidget extends StatefulWidget {
   const ProjectWidget({
-    Key key,
-    this.project,
-    this.index,
+    Key? key,
+    required this.project,
+    required this.index,
   }) : super(key: key);
 
   final ProjectData project;
@@ -26,9 +26,9 @@ class ProjectWidget extends StatefulWidget {
 }
 
 class _ProjectWidgetState extends State<ProjectWidget> {
-  String keyDebounce;
-  FlipCardController _controller;
-  Widget _btnFlipHint;
+  late String keyDebounce;
+  late FlipCardController _controller;
+  late Widget _btnFlipHint;
   bool isFlipping = false;
 
   @override

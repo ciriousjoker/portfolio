@@ -11,9 +11,9 @@ class ProjectBackWidget extends StatefulWidget {
   final Widget flipHint;
 
   const ProjectBackWidget({
-    Key key,
-    @required this.project,
-    this.flipHint,
+    Key? key,
+    required this.project,
+    required this.flipHint,
   }) : super(key: key);
 
   @override

@@ -4,12 +4,12 @@ import 'package:url_launcher/url_launcher.dart';
 
 class ButtonWidget extends StatelessWidget {
   const ButtonWidget({
-    Key key,
-    this.label,
-    this.url,
+    Key? key,
+    required this.label,
+    required this.url,
     this.isIconTrailing = false,
     this.icon,
-    this.tooltip,
+    required this.tooltip,
     this.color,
   }) : super(key: key);
 
@@ -17,8 +17,8 @@ class ButtonWidget extends StatelessWidget {
   final String url;
   final String tooltip;
   final bool isIconTrailing;
-  final IconData icon;
-  final Color color;
+  final IconData? icon;
+  final Color? color;
 
   @override
   Widget build(BuildContext context) {
@@ -43,10 +43,10 @@ class ButtonWidget extends StatelessWidget {
           style: ElevatedButton.styleFrom(
             primary: colorBg,
             onPrimary: colorText,
-          padding: EdgeInsets.symmetric(
-            vertical: UIHelper.VerticalSpaceMedium,
-            horizontal: 20,
-          ),
+            padding: EdgeInsets.symmetric(
+              vertical: UIHelper.VerticalSpaceMedium,
+              horizontal: 20,
+            ),
           ),
           child: widgetText,
           onPressed: () async {
@@ -62,10 +62,10 @@ class ButtonWidget extends StatelessWidget {
         style: ElevatedButton.styleFrom(
           onPrimary: colorText,
           primary: colorBg,
-        padding: EdgeInsets.symmetric(
-          vertical: UIHelper.VerticalSpaceMedium,
-          horizontal: 20,
-        ),
+          padding: EdgeInsets.symmetric(
+            vertical: UIHelper.VerticalSpaceMedium,
+            horizontal: 20,
+          ),
         ),
         icon: isIconTrailing ? widgetText : widgetIcon,
         label: isIconTrailing ? widgetIcon : widgetText,

@@ -5,7 +5,7 @@ import 'package:portfolio/ui/widget/card/card.widget.dart';
 import 'package:portfolio/ui/widget/timeline/timeline.widget.dart';
 
 class HomeScreen extends StatelessWidget {
-  HomeScreen({Key key}) : super(key: key);
+  HomeScreen({Key? key}) : super(key: key);
 
   final card = DelayedDisplay(
     fadingDuration: Duration(seconds: 2),

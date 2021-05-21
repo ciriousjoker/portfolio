@@ -9,10 +9,10 @@ import 'package:timeline_tile/timeline_tile.dart';
 
 class TimelineTileWidget extends StatelessWidget {
   const TimelineTileWidget({
-    Key key,
-    @required this.project,
-    @required this.index,
-    @required this.count,
+    Key? key,
+    required this.project,
+    required this.index,
+    required this.count,
   }) : super(key: key);
 
   final ProjectData project;
@@ -48,7 +48,7 @@ class TimelineTileWidget extends StatelessWidget {
           children: [
             Text(
               "Click on the cards to view technical details and learnings",
-              style: Theme.of(context).textTheme.headline4.copyWith(
+              style: Theme.of(context).textTheme.headline4?.copyWith(
                     fontSize: 20,
                     color: ColorsConfig.timelineHint,
                   ),
@@ -94,13 +94,11 @@ class TimelineTileWidget extends StatelessWidget {
             child: RoundedBorderWidget(
               size: UIConfig.timelineLineThickness,
               color: ColorsConfig.timelineLine,
-              child: (project.icon ?? "").isNotEmpty
-                  ? Image.asset(
-                      "assets/icons/${project.icon}",
-                      isAntiAlias: true,
-                      filterQuality: FilterQuality.high,
-                    )
-                  : SizedBox.shrink(),
+              child: Image.asset(
+                "assets/icons/${project.icon}",
+                isAntiAlias: true,
+                filterQuality: FilterQuality.high,
+              ),
             ),
           ),
         ),
