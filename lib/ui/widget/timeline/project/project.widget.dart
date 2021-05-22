@@ -3,9 +3,9 @@ import 'dart:async';
 import 'package:flip_card/flip_card_controller.dart';
 import 'package:flip_card/flip_card.dart';
 import 'package:flutter/material.dart';
-import 'package:portfolio/config/projects.config.dart';
 import 'package:portfolio/config/ui.config.dart';
 import 'package:portfolio/fonts/material_icons_minified_icons.dart';
+import 'package:portfolio/models/project.model.dart';
 import 'package:portfolio/ui/helper/ui.helper.dart';
 import 'package:portfolio/ui/widget/timeline/project/project_back.widget.dart';
 import 'package:portfolio/ui/widget/timeline/project/project_front.widget.dart';
@@ -18,7 +18,7 @@ class ProjectWidget extends StatefulWidget {
     required this.index,
   }) : super(key: key);
 
-  final ProjectData project;
+  final ProjectModel project;
   final int index;
 
   @override

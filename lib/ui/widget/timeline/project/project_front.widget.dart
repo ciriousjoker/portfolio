@@ -2,9 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:portfolio/config/colors.config.dart';
 import 'package:portfolio/config/general.config.dart';
-import 'package:portfolio/config/projects.config.dart';
+import 'package:portfolio/config/platforms.config.dart';
+import 'package:portfolio/config/tags.config.dart';
 import 'package:portfolio/config/ui.config.dart';
 import 'package:portfolio/fonts/material_icons_minified_icons.dart';
+import 'package:portfolio/models/project.model.dart';
 import 'package:portfolio/ui/helper/ui.helper.dart';
 import 'package:portfolio/ui/widget/util/chip.widget.dart';
 import 'package:portfolio/ui/widget/util/icon_normalized.widget.dart';
@@ -13,7 +15,7 @@ import 'package:portfolio/ui/widget/timeline/project/project_card.widget.dart';
 import 'package:portfolio/ui/widget/util/markdown_wrapper.widget.dart';
 
 class ProjectFrontWidget extends StatefulWidget {
-  final ProjectData project;
+  final ProjectModel project;
   final Widget flipHint;
 
   const ProjectFrontWidget({
@@ -109,20 +111,22 @@ class _ProjectFrontWidgetState extends State<ProjectFrontWidget> {
                   maxLines: 3,
                 ),
               ),
-              ...widget.project.platforms
-                  .map(
-                    (platform) => Tooltip(
-                      message: platform.label,
-                      child: Padding(
-                        padding: const EdgeInsets.only(left: 8),
-                        child: IconNormalizedWidget(
-                          icon: platform.icon,
-                          color: Colors.black26,
-                        ),
+              ...widget.project.platforms.map(
+                (platformId) {
+                  Platform platform =
+                      platforms.firstWhere((p) => p.id == platformId);
+                  return Tooltip(
+                    message: platform.label,
+                    child: Padding(
+                      padding: const EdgeInsets.only(left: 8),
+                      child: IconNormalizedWidget(
+                        icon: platform.icon,
+                        color: Colors.black26,
                       ),
                     ),
-                  )
-                  .toList(),
+                  );
+                },
+              ).toList(),
             ],
           ),
           Text(
@@ -162,11 +166,12 @@ class _ProjectFrontWidgetState extends State<ProjectFrontWidget> {
               Wrap(
                 spacing: UIHelper.HorizontalSpaceSmall,
                 runSpacing: UIHelper.HorizontalSpaceSmall,
-                children: widget.project.tags
-                    .map(
-                      (t) => ChipWidget(tag: t),
-                    )
-                    .toList(),
+                children: widget.project.tags.map(
+                  (tagId) {
+                    Tag tag = tags.firstWhere((t) => t.id == tagId);
+                    return ChipWidget(tag: tag);
+                  },
+                ).toList(),
               ),
               UIHelper.horizontalSpaceSmall(),
               Wrap(

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
-import 'package:portfolio/config/projects.config.dart';
+import 'package:portfolio/config/tags.config.dart';
 import 'package:portfolio/ui/helper/ui.helper.dart';
 import 'package:url_launcher/url_launcher.dart';
 

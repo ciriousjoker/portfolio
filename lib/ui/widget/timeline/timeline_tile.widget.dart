@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/config/colors.config.dart';
-import 'package:portfolio/config/projects.config.dart';
 import 'package:portfolio/config/ui.config.dart';
+import 'package:portfolio/models/project.model.dart';
 import 'package:portfolio/ui/helper/ui.helper.dart';
 import 'package:portfolio/ui/widget/util/rounded_border.widget.dart';
 import 'package:portfolio/ui/widget/timeline/project/project.widget.dart';
@@ -15,7 +15,7 @@ class TimelineTileWidget extends StatelessWidget {
     required this.count,
   }) : super(key: key);
 
-  final ProjectData project;
+  final ProjectModel project;
   final int index;
   final int count;
 

@@ -1,5 +1,7 @@
+import 'dart:convert';
+
 import 'package:flutter/material.dart';
-import 'package:portfolio/config/projects.config.dart';
+import 'package:portfolio/models/projects.model.dart';
 import 'package:portfolio/ui/widget/timeline/timeline_tile.widget.dart';
 
 class TimelineWidget extends StatelessWidget {
@@ -7,20 +9,31 @@ class TimelineWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    List<ProjectData> projects = ProjectConfig.projects.toList();
-    projects.sort((a, b) => b.timestamp - a.timestamp);
-
-    return SliverList(
-      delegate: SliverChildBuilderDelegate(
-        (BuildContext context, int index) {
-          return TimelineTileWidget(
-            project: projects[index],
-            index: index,
-            count: projects.length,
+    return FutureBuilder<String>(
+      future: DefaultAssetBundle.of(context).loadString("assets/projects.json"),
+      builder: (context, snapshot) {
+        if (!snapshot.hasData) {
+          return SliverFillRemaining(
+            child: Center(child: CircularProgressIndicator()),
           );
-        },
-        childCount: projects.length,
-      ),
+        }
+
+        ProjectsModel data =
+            ProjectsModel.fromJson(json.decode(snapshot.data!));
+
+        return SliverList(
+          delegate: SliverChildBuilderDelegate(
+            (BuildContext context, int index) {
+              return TimelineTileWidget(
+                project: data.projects[index],
+                index: index,
+                count: data.projects.length,
+              );
+            },
+            childCount: data.projects.length,
+          ),
+        );
+      },
     );
   }
 }

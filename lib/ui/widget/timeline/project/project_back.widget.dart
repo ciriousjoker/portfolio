@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/config/colors.config.dart';
-import 'package:portfolio/config/projects.config.dart';
 import 'package:portfolio/config/ui.config.dart';
+import 'package:portfolio/models/project.model.dart';
 import 'package:portfolio/ui/helper/ui.helper.dart';
 import 'package:portfolio/ui/widget/timeline/project/project_card.widget.dart';
 import 'package:portfolio/ui/widget/util/markdown_wrapper.widget.dart';
 
 class ProjectBackWidget extends StatefulWidget {
-  final ProjectData project;
+  final ProjectModel project;
   final Widget flipHint;
 
   const ProjectBackWidget({
