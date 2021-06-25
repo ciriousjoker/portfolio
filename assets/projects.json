@@ -1,6 +1,30 @@
 {
   "projects": [
     {
+      "title": "LoL Journal",
+      "description": [
+        "This app is a specialized journal to help you improve at League of Legends (a popular video game).\n\n",
+        "A very important aspect of climbing the ranked ladder is to not autopilot and think about your mistakes.\n",
+        "This project improves this reflection process by making it as easy as possible to create meaningful notes for your games.\n\n",
+        "Since it's an offline-first PWA, you can also install it locally and pin it to your taskbar."
+      ],
+      "learningsTldr": "angular, progressive web apps",
+      "learnings": [
+        "The goals of this project was to combine multiple technologies into one app and create something (hopefully) useful.\n",
+        "#### Technologies used:\n",
+        "- **Angular:** UI & interactivity\n",
+        "- **PWA:** Make the website installable as a standalone app\n",
+        "- **Firestore:** Database with offline support (necessary for PWA)\n",
+        "- **MaterialUI:** Google's official Material Design framework for Angular\n",
+        "- **Riot API:** Riot Games' api to gather game data\n"
+      ],
+      "urlWebsite": "https://loljournal.web.app/",
+      "timestamp": 1616540400000,
+      "tags": ["angular", "firebase", "pwa"],
+      "icon": "loljournal.png",
+      "platforms": ["web"]
+    },
+    {
       "title": "3D Gabion Configurator",
       "description": [
         "This software was developed for the company Unknown Inc. (can't disclose the name) which sells Gabions (among other things). \n",

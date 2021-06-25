@@ -40,6 +40,14 @@ const List<Tag> tags = [
     url: "https://angular.io/",
   ),
   Tag(
+    id: "pwa",
+    // Don't remove the space or it'll look cramped together
+    label: " Progressive Web App",
+    colorHex: "#5a0fc8",
+    icon: BrandIconsMinified.progressive_web_app,
+    url: "https://web.dev/progressive-web-apps/",
+  ),
+  Tag(
     id: "aurelia",
     label: "Aurelia",
     colorHex: "#ED2B88",
