@@ -135,9 +135,7 @@
         "except for the video, which already existed. \n\n",
         "#### Comparison before & after:\n\n",
         "- [snapshot before the relaunch](https://web.archive.org/web/20200314094119/https://switchboard.live/)\n\n",
-        "- [snapshot right before my contract ended](https://web.archive.org/web/20200909094059/https://switchboard.live/)\n\n",
-        "The current website is also linked below, ",
-        "although keep in mind that it might look different by now."
+        "- [snapshot right before my contract ended](https://web.archive.org/web/20200909094059/https://switchboard.live/)\n\n"
       ],
       "learningsTldr": "tailwindcss, ejs, webpack, netlify, google tag manager",
       "learnings": [
@@ -149,7 +147,6 @@
         "\nAside from these technical details, I also improved my copywriting skills."
       ],
       "timestamp": 1584658800000,
-      "urlWebsite": "https://switchboard.live/",
       "tags": ["tailwind", "googletagmanager", "webpack", "ejs"],
       "icon": "switchboard.png",
       "platforms": ["web"]
