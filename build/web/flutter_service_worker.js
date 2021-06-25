@@ -3,56 +3,60 @@ const MANIFEST = 'flutter-app-manifest';
 const TEMP = 'flutter-temp-cache';
 const CACHE_NAME = 'flutter-app-cache';
 const RESOURCES = {
-  "version.json": "77558fb05c0fb27a95a910f97ff807a7",
-"index.html": "93770dd1524a0babcebcc208e7ee6521",
-"/": "93770dd1524a0babcebcc208e7ee6521",
-"main.dart.js": "2ac03b428b08522f2a1ca87afb630bd3",
-"style.css.map": "ddc42bf925f2933f501ee9f7c6daf708",
-"favicon.png": "bb0107d24d6e2d23499705b538213c7d",
-"style.scss": "e0851c1d4288655c0549d8918102440c",
-"icons/favicon-16x16.png": "e7d46605326e2b8be4b7a5ac289ae221",
-"icons/safari-pinned-tab.svg": "2e8325a91d5aef2cad49e9e2d223b260",
-"icons/favicon.ico": "5f80233cc2f34779c32c78e0ee7222c2",
-"icons/android-chrome-192x192.png": "eb9a9a4be0f2e387faae2a88b859f6d0",
-"icons/apple-touch-icon.png": "bca472bd5403b28b9fd5fb6adac3e4b0",
-"icons/android-chrome-512x512.png": "cabc182cb81b3d4e35c02896c08daa38",
-"icons/site.webmanifest": "6765a42fc075d8b3df4d25205d6744a2",
-"icons/mstile-150x150.png": "cada11d0673f2305eb5ed5e98b292a0d",
-"icons/browserconfig.xml": "6ec9b8795226e72d4b6315221b2fedbd",
-"icons/favicon-32x32.png": "bb0107d24d6e2d23499705b538213c7d",
-"style.css": "70cf1a10ef116411fcd6c13ea4783951",
-"assets/AssetManifest.json": "cd8f74d5e8671a0da38bb7e6f14046c9",
-"assets/NOTICES": "3eda3112cde776df9b351a4548e9cc1d",
-"assets/FontManifest.json": "92213c3c1148a368eaa8c9930f77e433",
-"assets/packages/flutter_markdown/assets/logo.png": "67642a0b80f3d50277c44cde8f450e50",
-"assets/packages/slimy_card/assets/flare/topSlime.flr": "65ff491b065af4abfb7379c91edad2f7",
-"assets/packages/slimy_card/assets/flare/bottomSlime.flr": "ca03aa3f1540b6ddc0711f153f02ae8b",
-"assets/fonts/BrandIconsMinified.ttf": "5fc7dac2553dac3604a149603558c174",
-"assets/fonts/Exo2-Regular.ttf": "b5f984d1c21970b20048461157228e26",
-"assets/fonts/Catamaran/static/Catamaran-Medium.ttf": "b3bb54272b79aefcf2b07d5139ebec0b",
-"assets/fonts/Catamaran/static/Catamaran-Light.ttf": "7af00944494a4d42781ae7207466e9ab",
-"assets/fonts/Catamaran/static/Catamaran-Regular.ttf": "6d96a0d79326c05382895c87346c92ca",
-"assets/fonts/MaterialIconsMinified.ttf": "b775b1128306d1c47ee230e218dd0a2e",
-"assets/assets/images/opengraph.png": "77e02ca7ea090dff76b91103ad24204b",
-"assets/assets/images/avatar.webp": "796ec281b58bc5722e6b7a552bc7a54b",
-"assets/assets/images/favicon_src.png": "ac33c76699cce52c0b2817a4023e4f14",
-"assets/assets/icons/fridaynightsurvival.png": "f294f3c03fee4e9b20b64662c8ef1fce",
+  "assets/AssetManifest.json": "18614422b57e3b5d34763c598d3f3e69",
+"assets/assets/icons/algodat_gui.png": "0ca583201157596b812928ecfcba0754",
 "assets/assets/icons/amidoneyet.png": "5654a39c1d41e4846921f27cc9f0126e",
+"assets/assets/icons/didactduell.png": "9c810910e37dfe421d9b04477a295c5b",
+"assets/assets/icons/fridaynightsurvival.png": "f294f3c03fee4e9b20b64662c8ef1fce",
+"assets/assets/icons/gabion_configurator.png": "3bd968bf2d91c2ee86212d4a87d96d6c",
+"assets/assets/icons/gabion_configurator.svg": "1ae693f0a3fea429e22ec0a2a4cd1598",
+"assets/assets/icons/homingcompass.png": "d16d856f9f34f58186e86886a6a732b6",
 "assets/assets/icons/legacyxp.png": "1fcdbe8992123eaaff22cfa522ffff96",
-"assets/assets/icons/shufflepaper.png": "e1c8ae789603815f8b421fbbab9d9a3d",
+"assets/assets/icons/loljournal.png": "c9433b2eff1ee317030736bb12e9d32e",
+"assets/assets/icons/ntradeadvanced.png": "d023790cb7a4b0f378d7553308b944c4",
+"assets/assets/icons/nxtburner.png": "de57a1315fbc18b800c9cf16a4a2e7d2",
+"assets/assets/icons/perfectdecisionfinder.png": "83c429ba0424f2e6f8b761473dab17ce",
+"assets/assets/icons/pokeroute.png": "0cbf7cf98f4516271e247c9973d41784",
 "assets/assets/icons/pokeroute.svg": "5ac24ad3646510a231acd41054db6ed7",
 "assets/assets/icons/shadyvault.png": "1995a9d186c5e3858598766201d306ea",
-"assets/assets/icons/pokeroute.png": "0cbf7cf98f4516271e247c9973d41784",
-"assets/assets/icons/ntradeadvanced.png": "d023790cb7a4b0f378d7553308b944c4",
+"assets/assets/icons/shufflepaper.png": "e1c8ae789603815f8b421fbbab9d9a3d",
 "assets/assets/icons/sidenote.png": "3ea604cd2c84dfb0e556be7c770ee4c0",
-"assets/assets/icons/didactduell.png": "9c810910e37dfe421d9b04477a295c5b",
-"assets/assets/icons/nxtburner.png": "de57a1315fbc18b800c9cf16a4a2e7d2",
-"assets/assets/icons/tagmyknowledge.png": "031f4cde4239ec68725c4886a8fa786d",
-"assets/assets/icons/algodat_gui.png": "0ca583201157596b812928ecfcba0754",
-"assets/assets/icons/switchboard.png": "0f35e31734f37ec9cecd57b57644478f",
-"assets/assets/icons/homingcompass.png": "d16d856f9f34f58186e86886a6a732b6",
 "assets/assets/icons/starclock.png": "ca3d275fbe61f67388704d39d75c83a7",
-"assets/assets/icons/perfectdecisionfinder.png": "83c429ba0424f2e6f8b761473dab17ce"
+"assets/assets/icons/switchboard.png": "0f35e31734f37ec9cecd57b57644478f",
+"assets/assets/icons/tagmyknowledge.png": "031f4cde4239ec68725c4886a8fa786d",
+"assets/assets/images/avatar.webp": "796ec281b58bc5722e6b7a552bc7a54b",
+"assets/assets/images/favicon_src.png": "ac33c76699cce52c0b2817a4023e4f14",
+"assets/assets/images/opengraph.png": "77e02ca7ea090dff76b91103ad24204b",
+"assets/assets/projects.json": "f1e6ed465c57b1e82d8df86a03ffff79",
+"assets/FontManifest.json": "92213c3c1148a368eaa8c9930f77e433",
+"assets/fonts/BrandIconsMinified.ttf": "cd0d861f732e4da00596966a94c0830a",
+"assets/fonts/Catamaran/static/Catamaran-Light.ttf": "7af00944494a4d42781ae7207466e9ab",
+"assets/fonts/Catamaran/static/Catamaran-Medium.ttf": "b3bb54272b79aefcf2b07d5139ebec0b",
+"assets/fonts/Catamaran/static/Catamaran-Regular.ttf": "6d96a0d79326c05382895c87346c92ca",
+"assets/fonts/Exo2-Regular.ttf": "b5f984d1c21970b20048461157228e26",
+"assets/fonts/MaterialIconsMinified.ttf": "b775b1128306d1c47ee230e218dd0a2e",
+"assets/NOTICES": "359e867f91b58355bbe33481309c44d2",
+"assets/packages/flutter_markdown/assets/logo.png": "67642a0b80f3d50277c44cde8f450e50",
+"assets/packages/slimy_card/assets/flare/bottomSlime.flr": "3a26ed39d3a9a9956105e9e6e4d5ad43",
+"assets/packages/slimy_card/assets/flare/topSlime.flr": "9f381ee39c22b624c805f536b39171a6",
+"favicon.png": "bb0107d24d6e2d23499705b538213c7d",
+"icons/android-chrome-192x192.png": "eb9a9a4be0f2e387faae2a88b859f6d0",
+"icons/android-chrome-512x512.png": "cabc182cb81b3d4e35c02896c08daa38",
+"icons/apple-touch-icon.png": "bca472bd5403b28b9fd5fb6adac3e4b0",
+"icons/browserconfig.xml": "b5cf09cf584122a8c717e8597ff572ba",
+"icons/favicon-16x16.png": "e7d46605326e2b8be4b7a5ac289ae221",
+"icons/favicon-32x32.png": "bb0107d24d6e2d23499705b538213c7d",
+"icons/favicon.ico": "5f80233cc2f34779c32c78e0ee7222c2",
+"icons/mstile-150x150.png": "cada11d0673f2305eb5ed5e98b292a0d",
+"icons/safari-pinned-tab.svg": "2e8325a91d5aef2cad49e9e2d223b260",
+"icons/site.webmanifest": "8386cd021e53299a0ca26b4107fcd4db",
+"index.html": "ed8f91e77b735b58a03963dcdde036fe",
+"/": "ed8f91e77b735b58a03963dcdde036fe",
+"main.dart.js": "17b963bf4242826c0b458413056b72ad",
+"style.css": "5cbd7958864f498dd5aca1c7b5ec38d6",
+"style.css.map": "f803bbeb8c7f20e08bab141e9934425b",
+"style.scss": "489e606c4488e556999df4eae44f62ef",
+"version.json": "d339494f40ea2fbe79de4f746532733f"
 };
 
 // The application shell files that are downloaded before a service worker can
@@ -70,7 +74,7 @@ self.addEventListener("install", (event) => {
   return event.waitUntil(
     caches.open(TEMP).then((cache) => {
       return cache.addAll(
-        CORE.map((value) => new Request(value + '?revision=' + RESOURCES[value], {'cache': 'reload'})));
+        CORE.map((value) => new Request(value, {'cache': 'reload'})));
     })
   );
 });
@@ -196,7 +200,7 @@ async function downloadOffline() {
     }
     currentContent[key] = true;
   }
-  for (var resourceKey in Object.keys(RESOURCES)) {
+  for (var resourceKey of Object.keys(RESOURCES)) {
     if (!currentContent[resourceKey]) {
       resources.push(resourceKey);
     }
