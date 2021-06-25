@@ -97,6 +97,8 @@ class TimelineTileWidget extends StatelessWidget {
               child: Image.asset(
                 "assets/icons/${project.icon}",
                 isAntiAlias: true,
+                errorBuilder: (context, error, stackTrace) =>
+                    Text("Icon missing"),
                 filterQuality: FilterQuality.high,
               ),
             ),

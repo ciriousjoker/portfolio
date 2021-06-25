@@ -1,16 +1,40 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:portfolio/config/tags.config.dart';
+import 'package:portfolio/fonts/brand_icons_minified_icons.dart';
 import 'package:portfolio/ui/helper/ui.helper.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-class ChipWidget extends StatelessWidget {
+class ChipWidget extends StatefulWidget {
   const ChipWidget({
     Key? key,
-    required this.tag,
+    required this.tagId,
   }) : super(key: key);
 
-  final Tag tag;
+  final String tagId;
+
+  @override
+  State<ChipWidget> createState() => _ChipWidgetState();
+}
+
+class _ChipWidgetState extends State<ChipWidget> {
+  late Tag tag;
+
+  @override
+  void initState() {
+    super.initState();
+
+    tag = tags.firstWhere(
+      (t) => t.id == widget.tagId,
+      orElse: () => Tag(
+        id: "null",
+        label: "null",
+        colorHex: "#ff00ff",
+        icon: BrandIconsMinified.javascript,
+        url: "http://example.com/",
+      ),
+    );
+  }
 
   @override
   Widget build(BuildContext context) {

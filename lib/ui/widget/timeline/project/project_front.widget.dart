@@ -3,7 +3,6 @@ import 'package:intl/intl.dart';
 import 'package:portfolio/config/colors.config.dart';
 import 'package:portfolio/config/general.config.dart';
 import 'package:portfolio/config/platforms.config.dart';
-import 'package:portfolio/config/tags.config.dart';
 import 'package:portfolio/config/ui.config.dart';
 import 'package:portfolio/fonts/material_icons_minified_icons.dart';
 import 'package:portfolio/models/project.model.dart';
@@ -166,12 +165,11 @@ class _ProjectFrontWidgetState extends State<ProjectFrontWidget> {
               Wrap(
                 spacing: UIHelper.HorizontalSpaceSmall,
                 runSpacing: UIHelper.HorizontalSpaceSmall,
-                children: widget.project.tags.map(
-                  (tagId) {
-                    Tag tag = tags.firstWhere((t) => t.id == tagId);
-                    return ChipWidget(tag: tag);
-                  },
-                ).toList(),
+                children: widget.project.tags
+                    .map(
+                      (tagId) => ChipWidget(tagId: tagId),
+                    )
+                    .toList(),
               ),
               UIHelper.horizontalSpaceSmall(),
               Wrap(
