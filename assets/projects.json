@@ -1,6 +1,40 @@
 {
   "projects": [
     {
+      "title": "3D Gabion Configurator",
+      "description": [
+        "This software was developed for the company Unknown Inc. (can't disclose the name) which sells Gabions (among other things). \n",
+        "Gabions are metal cages filled with stones that are supposed to make people's gardens look better. \n\n",
+        "Previously, Unknown Inc. would draw the customer's request on paper and then enter the required materials and pieces into their CRM to create an offer. \n\n",
+        "To make this process easier, I integrated a 3d gabion configurator into this CRM. \n",
+        "Now, the company would design the customer's request in 3d space and export it as an image/pdf and as a bill of materials.\n\n",
+        "**Features:**\n\n",
+        "- Create/move/delete/rotate gabions with different dimensions\n",
+        "- Group gabions to move/delete/rotate them as one entity\n",
+        "- Snap gabions together at the corners to use the corner as a hinge while rotating\n",
+        "- Gabions can be stacked vertically\n",
+        "- Remove individual gabion sides if they aren't required\n",
+        "- Multiple views: 2d, 3d, with/without textures\n",
+        "- Export as bill of material, png & pdf\n"
+      ],
+      "learningsTldr": "angular, 3d engines, existing code base",
+      "learnings": [
+        "This was my first Angular project and also my first project with a 3d engine on the web. \n",
+        "Since I was the only one tasked with the project as part of an internship and my collegues hadn't done anything similar before either, the learning curve was quite steep. \n\n",
+        "#### Learnings:\n\n",
+        "- Working with existing code bases\n",
+        "- Building interactivity in 3d space in a user friendly manner\n",
+        "- Reacting to changing customer requests\n\n",
+        "#### Technologies used:\n",
+        "- **Angular:** UI & interactivity\n",
+        "- **BabylonJS:** 3d engine of my choice\n"
+      ],
+      "timestamp": 1616540400000,
+      "tags": ["angular", "babylonjs"],
+      "icon": "gabion_configurator.png",
+      "platforms": ["web"]
+    },
+    {
       "title": "Tag My Knowledge",
       "description": [
         "This app is your personal knowledge feed.\n\n",

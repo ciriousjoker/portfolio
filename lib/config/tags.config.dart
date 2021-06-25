@@ -26,6 +26,20 @@ class Tag {
 
 const List<Tag> tags = [
   Tag(
+    id: "babylonjs",
+    label: "BabylonJS",
+    colorHex: "#e0684b",
+    icon: BrandIconsMinified.babylonjs,
+    url: "https://www.babylonjs.com/",
+  ),
+  Tag(
+    id: "angular",
+    label: "Angular",
+    colorHex: "#cc002c",
+    icon: BrandIconsMinified.angular,
+    url: "https://angular.io/",
+  ),
+  Tag(
     id: "aurelia",
     label: "Aurelia",
     colorHex: "#ED2B88",
