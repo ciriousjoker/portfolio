@@ -1,5 +1,9 @@
 # portfolio
 
+## Flutter version
+
+- Flutter version is pinned via [Flutter Version Manger](https://fvm.app/) ([GUI: Flutter Sidekick](https://github.com/leoafarias/sidekick))
+
 ## Update models
 
 `flutter pub run build_runner build`
