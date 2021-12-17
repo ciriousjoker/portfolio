@@ -18,7 +18,7 @@
         "- **MaterialUI:** Google's official Material Design framework for Angular\n",
         "- **Riot API:** Riot Games' api to gather game data\n"
       ],
-      "urlWebsite": "https://loljournal.web.app/",
+      "urlWebsite": "https://loljournal.app/",
       "timestamp": 1616540400000,
       "tags": ["angular", "firebase", "pwa"],
       "icon": "loljournal.png",
