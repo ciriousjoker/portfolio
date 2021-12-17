@@ -47,8 +47,7 @@ class _CardWidgetState extends State<CardWidget> {
               children: [
                 Expanded(
                   child: Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: padding)
-                        .copyWith(
+                    padding: const EdgeInsets.symmetric(horizontal: padding).copyWith(
                       top: padding,
                     ),
                     child: Stack(
@@ -86,10 +85,7 @@ class _CardWidgetState extends State<CardWidget> {
                           children: [
                             Text(
                               GeneralConfig.name,
-                              style: Theme.of(context)
-                                  .textTheme
-                                  .headline4
-                                  ?.copyWith(
+                              style: Theme.of(context).textTheme.headline4?.copyWith(
                                     color: ColorsConfig.cardText,
                                     fontWeight: FontWeight.w200,
                                     fontFamily: "Catamaran",
@@ -106,10 +102,9 @@ class _CardWidgetState extends State<CardWidget> {
                             UIHelper.verticalSpaceSmall(),
                             Text(
                               GeneralConfig.position,
-                              style:
-                                  Theme.of(context).textTheme.caption?.copyWith(
-                                        color: ColorsConfig.cardTextSecondary,
-                                      ),
+                              style: Theme.of(context).textTheme.caption?.copyWith(
+                                    color: ColorsConfig.cardTextSecondary,
+                                  ),
                               maxLines: 3,
                               textAlign: TextAlign.center,
                             ),
@@ -136,6 +131,9 @@ class _CardWidgetState extends State<CardWidget> {
             child: Stack(
               children: [
                 SingleChildScrollView(
+                  // Necessary as per:
+                  // https://github.com/flutter/flutter/issues/85456
+                  controller: ScrollController(),
                   child: MarkdownWrapperWidget(
                     data: GeneralConfig.aboutMe,
                     style: TextStyle(
