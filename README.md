@@ -25,5 +25,6 @@ Upgrade version in `pubspec.yaml` like this: `0.9.0+1` -> `0.9.1+2`
 - Commit the changes as `v0.9.0`
 - `flutter clean`
 - `flutter build web --release --web-renderer canvaskit --csp`
+- Test the build: `python3 -m http.server --directory ./build/web`
 - Commit the `./build` folder as `Deployed v0.9.0`
 - The live version of the website is deployed automatically via [Netlify](https://app.netlify.com/)
