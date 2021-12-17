@@ -1,11 +1,14 @@
 import 'package:delayed_display/delayed_display.dart';
 import 'package:flutter/material.dart';
+import 'package:portfolio/ui/helper/smoothscroll.helper.dart';
 import 'package:portfolio/ui/helper/ui.helper.dart';
 import 'package:portfolio/ui/widget/card/card.widget.dart';
 import 'package:portfolio/ui/widget/timeline/timeline.widget.dart';
 
 class HomeScreen extends StatelessWidget {
   HomeScreen({Key? key}) : super(key: key);
+
+  final _controller = ScrollController();
 
   final card = DelayedDisplay(
     fadingDuration: Duration(seconds: 2),
@@ -21,46 +24,54 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Colors.transparent,
-      body: Padding(
-        padding: EdgeInsets.symmetric(
-          horizontal: UIHelper.VerticalSpaceMedium,
-        ),
-        child: UIHelper.isVertical(context)
-            ? CustomScrollView(
-                shrinkWrap: true,
-                slivers: <Widget>[
-                  SliverList(
-                    delegate: SliverChildListDelegate(
-                      [
-                        UIHelper.verticalSpaceMedium(),
-                        card,
-                        UIHelper.verticalSpaceMedium(),
-                      ],
-                    ),
-                  ),
-                  TimelineWidget(),
-                ],
-              )
-            : Row(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                mainAxisSize: MainAxisSize.min,
-                children: [
-                  UIHelper.horizontalSpaceMedium(),
-                  card,
-                  UIHelper.horizontalSpaceMedium(),
-                  Expanded(
-                    child: _delayed(
-                      CustomScrollView(
-                        scrollDirection: Axis.vertical,
-                        shrinkWrap: true,
-                        slivers: <Widget>[TimelineWidget()],
+    return SmoothScrollWeb(
+      curve: Curves.easeOut,
+      controller: _controller,
+      child: Scaffold(
+        backgroundColor: Colors.transparent,
+        body: Padding(
+          padding: EdgeInsets.symmetric(
+            horizontal: UIHelper.VerticalSpaceMedium,
+          ),
+          child: UIHelper.isVertical(context)
+              ? CustomScrollView(
+                  physics: NeverScrollableScrollPhysics(),
+                  controller: _controller,
+                  shrinkWrap: true,
+                  slivers: <Widget>[
+                    SliverList(
+                      delegate: SliverChildListDelegate(
+                        [
+                          UIHelper.verticalSpaceMedium(),
+                          card,
+                          UIHelper.verticalSpaceMedium(),
+                        ],
                       ),
                     ),
-                  ),
-                ],
-              ),
+                    TimelineWidget(),
+                  ],
+                )
+              : Row(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    UIHelper.horizontalSpaceMedium(),
+                    card,
+                    UIHelper.horizontalSpaceMedium(),
+                    Expanded(
+                      child: _delayed(
+                        CustomScrollView(
+                          physics: NeverScrollableScrollPhysics(),
+                          controller: _controller,
+                          scrollDirection: Axis.vertical,
+                          shrinkWrap: true,
+                          slivers: <Widget>[TimelineWidget()],
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+        ),
       ),
     );
   }
