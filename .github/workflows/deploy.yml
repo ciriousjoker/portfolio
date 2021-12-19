@@ -1,0 +1,28 @@
+name: Deploy
+
+on: [workflow_dispatch]
+
+jobs:
+  deploy:
+    timeout-minutes: 30
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout the repository
+        uses: actions/checkout@v2
+
+      - name: Install Flutter 2.8.1
+        uses: subosito/flutter-action@v1
+        with:
+          flutter-version: "2.8.1"
+
+      - name: Installing dependencies
+        run: flutter pub get
+
+      - name: Building for web
+        run: flutter build web
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./build/web
