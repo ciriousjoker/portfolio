@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:delayed_display/delayed_display.dart';
 import 'package:flutter/material.dart';
 import 'package:portfolio/ui/helper/smoothscroll.helper.dart';
@@ -5,10 +7,19 @@ import 'package:portfolio/ui/helper/ui.helper.dart';
 import 'package:portfolio/ui/widget/card/card.widget.dart';
 import 'package:portfolio/ui/widget/timeline/timeline.widget.dart';
 
-class HomeScreen extends StatelessWidget {
+class HomeScreen extends StatefulWidget {
   HomeScreen({Key? key}) : super(key: key);
 
+  @override
+  State<HomeScreen> createState() => _HomeScreenState();
+}
+
+class _HomeScreenState extends State<HomeScreen> {
   final _controller = ScrollController();
+
+  PointerDeviceKind _pointerKind = PointerDeviceKind.touch;
+
+  bool get _isMouse => _pointerKind == PointerDeviceKind.mouse;
 
   final card = DelayedDisplay(
     fadingDuration: Duration(seconds: 2),
@@ -26,6 +37,11 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return SmoothScrollWeb(
       curve: Curves.easeOut,
+      onDeviceTypeChange: (value) {
+        setState(() {
+          _pointerKind = value;
+        });
+      },
       controller: _controller,
       child: Scaffold(
         backgroundColor: Colors.transparent,
@@ -35,7 +51,7 @@ class HomeScreen extends StatelessWidget {
           ),
           child: UIHelper.isVertical(context)
               ? CustomScrollView(
-                  physics: NeverScrollableScrollPhysics(),
+                  physics: _isMouse ? NeverScrollableScrollPhysics() : null,
                   controller: _controller,
                   shrinkWrap: true,
                   slivers: <Widget>[
@@ -61,7 +77,7 @@ class HomeScreen extends StatelessWidget {
                     Expanded(
                       child: _delayed(
                         CustomScrollView(
-                          physics: NeverScrollableScrollPhysics(),
+                          physics: _isMouse ? NeverScrollableScrollPhysics() : null,
                           controller: _controller,
                           scrollDirection: Axis.vertical,
                           shrinkWrap: true,

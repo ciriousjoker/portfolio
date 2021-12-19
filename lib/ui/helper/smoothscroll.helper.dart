@@ -5,11 +5,12 @@ import 'package:flutter/material.dart';
 // https://gitlab.com/dezso15/smoothscrollweb/
 // and added null safety.
 
-
 const int DEFAULT_NORMAL_SCROLL_ANIMATION_LENGTH_MS = 250;
 const int DEFAULT_SCROLL_SPEED = 130;
 
 class SmoothScrollWeb extends StatefulWidget {
+  final ValueChanged<PointerDeviceKind>? onDeviceTypeChange;
+
   ///Same ScrollController as the child widget's.
   final ScrollController controller;
 
@@ -28,6 +29,7 @@ class SmoothScrollWeb extends StatefulWidget {
   SmoothScrollWeb({
     required this.controller,
     required this.child,
+    this.onDeviceTypeChange,
     this.scrollSpeed = DEFAULT_SCROLL_SPEED,
     this.scrollAnimationLength = DEFAULT_NORMAL_SCROLL_ANIMATION_LENGTH_MS,
     this.curve = Curves.linear,
@@ -40,6 +42,8 @@ class SmoothScrollWeb extends StatefulWidget {
 class _SmoothScrollWebState extends State<SmoothScrollWeb> {
   double _scroll = 0;
 
+  PointerDeviceKind _pointerKind = PointerDeviceKind.touch;
+
   @override
   Widget build(BuildContext context) {
     widget.controller.addListener(() {
@@ -49,10 +53,25 @@ class _SmoothScrollWebState extends State<SmoothScrollWeb> {
     });
 
     return Listener(
-      onPointerSignal: (pointerSignal) {
+      onPointerDown: (PointerDownEvent event) {
+        if (_pointerKind != event.kind) {
+          _pointerKind = event.kind;
+          widget.onDeviceTypeChange?.call(event.kind);
+        }
+
+        _scroll = widget.controller.position.extentBefore;
+      },
+      onPointerSignal: (event) {
+        if (_pointerKind != event.kind) {
+          _pointerKind = event.kind;
+          widget.onDeviceTypeChange?.call(event.kind);
+        }
+
+        if (_pointerKind != PointerDeviceKind.mouse) return;
+
         int millis = widget.scrollAnimationLength;
-        if (pointerSignal is PointerScrollEvent) {
-          if (pointerSignal.scrollDelta.dy > 0) {
+        if (event is PointerScrollEvent) {
+          if (event.scrollDelta.dy > 0) {
             _scroll += widget.scrollSpeed;
           } else {
             _scroll -= widget.scrollSpeed;
