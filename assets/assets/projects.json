@@ -1,0 +1,563 @@
+{
+  "projects": [
+    {
+      "title": "LoL Journal",
+      "description": [
+        "This app is a specialized journal to help you improve at League of Legends (a popular video game).\n\n",
+        "A very important aspect of climbing the ranked ladder is to not autopilot and think about your mistakes.\n",
+        "This project improves this reflection process by making it as easy as possible to create meaningful notes for your games.\n\n",
+        "Since it's an offline-first PWA, you can also install it locally and pin it to your taskbar."
+      ],
+      "learningsTldr": "angular, progressive web apps",
+      "learnings": [
+        "The goals of this project was to combine multiple technologies into one app and create something (hopefully) useful.\n",
+        "#### Technologies used:\n",
+        "- **Angular:** UI & interactivity\n",
+        "- **PWA:** Make the website installable as a standalone app\n",
+        "- **Firestore:** Database with offline support (necessary for PWA)\n",
+        "- **MaterialUI:** Google's official Material Design framework for Angular\n",
+        "- **Riot API:** Riot Games' api to gather game data\n"
+      ],
+      "urlWebsite": "https://loljournal.app/",
+      "timestamp": 1616540400000,
+      "tags": ["angular", "firebase", "pwa"],
+      "icon": "loljournal.png",
+      "platforms": ["web"]
+    },
+    {
+      "title": "3D Gabion Configurator",
+      "description": [
+        "This software was developed for the company Unknown Inc. (can't disclose the name) which sells Gabions (among other things). \n",
+        "Gabions are metal cages filled with stones that are supposed to make people's gardens look better. \n\n",
+        "Previously, Unknown Inc. would draw the customer's request on paper and then enter the required materials and pieces into their CRM to create an offer. \n\n",
+        "To make this process easier, I integrated a 3d gabion configurator into this CRM. \n",
+        "Now, the company would design the customer's request in 3d space and export it as an image/pdf and as a bill of materials.\n\n",
+        "**Features:**\n\n",
+        "- Create/move/delete/rotate gabions with different dimensions\n",
+        "- Group gabions to move/delete/rotate them as one entity\n",
+        "- Snap gabions together at the corners to use the corner as a hinge while rotating\n",
+        "- Gabions can be stacked vertically\n",
+        "- Remove individual gabion sides if they aren't required\n",
+        "- Multiple views: 2d, 3d, with/without textures\n",
+        "- Export as bill of material, png & pdf\n"
+      ],
+      "learningsTldr": "angular, 3d engines, existing code base",
+      "learnings": [
+        "This was my first Angular project and also my first project with a 3d engine on the web. \n",
+        "Since I was the only one tasked with the project as part of an internship and my collegues hadn't done anything similar before either, the learning curve was quite steep. \n\n",
+        "#### Learnings:\n\n",
+        "- Working with existing code bases\n",
+        "- Building interactivity in 3d space in a user friendly manner\n",
+        "- Reacting to changing customer requests\n\n",
+        "#### Technologies used:\n",
+        "- **Angular:** UI & interactivity\n",
+        "- **BabylonJS:** 3d engine of my choice\n"
+      ],
+      "timestamp": 1616540400000,
+      "tags": ["angular", "babylonjs"],
+      "icon": "gabion_configurator.png",
+      "platforms": ["web"]
+    },
+    {
+      "title": "Tag My Knowledge",
+      "description": [
+        "This app is your personal knowledge feed.\n\n",
+        "With note taking apps like Google Keep, you're mostly archiving your knowledge. ",
+        "Important pieces of advice get buried and are lost forever ",
+        "as soon as they're pushed below your average scroll threshold. \n\n",
+        "So, instead of sorting your notes in chronological order, ",
+        "Tag My Knowledge generates a daily feed. By reading just a few random notes every day, ",
+        "your brain doesn't get the chance to fully forget them. ",
+        "Then, when it actually matters, you'll remember the advice ",
+        "instead of not even knowing where to look. \n",
+        "\n---\n",
+        "#### Twitter bot \n",
+        "Quickly save interesting tweets by replying like this:\n",
+        "> @TagMyKnowledge save Some Title #yourtag\n\n",
+        "The bot will then automatically save this tweet in your collection ",
+        "and match #yourtag to your closest actual tag.\n\n",
+        "Tag My Knowledge available for Android & web (PWA, beta).\n\n",
+        "*(Note that the Twitter bot can only be set up on Android for now.)*"
+      ],
+      "learningsTldr": "ux, web design, static website generators, analytics",
+      "learnings": [
+        "A big learning was definitely how to make everything more production-ready. \n",
+        "#### Making code production-ready\n",
+        "- Unit & integration tests\n",
+        "- Serverside database migration for old versions of the app\n\n",
+        "#### Tech stack:\n",
+        "- **Flutter:** Mobile & web app UI\n",
+        "- **Firebase:** Auth, Firestore, Functions, Hosting, Remote Config, Analytics\n",
+        "- **Twitter Api:** For writing the Twitter bot via webhooks\n",
+        "- **Google Play IAP:** Monetization\n",
+        "- **Publii:** Static site cms\n",
+        "- **TailwindCss & Handlebars:** For building the Publii page template\n",
+        "- **Google Analytics & Google Optimize**: Page & app insights\n"
+      ],
+      "urlWebsite": "https://tagmyknowledge.com/",
+      "urlPlaystore": "https://play.google.com/store/apps/details?id=com.tagmyknowledge",
+
+      "timestamp": 1596924000000,
+      "tags": ["flutter", "firebase", "tailwind", "googletagmanager", "googleanalytics"],
+      "icon": "tagmyknowledge.png",
+      "platforms": ["playstore", "web"]
+    },
+    {
+      "title": "AlgoDat GUI",
+      "description": [
+        "This is a simple, yet beautiful GUI that I built during a group project ",
+        "where we had to showcase our datastructure implementations. ",
+        "Now, following semesters can clone this repository to skip the tedious and ugly console applications ",
+        "and focus on their datastructure implementations (which is the only thing they're graded on). ",
+        "Who knows, maybe the design and the simplicity behind it inspires some ",
+        "of them to build something great in their free time :)"
+      ],
+      "learningsTldr": "datastructures, wpf",
+      "learnings": [
+        "- **Various datastructures:** We had to implement those during the project\n",
+        "- **WPF:** Build Windows GUI applications in C#"
+      ],
+      "urlDownload": "https://github.com/CiriousJoker/algodat_gui/releases/latest",
+      "githubName": "algodat_gui",
+
+      "timestamp": 1596751200000,
+      "tags": ["csharp"],
+      "icon": "algodat_gui.png",
+      "platforms": ["windows"]
+    },
+    {
+      "title": "Website Redesign for Switchboard Live",
+      "description": [
+        "Switchboard Live is a multistreaming service to stream one input to multiple platforms at once. ",
+        "As a freelancer, my job was (among other things) to completely redesign ",
+        "their website to make the most out of the rising covid 19 traffic. ",
+        "I had pretty much full control over everything (layout, graphics, text) ",
+        "except for the video, which already existed. \n\n",
+        "#### Comparison before & after:\n\n",
+        "- [snapshot before the relaunch](https://web.archive.org/web/20200314094119/https://switchboard.live/)\n\n",
+        "- [snapshot right before my contract ended](https://web.archive.org/web/20200909094059/https://switchboard.live/)\n\n"
+      ],
+      "learningsTldr": "tailwindcss, ejs, webpack, netlify, google tag manager",
+      "learnings": [
+        "- **Netlify:** Deploy directly from the git repository\n",
+        "- **TailwindCss:** Styling exclusively via utility classes instead of \"real\" css\n",
+        "- **Webpack:** Build pipeline, in this case for a static website\n",
+        "- **Embedded Javascript Templating:** Build .html out of .ejs templates (which can contain js to parse Markdown etc.)\n",
+        "- **Frontmatter + Markdown:** The \"data structure\" of the blog posts.\n",
+        "\nAside from these technical details, I also improved my copywriting skills."
+      ],
+      "timestamp": 1584658800000,
+      "tags": ["tailwind", "googletagmanager", "webpack", "ejs"],
+      "icon": "switchboard.png",
+      "platforms": ["web"]
+    },
+    {
+      "title": "Star Clock",
+      "description": [
+        "This was my entry for the [Flutter Clock Face Contest.](https://flutter.dev/clock)",
+        "The goal was to create a clock face for upcoming Lenovo Smart clocks.\n\n",
+        "#### Features:\n",
+        "- Day/night transition\n",
+        "- 7 weather conditions complete with animations\n",
+        "- Night-only mode\n\n",
+        "**Result:** I got a top 25 placement & won a Lenovo Smart clock :)\n\n",
+        "Click on \"Demo\" to watch the 30 sec demo video on YouTube!"
+      ],
+      "urlDemo": "https://www.youtube.com/watch?v=ZuHLtdbaXqc",
+      "learningsTldr": "animation, adobe after effects",
+      "learnings": [
+        "- **Animations:** These were created using Flare (now called Rive)\n",
+        "- **Bugfixing:** I ran into some incredibly strange bugs during this project.",
+        "In the future, I'll check open flutter & rive issues more thoroughly :)\n",
+        "- **Adobe After Effects:** Creating the 30 sec demo video\n"
+      ],
+      "githubName": "star_clock",
+
+      "timestamp": 1577055600000,
+      "tags": ["flutter", "adobeaftereffects"],
+      "icon": "starclock.png",
+      "platforms": ["playstore"]
+    },
+    {
+      "title": "Friday Night Survival",
+      "description": [
+        "This game is a round-based, 2D-RPG with a top-down overworld map. ",
+        "It was developed during a group project at the \"Technische Hochschule Nuremberg\" ",
+        "(German university of applied science).\n\n",
+        "#### If I had to describe it in one sentence:\n",
+        "> Pokémon, but in a night club setting, with crude humor, multiple dialog options and interesting battle mechanics.\n\n",
+        "The battle system is unique because you essentially have to balance ",
+        "your health points with your honor level (= damage multiplier) to survive fights. \n",
+        "#### Example moves:\n",
+        "- Crush a beer bottle with your bare hands to boost honor at the expense of hp\n",
+        "- Call your mum for emotional support to heal at the expense of honor\n",
+        "- Land \"honorable\" punches to slowly build honor at the expense of time\n",
+        "- Throw a beer bottle for high damage at the expense of honor\n",
+        "- Sometimes your only option is to drink your opponent under the table in a minigame\n\n",
+        "After each fight, you replace one of your moves with one you \"learn\" from your opponent. ",
+        "All in all, even though the playtime is relatively short, the 13 enemies, 40+ moves and multiple ",
+        "hilarious dialog options give this game great replay value. \n\n",
+        "Sadly, there's no way to directly translate the humor into English, ",
+        "but if you're German or know someone who is, we highly recommend you give it a shot. ",
+        "Since this game was developed in Unity, it runs in your browser, no account required. \n\n",
+        "**=> Unless you get offended easily, you'll have a blast, so try it out!**"
+      ],
+      "learningsTldr": "game development, pixel art, game balance, team management",
+      "learnings": [
+        "- Create pixel art for everything that's not an in-battle character\n",
+        "- Set up lighting to create a realistic atmosphere\n",
+        "- Write scripts to animate the overworld\n",
+        "- **Game balance:** Balance the difficulty curve for 40+ moves across 14 unique characters\n\n",
+        "#### About game balance:\n\n",
+        "This was difficult since gut feeling isn't accurate. ",
+        "To solve it, I wrote a C# program to rank all moves ",
+        "on a percentage scale based on their actual strength. ",
+        "This strength was calculated by a complicated formula for a few chosen reference points. ",
+        "The reference points were the weakest/strongest moves and a few \"alternative moves\" ",
+        " that an accurate formula should rank as equal. The result is still not truly objective, ",
+        "but probably as close as you can get without using AI to figure out the game meta programmatically. \n\n",
+        "In retrospect, simulating battles to calculate expected win percentages ",
+        "for each character sounds interesting, so I might do that at one point.\n\n",
+        "---\n",
+        "Aside from these technological aspects, I also managed our Trello and organized meetings."
+      ],
+      "urlWebsite": "https://fridaynightsurvival.philippbauer.me/",
+
+      "timestamp": 1572735600000,
+      "tags": ["unity", "csharp"],
+      "icon": "fridaynightsurvival.png",
+      "platforms": ["web", "windows", "linux", "mac"]
+    },
+    {
+      "title": "ShadyVault",
+      "description": [
+        "This app provides an encrypted filesystem for Chrome OS. \n",
+        "After creating a vault and linking a real folder, a new device shows up next to the external drives. ",
+        "This vault only exists in-memory, so reading/writing works like any other folder, ",
+        "but behind the scenes it's accessing the encrypted content of the linked folder. \n\n",
+        "Sadly, Google deprecated chrome apps for chromebooks as well ",
+        "and I doubt that Android apps can properly fill the gap anytime soon.\n\n",
+        "Until then, enjoy!\n"
+      ],
+      "learningsTldr": "encryption, file systems, animation",
+      "learnings": [
+        "- **Encryption**, specifically [AES-256 GCM](https://en.wikipedia.org/wiki/Galois/Counter_Mode)\n",
+        "- **Animations**\n\n",
+        "#### About animations:\n",
+        "It might be a surprise, given that the software is about encrypting data, ",
+        "but I really liked how the UI turned out and just had to include animations.\n\n",
+        "I'm particularly proud of the transition when clicking the \"add vault\" button.\n\n",
+        "=> If I had to pick one project to submit to a design contest or something, this would be it ;)\n"
+      ],
+      "urlWebsite": "https://shadyvault.web.app/",
+
+      "timestamp": 1555538400000,
+      "tags": ["typescript", "aurelia", "material_design_components"],
+      "icon": "shadyvault.png",
+      "platforms": ["chromeos"]
+    },
+    {
+      "title": "Perfect Decision Finder",
+      "description": [
+        "If you ever struggled to make the correct decision, this is the app for you.\n",
+        "**Alternative solutions you might have tried:**\n",
+        "- Pros & cons lists\n",
+        "- Score each option based on some criteria from 0 (bad) to 10 (good)\n\n",
+        "**Both of these are bad, because:**\n\n",
+        "1. You rely on your gut feeling to rank the options on a scale, ",
+        "and not all pros/cons carry the same weight\n",
+        "2. None of the individual scores can be accurately determined without the full context (which might change later). ",
+        "For example, once you rated an option as a 10, you can't rank any option higher than that without ",
+        "updating past ratings. \n\n",
+        "**Solution:**\n",
+        "- Download Perfect Decision Finder (free) & create a new decision\n",
+        "- Add your list of options & criteria\n",
+        "- Weigh the criteria based on their relative importance\n",
+        "- Rank the pairs of options against each other for your criteria\n\n",
+        "=> By only ever comparing options 1on1, you have a much easier time ranking them accurately. ",
+        "The objectively best option is then calculated using a modified elo rating system.\n\n",
+        "**Check it out now!**"
+      ],
+      "learningsTldr": "flutter, various rating systems, state management, sqlite",
+      "learnings": [
+        "#### The ranking system\n",
+        "It turns out, there are like a million different ways to rank things. ",
+        "I chose elo because of its simplicity and because this app doesn't need the sophisticated ",
+        "benefits of something like Microsoft's TrueSkill™ or bayesian approximations in general.\n\n",
+        "#### State management & persistency\n",
+        "This app was also my first attempt at proper Flutter state management using providers ",
+        "and SQLite for persistency."
+      ],
+      "urlPlaystore": "https://play.google.com/store/apps/details?id=com.ciriousjoker.perfect_decision_finder",
+
+      "timestamp": 1567202400000,
+      "tags": ["flutter", "sqlite"],
+      "icon": "perfectdecisionfinder.png",
+      "platforms": ["playstore"]
+    },
+    {
+      "title": "Pokeroute",
+      "description": [
+        "This was a small project to evaluate how stable and usable Flutter Web was at the time. ",
+        "The app allows you to optimize your route through a list of GPS coordinates. ",
+        "It's intended for Pokémon GO spoofers to minimize their server timeout (soft ban) when teleporting."
+      ],
+      "learningsTldr": "rest api, gps calculations",
+      "learnings": [
+        "- **REST api:** The pokeapi was used to load Pokémon data\n",
+        "- **GPS:** Distance calculation\n",
+        "- **Recursion:** Calculate the optimal route"
+      ],
+      "githubName": "pokeroute",
+      "urlWebsite": "https://pokeroute.web.app/",
+
+      "timestamp": 1566770400000,
+      "tags": ["flutter"],
+      "icon": "pokeroute.png",
+      "platforms": ["web"]
+    },
+    {
+      "title": "Am I Done Yet",
+      "description": [
+        "This was my submission for the [Flutter Create challenge.](https://flutter.dev/create)\n",
+        "> Flutter Create is a contest that challenges you to build something interesting, ",
+        "inspiring, and beautiful with Flutter using 5KB or less of Dart code.\n\n",
+        "The app itself is a simple todo app, but with a twist.\n\n",
+        "#### Features:\n",
+        "- Add a new item *(pinned)*\n",
+        "- Swipe to set priority *(unpins it)*\n",
+        "- Long press to delete\n\n",
+        "It doesn't get much simpler than that, but it works surprisingly well, especially for ",
+        "lists of loosely prioritized todos with no exact due time.\n\n",
+        "I couldn't fit a local database within the 5120 character limit, so the app required an account to ",
+        "store the data in the cloud via Firestore (which is kind of ridiculous if you think about it).\n\n",
+        "I've since rewritten the app to use a local database instead."
+      ],
+      "learningsTldr": "firebase, sembast (local database), animations",
+      "learnings": [
+        "#### Originally:\n",
+        "- **Flutter:** This was my first project with Flutter\n",
+        "- **Firebase:** Auth, Firestore\n",
+        "#### During the rewrite:\n",
+        "- **Sembast:** Local database\n",
+        "- **Flutter:** Animations & SliverLists\n",
+        "- Restructuring and modularizing code properly\n"
+      ],
+      "githubName": "am-i-done-yet",
+      "urlPlaystore": "https://play.google.com/store/apps/details?id=com.ciriousjoker.amidoneyet",
+
+      "timestamp": 1552604400000,
+      "icon": "amidoneyet.png",
+      "tags": ["flutter", "firebase"],
+      "platforms": ["playstore"]
+    },
+    {
+      "title": "Didactduell",
+      "description": [
+        "Didactduell is an app for medical students I developed for a startup called Didactylus. ",
+        "The goal was to make learning interesting and replace expensive flash cards. ",
+        "Students could not only learn with the app via training mode but also challenge each other, ",
+        "chat, and improve their ranking among other features.\n\n",
+        "Sadly, the startup ultimately failed before it launched, but the app is still available as a browser version. ",
+        "It probably still has a few bugs and only a few demo questions are available, ",
+        "but apart from that, this demo contains all the functionality planned for the launch.\n",
+        "Just create a new account (email verification is turned off) and play around with it.\n\n",
+        "There's also an admin panel where the team could add questions, upload images, review them, ",
+        "and ultimately publish them. This admin panel is not part of the demo for obvious reasons ;)"
+      ],
+      "learningsTldr": "App development using Aurelia, Cordova & Firebase.",
+      "learnings": [
+        "This was a huge project, especially since I was the only developer working on it. ",
+        "Here are all the different frameworks and technologies I learned how to use during development. ",
+        "I used all of these for the first time during this project, so I can't say I did everything perfectly. ",
+        "However, I still think I did a pretty good job and I learned a lot for future projects, ",
+        "especially regarding code quality.\n\n",
+        "#### Technologies used:\n",
+        "- **Aurelia:** Alternative to Angular/React/Vue to build the interface in a modular way\n",
+        "- **Typescript:** Basically javascript, but objectively much better\n",
+        "- **Material Design Components for Web:** Successor to Material Design Lite\n",
+        "- **Firebase:** Auth, Firestore, Firebase Cloud Messaging, Storage, Hosting\n",
+        "- **Webpack:** Compile typescript & do the packaging\n",
+        "- **Cordova:** Wrap the web app and provide native functionality via plugins\n",
+        "- Writing custom plugins for mobile to add specific push notification functionality\n",
+        "- Writing well organized, modular and maintainable code"
+      ],
+      "urlDemo": "https://didactduell.web.app/",
+
+      "timestamp": 1535666400000,
+      "icon": "didactduell.png",
+      "tags": ["firebase", "typescript", "aurelia", "webpack", "java", "material_design_components"],
+      "platforms": ["web", "playstore", "ios"]
+    },
+    {
+      "title": "ShufflePaper",
+      "description": [
+        "This is a wallpaper manager for your Chromebook.\n",
+        "Chrome OS does come with a way to change the current wallpaper, ",
+        "but it's pretty limited in it's functionality, even years later.\n",
+        "#### Features:\n",
+        "- Pick a folder and shuffle through it (manually or automatically)\n",
+        "- Set an interval to update the wallpaper automatically\n",
+        "- Pick the next wallpaper alphanumerically or at random\n\n",
+        "Chrome apps will be discontinued in the future, but this app bridged a functionality ",
+        "gap during a time where Android apps weren't available yet."
+      ],
+      "learningsTldr": "javascript, html, css, material design",
+      "learnings": [
+        "This was my first real project with web technologies using html, css and vanilla js. ",
+        "Originally I didn't even use Promises, since the async/await syntax wasn't widespread yet. \n\n",
+        "In 2019, I decided to rewrite large parts of the app clean up the code, ",
+        "fix bugs, add functionality, and completely change the UI. \n\n",
+        "The new UI was written using Material Design Lite and parts of its successor, ",
+        "Material Design Components for Web."
+      ],
+      "urlWebsite": "https://shufflepaper.web.app/",
+      "githubName": "shufflepaper",
+
+      "timestamp": 1488668400000,
+      "tags": ["javascript", "material_design_lite"],
+      "icon": "shufflepaper.png",
+      "platforms": ["chromeos"]
+    },
+    {
+      "title": "Legacy Manager & Uploader",
+      "description": [
+        "A mod manager for [Super Smash Bros. Brawl Legacy XP.](http://www.smashbroslegacy.com/)\n",
+        "- [**Legacy Manager:**](https://github.com/CiriousJoker/legacymanager) To download & update the game\n",
+        "- [**Legacy Uploader:**](https://github.com/CiriousJoker/legacyuploader) For the mod team to upload new releases\n\n",
+        "Sadly, the tool didn't catch on in the community and the game was taken down eventually ",
+        "(most likely by Nintendo, but that's just speculation)."
+      ],
+      "learningsTldr": "google drive api, oauth, electron, nodejs",
+      "learnings": [
+        "- **Google Drive Api:** Upload the game files to the cloud\n",
+        "- **OAuth:** Authorize the upload for the correct account\n",
+        "- **Electron:** Package the app for cross platform\n",
+        "- **NodeJS:** Native file system access via javascript\n\n",
+        "The cross platform functionality was never implemented, ",
+        "but it would have been relatively straight forward with the technologies used."
+      ],
+      "githubName": "legacymanager",
+      "urlDownload": "https://github.com/CiriousJoker/legacymanager/releases/latest",
+
+      "timestamp": 1502143200000,
+      "icon": "legacyxp.png",
+      "tags": ["csharp", "react", "electron", "nodejs"],
+      "platforms": ["embedded"]
+    },
+    {
+      "title": "NXTProject",
+      "description": [
+        "This was created as part of a school project where we got to create robots with the Lego NXT. ",
+        "Most chose to build one of the suggested project ideas with the Lego Mindstorms software,",
+        " but that would have been boring. I always wanted a Lego NXT as a kid and never got one, ",
+        "so I used this opportunity to catch up a lot of things :)\n",
+        "#### Two parts:\n",
+        "- [NXTBurner (Windows)](https://github.com/CiriousJoker/nxtburner)\n",
+        "- [NXTPlayer (Lego + Java)](https://github.com/CiriousJoker/nxtplayer)\n\n",
+        "NXTBurner is used to create special disks. Once you printed & glued them onto cardboard, ",
+        "you can play them back using the NXTPlayer and the (terrible) speaker inside the NXT.\n\n",
+        "Flip this card to read how it's working and which features are included.\n\n",
+        "Photos of the lego model are available [here.](https://github.com/CiriousJoker/NXTPlayer/blob/master/gallery/GALLERY.md)"
+      ],
+      "learningsTldr": "music, custom audio compression algorithm",
+      "learnings": [
+        "Building the thing was the easy part, the hard part was figuring out how to compress the audio. ",
+        "There are very tight constraints for how much information can fit on any given NXTDisk.\n",
+        "- **Maximum number of greyscale spots:** 176\n",
+        "- **Information per spot:** 9 values (3.375 bit)\n",
+        "- **Total bits:** 176 * 3.375 = 594 bits of information\n\n",
+        "#### What needs to be stored:\n",
+        "- At least 3 adjacent octaves per song should be possible\n",
+        "- A main melody as well as potential choruses\n",
+        "- 8 different notes + half tones\n",
+        "- Different durations per note, dotted notes as well\n\n",
+        "As you can see, this quickly becomes overwhelming, ",
+        "so I added features like loop markers to save sections for later.\n\n",
+        "**If you're interested in how I implemented all of these in detail:** ",
+        "[Click here to read the documentation.](https://github.com/CiriousJoker/NXTPlayer/blob/master/DOCUMENTATION.md)"
+      ],
+      "githubName": "nxtburner",
+
+      "timestamp": 1495843200000,
+      "tags": ["csharp", "java"],
+      "icon": "nxtburner.png",
+      "platforms": ["windows", "embedded"]
+    },
+    {
+      "title": "Homing Compass",
+      "description": [
+        "A homescreen widget that always points towards home (or any other location you specify). ",
+        "You can switch between multiple locations and the widget displays the direction and distance.\n\n",
+        "Was a parting gift for a friend who travelled abroad :)"
+      ],
+      "learningsTldr": "Android, widgets, GPS, threads",
+      "learnings": [
+        "- **GPS & Maps Api:** Location picker & geolocation detection\n",
+        "- **Widgets:** The widget is essentially an svg icon that's being transformed\n",
+        "- **Threads:** The widget is updated through a background thread\n",
+        "- Distance calculations on a sphere aren't straightforward ;)\n"
+      ],
+      "githubName": "HomingCompass",
+      "urlPlaystore": "https://play.google.com/store/apps/details?id=com.ciriousjoker.homingcompass",
+
+      "timestamp": 1474636718000,
+      "tags": ["java"],
+      "platforms": ["playstore"],
+      "icon": "homingcompass.png"
+    },
+    {
+      "title": "SideNote",
+      "description": [
+        "This program was my first attempt at C#/.NET + WPF, after being fascinated by the UI ",
+        "of a tool called Curse Voice, ",
+        "which was written in it (at least according to their open hiring positions at the time).\n",
+        "#### Features:\n",
+        "- **Autosaving:** Note is automatically saved\n",
+        "- **shift+tab:** Slide in/out from the right screen edge\n",
+        "- **Settings:** Font family, font size & color theme"
+      ],
+      "learningsTldr": "c#, .net, wpf, animations & state management",
+      "learnings": [
+        "- **C#:** Language of choice when developing for Windows\n",
+        "- **WPF:** Windows Presentation Foundation was used for the GUI\n",
+        "- **Animations:** Basic animations, concept of easing & animation curves\n",
+        "- **State management:** Basic state management to reflect settings changes ",
+        "like color themes immediately without restarting"
+      ],
+      "githubName": "SideNote",
+      "urlDownload": "https://github.com/CiriousJoker/SideNote/releases/latest",
+
+      "timestamp": 1446332400000,
+      "tags": ["csharp"],
+      "icon": "sidenote.png",
+      "platforms": ["windows"]
+    },
+    {
+      "title": "nTradeAdvanced",
+      "description": [
+        "A program for the Ti-Nspire CAS calculator, which allows you to trade Pokémon between two third gen Pokémon games. \n\n",
+        "Once you've rooted your device using Ndless, you can install a GBA emulator and play Pokémon. ",
+        "There is no link functionality available, but with this tool, you can trade Pokémon anyway. \n\n",
+        "Just transfer the .sav files, run this tool, and trade Pokémon between them. ",
+        "I also included a little tool to fix corrupted save states, which could be caused by cheating.\n\n",
+        "**Supported games:** Firered/Leafgreen, Ruby/Sapphire, Emerald"
+      ],
+      "learningsTldr": "c, pointer arithmetic, checksums",
+      "learnings": [
+        "- Developed in c, c++ wasn't available in the Ndless sdk yet",
+        "- Basics of embedded programming with tight hardware constraints",
+        "- Understanding inofficial reverse-engineered documentation about save formats",
+        "- Pointer arithmetic to modify the savestates in-memory",
+        "- Recalculating checksums to repair a corrupted save file"
+      ],
+      "githubName": "nTradeAdvanced",
+      "urlDownload": "https://github.com/CiriousJoker/nTradeAdvanced/releases/latest",
+
+      "timestamp": 1406246400000,
+      "tags": ["c"],
+      "icon": "ntradeadvanced.png",
+      "platforms": ["calculator"]
+    }
+  ]
+}

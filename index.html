@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <base href="/">
+  <!-- Google Tag Manager -->
+  <script>
+    (function (w, d, s, l, i) {
+      w[l] = w[l] || []; w[l].push({
+        'gtm.start':
+          new Date().getTime(), event: 'gtm.js'
+      }); var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+          'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-N34WM9J');
+  </script>
+  <!-- End Google Tag Manager -->
+
+  <meta charset="UTF-8">
+  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+  <meta name="robots" content="index, follow">
+  <link rel="stylesheet" href="style.css">
+  <link rel="manifest" href="manifest/site.webmanifest">
+
+  <!-- iOS / Mac OS meta tags & icons -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="portfolio">
+  <link rel="apple-touch-icon" sizes="180x180" href="manifest/apple-touch-icon.png">
+
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="manifest/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="manifest/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="manifest/favicon-16x16.png">
+
+  <!-- Windows Tile -->
+  <meta name="msapplication-TileColor" content="#141e30">
+  <meta name="msapplication-config" content="manifest/browserconfig.xml">
+  <meta name="theme-color" content="#141e30">
+
+  <!-- General info -->
+  <title>Philipp Bauer - Portfolio</title>
+  <meta name="description"
+    content="Web developer, Flutter developer, Firebase as the backend of choice, experienced with Google Tag Manager + Google Analytics. 👋">
+  <meta name="author" content="Philipp Bauer">
+
+  <!-- JSON-LD -->
+  <script type="application/ld+json">
+    {
+      "@context": "http://schema.org/",
+      "@type": "Person",
+      "name": "Philipp Bauer",
+      "jobTitle": "Web & Flutter developer",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "undefined",
+        "addressRegion": "Germany"
+      }
+    }
+    </script>
+
+  <!-- OpenGraph Tags -->
+  <meta property="og:type" content="profile">
+  <meta property="og:title" content="Portfolio">
+  <meta property="og:url" content="https://philippbauer.me/">
+  <meta property="og:image" content="https://philippbauer.me/assets/assets/images/opengraph.png">
+  <meta property="profile:first_name" content="Philipp">
+  <meta property="profile:last_name" content="Bauer">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@ciriousjoker">
+  <meta name="twitter:title" content="Philipp Bauer - Portfolio">
+  <meta name="twitter:description"
+    content="Web developer, Flutter developer, Firebase as the backend of choice, experienced with Google Tag Manager + Google Analytics. 👋">
+  <meta name="twitter:image" content="https://philippbauer.me/assets/assets/images/opengraph.png">
+
+  <!-- Microdata -->
+  <meta itemprop="speakable" itemscope itemtype="http://schema.org/Person" itemref="mdName mdJobTitle" content>
+  <meta id="mdName" itemprop="name" content="Philipp Bauer">
+  <meta id="mdJobTitle" itemprop="jobTitle" content="Web & Flutter developer">
+
+  <meta itemprop="speakable" itemscope itemtype="http://schema.org/PostalAddress" itemref="mdAdressRegion" content>
+  <meta id="mdAdressRegion" itemprop="addressRegion" content="Germany">
+
+  <!-- Preconnect -->
+  <link rel="preconnect" href="https://unpkg.com/">
+</head>
+
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N34WM9J" height="0" width="0"
+      style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <!-- Loading animation -->
+  <div class="loading">
+    <!-- Google Chrome -->
+    <div class="infinityChrome">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+
+    <!-- Safari and others -->
+    <div class="infinity">
+      <div>
+        <span></span>
+      </div>
+      <div>
+        <span></span>
+      </div>
+      <div>
+        <span></span>
+      </div>
+    </div>
+
+    <!-- Stuff -->
+    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" style="display: none;">
+      <defs>
+        <filter id="goo">
+          <feGaussianBlur in="SourceGraphic" stdDeviation="6" result="blur" />
+          <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo" />
+          <feBlend in="SourceGraphic" in2="goo" />
+        </filter>
+      </defs>
+    </svg>
+  </div>
+
+  <script>
+    (() => {
+      var isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
+
+      if (!isChrome) {
+        document.getElementsByClassName("infinityChrome")[0].style.display = "none";
+        document.getElementsByClassName("infinity")[0].style.display = "block";
+      }
+    })();
+
+    function stopLoading() {
+      const elemChrome = document.getElementsByClassName("infinityChrome")[0];
+      const elem = document.getElementsByClassName("infinity")[0];
+      if (elemChrome) {
+        elemChrome.remove();
+      }
+      if (elem) {
+        elem.remove();
+      }
+    }
+  </script>
+  <!-- This script installs service_worker.js to provide PWA functionality to
+       application. For more information, see:
+       https://developers.google.com/web/fundamentals/primers/service-workers -->
+  <script>
+    if ("serviceWorker" in navigator) {
+      window.addEventListener("flutter-first-frame", function () {
+        navigator.serviceWorker.register("flutter_service_worker.js");
+      });
+    }
+  </script>
+  <script src="main.dart.js" type="application/javascript"></script>
+  <noscript>This page requires javascript.</noscript>
+</body>
+
+</html>
