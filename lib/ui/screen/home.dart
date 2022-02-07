@@ -54,6 +54,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   physics: _isMouse ? const NeverScrollableScrollPhysics() : null,
                   controller: _controller,
                   shrinkWrap: true,
+                  clipBehavior: Clip.none,
                   slivers: <Widget>[
                     SliverList(
                       delegate: SliverChildListDelegate(
@@ -78,6 +79,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         CustomScrollView(
                           physics: _isMouse ? const NeverScrollableScrollPhysics() : null,
                           controller: _controller,
+                          clipBehavior: Clip.none,
                           shrinkWrap: true,
                           slivers: const <Widget>[TimelineWidget()],
                         ),
