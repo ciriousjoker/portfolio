@@ -1,6 +1,6 @@
-import 'package:flutter/material.dart';
-import 'package:portfolio/ui/helper/ui.helper.dart';
-import 'package:url_launcher/url_launcher.dart';
+import "package:flutter/material.dart";
+import "package:portfolio/ui/helper/ui.helper.dart";
+import "package:url_launcher/url_launcher.dart";
 
 class ButtonWidget extends StatelessWidget {
   const ButtonWidget({
@@ -22,17 +22,17 @@ class ButtonWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final colorBg = color ?? Theme.of(context).accentColor;
+    final colorBg = color ?? Theme.of(context).colorScheme.secondary;
     final colorText =
         colorBg.computeLuminance() > 0.5 ? Colors.black87 : Colors.white;
 
-    var widgetIcon = Icon(
+    final widgetIcon = Icon(
       icon,
       size: 12,
       color: colorText,
     );
 
-    var widgetText = Text(
+    final widgetText = Text(
       label,
     );
 
@@ -43,8 +43,8 @@ class ButtonWidget extends StatelessWidget {
           style: ElevatedButton.styleFrom(
             primary: colorBg,
             onPrimary: colorText,
-            padding: EdgeInsets.symmetric(
-              vertical: UIHelper.VerticalSpaceMedium,
+            padding: const EdgeInsets.symmetric(
+              vertical: kVerticalSpaceMedium,
               horizontal: 20,
             ),
           ),
@@ -62,8 +62,8 @@ class ButtonWidget extends StatelessWidget {
         style: ElevatedButton.styleFrom(
           onPrimary: colorText,
           primary: colorBg,
-          padding: EdgeInsets.symmetric(
-            vertical: UIHelper.VerticalSpaceMedium,
+          padding: const EdgeInsets.symmetric(
+            vertical: kVerticalSpaceMedium,
             horizontal: 20,
           ),
         ),

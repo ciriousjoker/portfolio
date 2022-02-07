@@ -1,7 +1,7 @@
-import 'package:flutter/material.dart';
-import 'package:portfolio/config/colors.config.dart';
-import 'package:portfolio/ui/loading/loading.dart';
-import 'package:portfolio/ui/screen/home.dart';
+import "package:flutter/material.dart";
+import "package:portfolio/config/colors.config.dart";
+import "package:portfolio/ui/loading/loading.dart";
+import "package:portfolio/ui/screen/home.dart";
 
 void main() {
   runApp(MyApp());
@@ -48,11 +48,10 @@ class _MyAppState extends State<MyApp> {
                     fontSize: 12,
                   ),
             ),
-        primaryColor: ColorsConfig.primary,
-        accentColor: ColorsConfig.accent,
+        primaryColor: ColorsConfig.primary, colorScheme: ColorScheme.fromSwatch().copyWith(secondary: ColorsConfig.accent),
       ),
       // home: HomeScreen(),
-      home: HomeScreen(),
+      home: const HomeScreen(),
     );
   }
 }

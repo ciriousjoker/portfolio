@@ -1,6 +1,6 @@
-import 'package:flutter/material.dart';
-import 'package:portfolio/fonts/brand_icons_minified_icons.dart';
-import 'package:portfolio/fonts/material_icons_minified_icons.dart';
+import "package:flutter/material.dart";
+import "package:portfolio/fonts/brand_icons_minified_icons.dart";
+import "package:portfolio/fonts/material_icons_minified_icons.dart";
 
 class Platform {
   final String id;
@@ -17,47 +17,47 @@ class Platform {
 }
 
 List<Platform> platforms = [
-  Platform(
+  const Platform(
     id: "playstore",
     label: "Play Store",
     icon: BrandIconsMinified.googleplay,
   ),
-  Platform(
+  const Platform(
     id: "ios",
     label: "iOS",
     icon: BrandIconsMinified.apple,
   ),
-  Platform(
+  const Platform(
     id: "web",
     label: "Web",
     icon: BrandIconsMinified.googlechrome,
   ),
-  Platform(
+  const Platform(
     id: "windows",
     label: "Windows",
     icon: BrandIconsMinified.windows,
   ),
-  Platform(
+  const Platform(
     id: "mac",
     label: "Mac OS",
     icon: BrandIconsMinified.apple,
   ),
-  Platform(
+  const Platform(
     id: "linux",
     label: "Linux",
     icon: BrandIconsMinified.linux,
   ),
-  Platform(
+  const Platform(
     id: "chromeos",
     label: "Chrome OS",
     icon: BrandIconsMinified.googlechrome,
   ),
-  Platform(
+  const Platform(
     id: "calculator",
     label: "Calculator",
     icon: MaterialIconsMinified.calculator_variant,
   ),
-  Platform(
+  const Platform(
     id: "embedded",
     label: "Embedded System",
     icon: MaterialIconsMinified.developer_board,

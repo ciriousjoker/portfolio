@@ -1,11 +1,11 @@
-import 'package:flutter/material.dart';
-import 'package:portfolio/config/colors.config.dart';
-import 'package:portfolio/config/ui.config.dart';
-import 'package:portfolio/models/project.model.dart';
-import 'package:portfolio/ui/helper/ui.helper.dart';
-import 'package:portfolio/ui/widget/util/rounded_border.widget.dart';
-import 'package:portfolio/ui/widget/timeline/project/project.widget.dart';
-import 'package:timeline_tile/timeline_tile.dart';
+import "package:flutter/material.dart";
+import "package:portfolio/config/colors.config.dart";
+import "package:portfolio/config/ui.config.dart";
+import "package:portfolio/models/project.model.dart";
+import "package:portfolio/ui/helper/ui.helper.dart";
+import "package:portfolio/ui/widget/timeline/project/project.widget.dart";
+import "package:portfolio/ui/widget/util/rounded_border.widget.dart";
+import "package:timeline_tile/timeline_tile.dart";
 
 class TimelineTileWidget extends StatelessWidget {
   const TimelineTileWidget({
@@ -23,12 +23,12 @@ class TimelineTileWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final bool isDense = UIHelper.isDense(context);
+    final bool dense = isDense(context);
 
-    Widget widgetProject = Padding(
-      padding: EdgeInsets.symmetric(vertical: UIConfig.timelineProjectSpacing),
+    final Widget widgetProject = Padding(
+      padding: const EdgeInsets.symmetric(vertical: UIConfig.timelineProjectSpacing),
       child: Align(
-        alignment: isDense
+        alignment: dense
             ? Alignment.center
             : isLeft
                 ? Alignment.centerLeft
@@ -40,7 +40,7 @@ class TimelineTileWidget extends StatelessWidget {
       ),
     );
 
-    Widget widgetNotProject = SizedBox.shrink();
+    Widget widgetNotProject = const SizedBox.shrink();
     if (index == 0) {
       widgetNotProject = Center(
         child: Column(
@@ -60,28 +60,26 @@ class TimelineTileWidget extends StatelessWidget {
 
     return Center(
       child: TimelineTile(
-        alignment: isDense ? TimelineAlign.start : TimelineAlign.center,
-        beforeLineStyle: LineStyle(
+        alignment: dense ? TimelineAlign.start : TimelineAlign.center,
+        beforeLineStyle: const LineStyle(
           color: ColorsConfig.timelineLine,
           thickness: UIConfig.timelineLineThickness,
         ),
-        afterLineStyle: LineStyle(
+        afterLineStyle: const LineStyle(
           color: ColorsConfig.timelineLine,
           thickness: UIConfig.timelineLineThickness,
         ),
         indicatorStyle: IndicatorStyle(
           width: UIConfig.timelineIndicatorSize,
           padding: EdgeInsets.only(
-            left: isDense ? 0 : UIHelper.HorizontalSpaceMedium,
-            right: isDense
-                ? UIHelper.HorizontalSpaceSmall
-                : UIHelper.HorizontalSpaceMedium,
-            top: UIHelper.VerticalSpaceSmall,
-            bottom: UIHelper.VerticalSpaceSmall,
+            left: dense ? 0 : kHorizontalSpaceMedium,
+            right: dense ? kHorizontalSpaceSmall : kHorizontalSpaceMedium,
+            top: kVerticalSpaceSmall,
+            bottom: kVerticalSpaceSmall,
           ),
           height: UIConfig.timelineIndicatorSize,
           indicator: Container(
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
               shape: BoxShape.circle,
               boxShadow: [
                 BoxShadow(
@@ -97,21 +95,20 @@ class TimelineTileWidget extends StatelessWidget {
               child: Image.asset(
                 "assets/icons/${project.icon}",
                 isAntiAlias: true,
-                errorBuilder: (context, error, stackTrace) =>
-                    Text("Icon missing"),
+                errorBuilder: (context, error, stackTrace) => const Text("Icon missing"),
                 filterQuality: FilterQuality.high,
               ),
             ),
           ),
         ),
-        startChild: isDense
+        startChild: dense
             ? null
             : !isLeft
                 ? widgetProject
                 : widgetNotProject,
-        endChild: (isDense || isLeft) ? widgetProject : widgetNotProject,
-        isFirst: this.index == 0,
-        isLast: this.index == this.count - 1,
+        endChild: (dense || isLeft) ? widgetProject : widgetNotProject,
+        isFirst: index == 0,
+        isLast: index == count - 1,
       ),
     );
   }

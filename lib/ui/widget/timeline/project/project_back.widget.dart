@@ -1,10 +1,10 @@
-import 'package:flutter/material.dart';
-import 'package:portfolio/config/colors.config.dart';
-import 'package:portfolio/config/ui.config.dart';
-import 'package:portfolio/models/project.model.dart';
-import 'package:portfolio/ui/helper/ui.helper.dart';
-import 'package:portfolio/ui/widget/timeline/project/project_card.widget.dart';
-import 'package:portfolio/ui/widget/util/markdown_wrapper.widget.dart';
+import "package:flutter/material.dart";
+import "package:portfolio/config/colors.config.dart";
+import "package:portfolio/config/ui.config.dart";
+import "package:portfolio/models/project.model.dart";
+import "package:portfolio/ui/helper/ui.helper.dart";
+import "package:portfolio/ui/widget/timeline/project/project_card.widget.dart";
+import "package:portfolio/ui/widget/util/markdown_wrapper.widget.dart";
 
 class ProjectBackWidget extends StatefulWidget {
   final ProjectModel project;
@@ -48,24 +48,24 @@ class _ProjectBackWidgetState extends State<ProjectBackWidget> {
                       widget.project.learningsTldr,
                       style: Theme.of(context).textTheme.caption,
                     ),
-                    UIHelper.verticalSpaceSmall(),
+                    verticalSpaceSmall(),
                     MarkdownWrapperWidget(
                       data: widget.project.learnings,
                     ),
                   ],
                 ),
               ),
-              UIHelper.horizontalSpaceSmall(),
+              horizontalSpaceSmall(),
               Container(
                 width: 1,
                 height: UIConfig.projectDividerHeight,
                 color: ColorsConfig.projectDivider,
               ),
-              UIHelper.horizontalSpaceSmall(),
+              horizontalSpaceSmall(),
               widget.flipHint,
             ],
           ),
-          UIHelper.verticalSpaceSmall(),
+          verticalSpaceSmall(),
         ],
       ),
     );

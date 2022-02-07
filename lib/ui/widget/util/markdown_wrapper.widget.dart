@@ -1,9 +1,9 @@
-import 'package:flutter/gestures.dart';
-import 'package:flutter/material.dart';
-import 'package:flutter_markdown/flutter_markdown.dart';
-import 'package:markdown/markdown.dart' as md;
-import 'package:portfolio/config/colors.config.dart';
-import 'package:url_launcher/url_launcher.dart';
+import "package:flutter/gestures.dart";
+import "package:flutter/material.dart";
+import "package:flutter_markdown/flutter_markdown.dart";
+import "package:markdown/markdown.dart" as md;
+import "package:portfolio/config/colors.config.dart";
+import "package:url_launcher/url_launcher.dart";
 
 class MarkdownWrapperWidget extends StatelessWidget {
   final String data;
@@ -22,11 +22,6 @@ class MarkdownWrapperWidget extends StatelessWidget {
     return MarkdownBody(
       listItemCrossAxisAlignment: MarkdownListItemCrossAxisAlignment.start,
       data: data,
-      builders: {
-        // Handle links separately:
-        // https://github.com/flutter/flutter_markdown/issues/233
-        // "a": LinkBuilder(),
-      },
       onTapLink: (text, href, title) {
         try {
           launch(href!);
@@ -44,12 +39,12 @@ class MarkdownWrapperWidget extends StatelessWidget {
               fontWeight: FontWeight.w500,
               height: 1.5,
             ),
-        strong: TextStyle(
+        strong: const TextStyle(
           fontWeight: FontWeight.w500,
         ),
-        horizontalRuleDecoration: BoxDecoration(
+        horizontalRuleDecoration: const BoxDecoration(
           border: Border(
-            bottom: BorderSide(color: ColorsConfig.projectDivider, width: 1),
+            bottom: BorderSide(color: ColorsConfig.projectDivider),
           ),
         ),
         em: TextStyle(
@@ -60,7 +55,7 @@ class MarkdownWrapperWidget extends StatelessWidget {
         ),
         blockquoteDecoration: BoxDecoration(
           color: Colors.black.withOpacity(0.05),
-          border: Border(
+          border: const Border(
             left: BorderSide(
               color: ColorsConfig.primary,
               width: 2,
@@ -80,7 +75,7 @@ class LinkBuilder extends MarkdownElementBuilder {
   ) {
     return Transform.translate(
       // Fix a weird alignment issue. Might be fixed by Flutter in the future
-      offset: Offset(0, -1),
+      offset: const Offset(0, -1),
       child: MouseRegion(
         cursor: SystemMouseCursors.click,
         child: RichText(

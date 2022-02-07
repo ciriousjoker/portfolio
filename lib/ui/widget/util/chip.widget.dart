@@ -1,8 +1,8 @@
-import 'package:flutter/material.dart';
-import 'package:portfolio/config/tags.config.dart';
-import 'package:portfolio/fonts/brand_icons_minified_icons.dart';
-import 'package:portfolio/ui/helper/ui.helper.dart';
-import 'package:url_launcher/url_launcher.dart';
+import "package:flutter/material.dart";
+import "package:portfolio/config/tags.config.dart";
+import "package:portfolio/fonts/brand_icons_minified_icons.dart";
+import "package:portfolio/ui/helper/ui.helper.dart";
+import "package:url_launcher/url_launcher.dart";
 
 class ChipWidget extends StatefulWidget {
   const ChipWidget({
@@ -25,7 +25,7 @@ class _ChipWidgetState extends State<ChipWidget> {
 
     tag = tags.firstWhere(
       (t) => t.id == widget.tagId,
-      orElse: () => Tag(
+      orElse: () => const Tag(
         id: "null",
         label: "null",
         colorHex: "#ff00ff",
@@ -37,8 +37,8 @@ class _ChipWidgetState extends State<ChipWidget> {
 
   @override
   Widget build(BuildContext context) {
-    Color colorBg = UIHelper.getColorFromColorCode(tag.colorHex);
-    Color colorText =
+    final Color colorBg = getColorFromColorCode(tag.colorHex);
+    final Color colorText =
         colorBg.computeLuminance() > 0.5 ? Colors.black87 : Colors.white;
     return MouseRegion(
       cursor: SystemMouseCursors.click,
@@ -57,7 +57,6 @@ class _ChipWidgetState extends State<ChipWidget> {
             color: colorBg,
           ),
           child: Row(
-            crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisSize: MainAxisSize.min,
             children: [
               Padding(
@@ -74,7 +73,7 @@ class _ChipWidgetState extends State<ChipWidget> {
                 ),
               ),
               Transform.translate(
-                offset: Offset(0, 1),
+                offset: const Offset(0, 1),
                 child: Padding(
                   padding: const EdgeInsets.only(
                     right: 6,

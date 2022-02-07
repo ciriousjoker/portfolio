@@ -1,5 +1,5 @@
-import 'package:flutter/material.dart';
-import 'package:portfolio/fonts/brand_icons_minified_icons.dart';
+import "package:flutter/material.dart";
+import "package:portfolio/fonts/brand_icons_minified_icons.dart";
 
 class Tag {
   final String id;

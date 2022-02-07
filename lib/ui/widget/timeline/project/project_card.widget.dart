@@ -1,7 +1,7 @@
-import 'package:flutter/material.dart';
-import 'package:portfolio/config/colors.config.dart';
-import 'package:portfolio/config/ui.config.dart';
-import 'package:portfolio/ui/helper/ui.helper.dart';
+import "package:flutter/material.dart";
+import "package:portfolio/config/colors.config.dart";
+import "package:portfolio/config/ui.config.dart";
+import "package:portfolio/ui/helper/ui.helper.dart";
 
 class ProjectCardWidget extends StatelessWidget {
   final Widget child;
@@ -19,7 +19,7 @@ class ProjectCardWidget extends StatelessWidget {
         clipBehavior: Clip.antiAlias,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(UIConfig.projectRadius),
-          boxShadow: [
+          boxShadow: const [
             BoxShadow(
               color: ColorsConfig.projectGlow,
               blurRadius: UIConfig.projectGlowBlurRadius,
@@ -32,10 +32,10 @@ class ProjectCardWidget extends StatelessWidget {
         child: Material(
           color: ColorsConfig.projectCard,
           child: Container(
-            padding: EdgeInsets.all(
-              UIHelper.VerticalSpaceMedium,
+            padding: const EdgeInsets.all(
+              kVerticalSpaceMedium,
             ).copyWith(
-              top: UIHelper.VerticalSpaceSmall,
+              top: kVerticalSpaceSmall,
             ),
             child: child,
           ),

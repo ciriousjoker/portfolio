@@ -1,12 +1,12 @@
-import 'package:flutter/gestures.dart';
-import 'package:flutter/material.dart';
+import "package:flutter/gestures.dart";
+import "package:flutter/material.dart";
 
 // Forked from:
 // https://gitlab.com/dezso15/smoothscrollweb/
 // and added null safety.
 
-const int DEFAULT_NORMAL_SCROLL_ANIMATION_LENGTH_MS = 250;
-const int DEFAULT_SCROLL_SPEED = 130;
+const int _kDefaultNormalScrollAnimationLengthMs = 250;
+const int _kDefaultScrollSpeed = 130;
 
 class SmoothScrollWeb extends StatefulWidget {
   final ValueChanged<PointerDeviceKind>? onDeviceTypeChange;
@@ -26,12 +26,12 @@ class SmoothScrollWeb extends StatefulWidget {
   ///Curve of the animation.
   final Curve curve;
 
-  SmoothScrollWeb({
+  const SmoothScrollWeb({
     required this.controller,
     required this.child,
     this.onDeviceTypeChange,
-    this.scrollSpeed = DEFAULT_SCROLL_SPEED,
-    this.scrollAnimationLength = DEFAULT_NORMAL_SCROLL_ANIMATION_LENGTH_MS,
+    this.scrollSpeed = _kDefaultScrollSpeed,
+    this.scrollAnimationLength = _kDefaultNormalScrollAnimationLengthMs,
     this.curve = Curves.linear,
   });
 

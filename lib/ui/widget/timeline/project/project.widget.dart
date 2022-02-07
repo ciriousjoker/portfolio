@@ -1,15 +1,15 @@
-import 'dart:async';
+import "dart:async";
 
-import 'package:flip_card/flip_card_controller.dart';
-import 'package:flip_card/flip_card.dart';
-import 'package:flutter/material.dart';
-import 'package:portfolio/config/ui.config.dart';
-import 'package:portfolio/fonts/material_icons_minified_icons.dart';
-import 'package:portfolio/models/project.model.dart';
-import 'package:portfolio/ui/helper/ui.helper.dart';
-import 'package:portfolio/ui/widget/timeline/project/project_back.widget.dart';
-import 'package:portfolio/ui/widget/timeline/project/project_front.widget.dart';
-import 'package:shared_preferences/shared_preferences.dart';
+import "package:flip_card/flip_card.dart";
+import "package:flip_card/flip_card_controller.dart";
+import "package:flutter/material.dart";
+import "package:portfolio/config/ui.config.dart";
+import "package:portfolio/fonts/material_icons_minified_icons.dart";
+import "package:portfolio/models/project.model.dart";
+import "package:portfolio/ui/helper/ui.helper.dart";
+import "package:portfolio/ui/widget/timeline/project/project_back.widget.dart";
+import "package:portfolio/ui/widget/timeline/project/project_front.widget.dart";
+import "package:shared_preferences/shared_preferences.dart";
 
 class ProjectWidget extends StatefulWidget {
   const ProjectWidget({
@@ -34,7 +34,7 @@ class _ProjectWidgetState extends State<ProjectWidget> {
   @override
   void initState() {
     super.initState();
-    keyDebounce = "_skewCard_24bn78535758" + hashCode.toString();
+    keyDebounce = "_skewCard_24bn78535758$hashCode";
 
     _controller = FlipCardController();
 
@@ -45,7 +45,7 @@ class _ProjectWidgetState extends State<ProjectWidget> {
   MouseRegion widgetBtnFlipHint() {
     return MouseRegion(
       child: IconButton(
-        icon: Icon(MaterialIconsMinified.flip_horizontal),
+        icon: const Icon(MaterialIconsMinified.flip_horizontal),
         color: Colors.black12,
         tooltip: "Flip",
         onPressed: () {
@@ -65,9 +65,8 @@ class _ProjectWidgetState extends State<ProjectWidget> {
   Widget build(BuildContext context) {
     return Padding(
       padding:
-          const EdgeInsets.symmetric(horizontal: UIHelper.HorizontalSpaceSmall),
+          const EdgeInsets.symmetric(horizontal: kHorizontalSpaceSmall),
       child: FlipCard(
-        direction: FlipDirection.HORIZONTAL,
         controller: _controller,
         speed: UIConfig.projectFlipDuration.inMilliseconds,
         onFlip: () => isFlipping = true,
@@ -84,12 +83,12 @@ class _ProjectWidgetState extends State<ProjectWidget> {
     );
   }
 
-  void showHint() async {
+  Future<void> showHint() async {
     if (widget.index != 0) return;
 
-    SharedPreferences prefs = await SharedPreferences.getInstance();
-    String key = "isSeen_24857bh638967hn63";
-    bool isSeen = prefs.getBool(key) ?? false;
+    final SharedPreferences prefs = await SharedPreferences.getInstance();
+    const String key = "isSeen_24857bh638967hn63";
+    final bool isSeen = prefs.getBool(key) ?? false;
     if (isSeen) return;
 
     Timer(
@@ -109,7 +108,7 @@ class _ProjectWidgetState extends State<ProjectWidget> {
     if (isFlipping) return;
 
     Timer(
-      Duration(milliseconds: 50),
+      const Duration(milliseconds: 50),
       () {
         _controller.skew(
           value,

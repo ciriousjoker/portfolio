@@ -1,14 +1,14 @@
-import 'dart:ui';
+import "dart:ui";
 
-import 'package:delayed_display/delayed_display.dart';
-import 'package:flutter/material.dart';
-import 'package:portfolio/ui/helper/smoothscroll.helper.dart';
-import 'package:portfolio/ui/helper/ui.helper.dart';
-import 'package:portfolio/ui/widget/card/card.widget.dart';
-import 'package:portfolio/ui/widget/timeline/timeline.widget.dart';
+import "package:delayed_display/delayed_display.dart";
+import "package:flutter/material.dart";
+import "package:portfolio/ui/helper/smoothscroll.helper.dart";
+import "package:portfolio/ui/helper/ui.helper.dart";
+import "package:portfolio/ui/widget/card/card.widget.dart";
+import "package:portfolio/ui/widget/timeline/timeline.widget.dart";
 
 class HomeScreen extends StatefulWidget {
-  HomeScreen({Key? key}) : super(key: key);
+  const HomeScreen({Key? key}) : super(key: key);
 
   @override
   State<HomeScreen> createState() => _HomeScreenState();
@@ -22,12 +22,12 @@ class _HomeScreenState extends State<HomeScreen> {
   bool get _isMouse => _pointerKind == PointerDeviceKind.mouse;
 
   final card = DelayedDisplay(
-    fadingDuration: Duration(seconds: 2),
+    fadingDuration: const Duration(seconds: 2),
     slidingCurve: Curves.easeOutCubic,
-    slidingBeginOffset: Offset(0, 0.1),
+    slidingBeginOffset: const Offset(0, 0.1),
     child: Column(
       mainAxisSize: MainAxisSize.min,
-      children: [
+      children: const [
         CardWidget(),
       ],
     ),
@@ -46,42 +46,40 @@ class _HomeScreenState extends State<HomeScreen> {
       child: Scaffold(
         backgroundColor: Colors.transparent,
         body: Padding(
-          padding: EdgeInsets.symmetric(
-            horizontal: UIHelper.VerticalSpaceMedium,
+          padding: const EdgeInsets.symmetric(
+            horizontal: kVerticalSpaceMedium,
           ),
-          child: UIHelper.isVertical(context)
+          child: isVertical(context)
               ? CustomScrollView(
-                  physics: _isMouse ? NeverScrollableScrollPhysics() : null,
+                  physics: _isMouse ? const NeverScrollableScrollPhysics() : null,
                   controller: _controller,
                   shrinkWrap: true,
                   slivers: <Widget>[
                     SliverList(
                       delegate: SliverChildListDelegate(
                         [
-                          UIHelper.verticalSpaceMedium(),
+                          verticalSpaceMedium(),
                           card,
-                          UIHelper.verticalSpaceMedium(),
+                          verticalSpaceMedium(),
                         ],
                       ),
                     ),
-                    TimelineWidget(),
+                    const TimelineWidget(),
                   ],
                 )
               : Row(
-                  crossAxisAlignment: CrossAxisAlignment.center,
                   mainAxisSize: MainAxisSize.min,
                   children: [
-                    UIHelper.horizontalSpaceMedium(),
+                    horizontalSpaceMedium(),
                     card,
-                    UIHelper.horizontalSpaceMedium(),
+                    horizontalSpaceMedium(),
                     Expanded(
                       child: _delayed(
                         CustomScrollView(
-                          physics: _isMouse ? NeverScrollableScrollPhysics() : null,
+                          physics: _isMouse ? const NeverScrollableScrollPhysics() : null,
                           controller: _controller,
-                          scrollDirection: Axis.vertical,
                           shrinkWrap: true,
-                          slivers: <Widget>[TimelineWidget()],
+                          slivers: const <Widget>[TimelineWidget()],
                         ),
                       ),
                     ),
@@ -94,10 +92,10 @@ class _HomeScreenState extends State<HomeScreen> {
 
   Widget _delayed(Widget child) {
     return DelayedDisplay(
-      delay: Duration(milliseconds: 100),
-      fadingDuration: Duration(seconds: 2),
+      delay: const Duration(milliseconds: 100),
+      fadingDuration: const Duration(seconds: 2),
       slidingCurve: Curves.easeOutCubic,
-      slidingBeginOffset: Offset(0, 0.1),
+      slidingBeginOffset: const Offset(0, 0.1),
       child: child,
     );
   }

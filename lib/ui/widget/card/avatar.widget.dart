@@ -1,11 +1,11 @@
-import 'package:flutter/material.dart';
-import 'package:portfolio/fonts/brand_icons_minified_icons.dart';
-import 'package:portfolio/config/general.config.dart';
-import 'package:portfolio/config/colors.config.dart';
-import 'package:portfolio/fonts/material_icons_minified_icons.dart';
-import 'package:portfolio/ui/widget/util/icon_normalized.widget.dart';
-import 'package:portfolio/ui/widget/util/rounded_border.widget.dart';
-import 'package:url_launcher/url_launcher.dart';
+import "package:flutter/material.dart";
+import "package:portfolio/config/colors.config.dart";
+import "package:portfolio/config/general.config.dart";
+import "package:portfolio/fonts/brand_icons_minified_icons.dart";
+import "package:portfolio/fonts/material_icons_minified_icons.dart";
+import "package:portfolio/ui/widget/util/icon_normalized.widget.dart";
+import "package:portfolio/ui/widget/util/rounded_border.widget.dart";
+import "package:url_launcher/url_launcher.dart";
 
 class AvatarWidget extends StatelessWidget {
   static const double sizeAction = 38;
@@ -23,7 +23,7 @@ class AvatarWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       width: width + 0.5 * sizeAction,
       height: height + 0.5 * sizeAction,
       child: Stack(
@@ -32,7 +32,7 @@ class AvatarWidget extends StatelessWidget {
             width: width,
             height: height,
             clipBehavior: Clip.antiAlias,
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
               shape: BoxShape.circle,
             ),
             child: Image.asset(
@@ -44,7 +44,7 @@ class AvatarWidget extends StatelessWidget {
           Transform.translate(
             offset: Offset(
               (0.5 * width) - (0.5 * sizeAction),
-              (height) - (0.5 * sizeAction),
+              height - (0.5 * sizeAction),
             ),
             child: _Action(
               size: sizeAction,
@@ -61,8 +61,8 @@ class AvatarWidget extends StatelessWidget {
           ),
           Transform.translate(
             offset: Offset(
-              (width) - (1 * sizeAction),
-              (height) - (1 * sizeAction),
+              width - (1 * sizeAction),
+              height - (1 * sizeAction),
             ),
             child: _Action(
               size: sizeAction,
@@ -79,7 +79,7 @@ class AvatarWidget extends StatelessWidget {
           ),
           Transform.translate(
             offset: Offset(
-              (width) - (0.5 * sizeAction),
+              width - (0.5 * sizeAction),
               (0.5 * height) - (0.5 * sizeAction),
             ),
             child: _Action(
@@ -128,10 +128,11 @@ class _Action extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       width: size,
       height: size,
       child: InkWell(
+        onTap: onTap,
         child: RoundedBorderWidget(
           color: colorBackground,
           size: borderWidth,
@@ -141,7 +142,7 @@ class _Action extends StatelessWidget {
             child: Container(
               color: colorFab,
               child: Padding(
-                padding: EdgeInsets.all(borderWidth),
+                padding: const EdgeInsets.all(borderWidth),
                 child: Center(
                   child: IconNormalizedWidget(
                     icon: icon,
@@ -153,7 +154,6 @@ class _Action extends StatelessWidget {
             ),
           ),
         ),
-        onTap: onTap,
       ),
     );
   }
