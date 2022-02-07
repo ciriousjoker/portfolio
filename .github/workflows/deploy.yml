@@ -10,10 +10,10 @@ jobs:
       - name: Checkout the repository
         uses: actions/checkout@v2
 
-      - name: Install Flutter 2.8.1
+      - name: Install Flutter 2.10.0
         uses: subosito/flutter-action@v1
         with:
-          flutter-version: "2.8.1"
+          flutter-version: "2.10.0"
 
       - name: Installing dependencies
         run: flutter pub get
