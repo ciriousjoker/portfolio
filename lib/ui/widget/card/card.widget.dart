@@ -73,7 +73,7 @@ class _CardWidgetState extends State<CardWidget> {
                   ),
                 ),
               ),
-              verticalSpaceSmall(),
+              verticalSpaceSmall,
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 6),
                 child: Row(
@@ -90,14 +90,14 @@ class _CardWidgetState extends State<CardWidget> {
                                 ),
                             textAlign: TextAlign.center,
                           ),
-                          verticalSpaceSmall(),
+                          verticalSpaceSmall,
                           const SizedBox(
                             width: 48,
                             child: Divider(
                               color: ColorsConfig.cardTextSecondary,
                             ),
                           ),
-                          verticalSpaceSmall(),
+                          verticalSpaceSmall,
                           Text(
                             GeneralConfig.position,
                             style: Theme.of(context).textTheme.caption?.copyWith(
@@ -119,7 +119,7 @@ class _CardWidgetState extends State<CardWidget> {
                   ],
                 ),
               ),
-              verticalSpaceSmall(),
+              verticalSpaceSmall,
               verticalSpace(padding),
             ],
           ),

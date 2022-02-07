@@ -59,9 +59,9 @@ class _HomeScreenState extends State<HomeScreen> {
                     SliverList(
                       delegate: SliverChildListDelegate(
                         [
-                          verticalSpaceMedium(),
+                          verticalSpaceMedium,
                           card,
-                          verticalSpaceMedium(),
+                          verticalSpaceMedium,
                         ],
                       ),
                     ),
@@ -71,9 +71,9 @@ class _HomeScreenState extends State<HomeScreen> {
               : Row(
                   mainAxisSize: MainAxisSize.min,
                   children: [
-                    horizontalSpaceMedium(),
+                    horizontalSpaceMedium,
                     card,
-                    horizontalSpaceMedium(),
+                    horizontalSpaceMedium,
                     Expanded(
                       child: _delayed(
                         CustomScrollView(

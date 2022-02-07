@@ -132,7 +132,7 @@ class _ProjectFrontWidgetState extends State<ProjectFrontWidget> {
             DateFormat(UIConfig.projectDateFormat).format(date),
             style: Theme.of(context).textTheme.caption,
           ),
-          verticalSpaceSmall(),
+          verticalSpaceSmall,
           Row(
             children: [
               Expanded(
@@ -145,17 +145,17 @@ class _ProjectFrontWidgetState extends State<ProjectFrontWidget> {
                   data: widget.project.description,
                 ),
               ),
-              horizontalSpaceSmall(),
+              horizontalSpaceSmall,
               Container(
                 width: 1,
                 height: UIConfig.projectDividerHeight,
                 color: ColorsConfig.projectDivider,
               ),
-              horizontalSpaceSmall(),
+              horizontalSpaceSmall,
               widget.flipHint,
             ],
           ),
-          verticalSpaceSmall(),
+          verticalSpaceSmall,
           Wrap(
             runAlignment: WrapAlignment.center,
             crossAxisAlignment: WrapCrossAlignment.center,
@@ -171,7 +171,7 @@ class _ProjectFrontWidgetState extends State<ProjectFrontWidget> {
                     )
                     .toList(),
               ),
-              horizontalSpaceSmall(),
+              horizontalSpaceSmall,
               Wrap(
                 spacing: kHorizontalSpaceSmall,
                 runSpacing: kHorizontalSpaceSmall,

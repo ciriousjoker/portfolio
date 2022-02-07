@@ -12,19 +12,13 @@ const double kHorizontalSpaceMedium = 16.0;
 const double kHorizontalSpaceLarge = 32.0;
 
 /// Returns a vertical space with height set to [kVerticalSpaceSmall]
-Widget verticalSpaceSmall() {
-  return verticalSpace(kVerticalSpaceSmall);
-}
+const verticalSpaceSmall = SizedBox(height: kVerticalSpaceSmall, width: 0);
 
 /// Returns a vertical space with height set to [kVerticalSpaceMedium]
-Widget verticalSpaceMedium() {
-  return verticalSpace(kVerticalSpaceMedium);
-}
+const verticalSpaceMedium = SizedBox(height: kVerticalSpaceMedium, width: 0);
 
 /// Returns a vertical space with height set to [kVerticalSpaceLarge]
-Widget verticalSpaceLarge() {
-  return verticalSpace(kVerticalSpaceLarge);
-}
+const verticalSpaceLarge = SizedBox(height: kVerticalSpaceLarge, width: 0);
 
 /// Returns a vertical space equal to the [height] supplied
 Widget verticalSpace(double height) {
@@ -32,19 +26,13 @@ Widget verticalSpace(double height) {
 }
 
 /// Returns a vertical space with height set to [kHorizontalSpaceSmall]
-Widget horizontalSpaceSmall() {
-  return horizontalSpace(kHorizontalSpaceSmall);
-}
+const horizontalSpaceSmall = SizedBox(width: kHorizontalSpaceSmall, height: 0);
 
 /// Returns a vertical space with height set to [kHorizontalSpaceMedium]
-Widget horizontalSpaceMedium() {
-  return horizontalSpace(kHorizontalSpaceMedium);
-}
+const horizontalSpaceMedium = SizedBox(width: kHorizontalSpaceMedium, height: 0);
 
 /// Returns a vertical space with height set to [kHorizontalSpaceLarge]
-Widget horizontalSpaceLarge() {
-  return horizontalSpace(kHorizontalSpaceLarge);
-}
+const horizontalSpaceLarge = SizedBox(width: kHorizontalSpaceLarge, height: 0);
 
 /// Returns a vertical space equal to the [width] supplied
 Widget horizontalSpace(double width) {
