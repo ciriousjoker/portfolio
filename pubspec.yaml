@@ -9,7 +9,8 @@ environment:
 
 dependencies:
   delayed_display: ^2.0.0
-  flip_card: ^0.6.0
+  flip_card:
+    git: https://github.com/BrunoJurkovic/flip_card
   flutter:
     sdk: flutter
   flutter_markdown: ^0.6.9
@@ -23,7 +24,7 @@ dependencies:
   provider: ^6.0.0
   shared_preferences: ^2.0.13
   slimy_card:
-    git: https://github.com/CiriousJoker/SlimyCard-Animated-Flutter-Package.git
+    git: https://github.com/ciriousjoker/SlimyCard-Animated-Flutter-Package.git
   timeline_tile: ^2.0.0
   url_launcher: ^6.0.18
 
