@@ -125,7 +125,7 @@ class _ProjectFrontWidgetState extends State<ProjectFrontWidget> {
                     ),
                   );
                 },
-              ).toList(),
+              ),
             ],
           ),
           Text(
