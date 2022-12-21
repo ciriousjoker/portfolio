@@ -3,7 +3,7 @@ import "package:flutter/material.dart";
 import "package:flutter_markdown/flutter_markdown.dart";
 import "package:markdown/markdown.dart" as md;
 import "package:portfolio/config/colors.config.dart";
-import "package:url_launcher/url_launcher.dart";
+import "package:url_launcher/url_launcher_string.dart";
 
 class MarkdownWrapperWidget extends StatelessWidget {
   final String data;
@@ -24,7 +24,7 @@ class MarkdownWrapperWidget extends StatelessWidget {
       data: data,
       onTapLink: (text, href, title) {
         try {
-          launch(href!);
+          launchUrlString(href!);
         } catch (_) {
           assert(false);
         }
@@ -85,7 +85,7 @@ class LinkBuilder extends MarkdownElementBuilder {
             recognizer: TapGestureRecognizer()
               ..onTap = () {
                 try {
-                  launch(element.attributes["href"]!);
+                  launchUrlString(element.attributes["href"]!);
                 } catch (_) {
                   assert(false);
                 }

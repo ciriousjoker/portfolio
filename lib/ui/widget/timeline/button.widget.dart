@@ -1,6 +1,6 @@
 import "package:flutter/material.dart";
 import "package:portfolio/ui/helper/ui.helper.dart";
-import "package:url_launcher/url_launcher.dart";
+import "package:url_launcher/url_launcher_string.dart";
 
 class ButtonWidget extends StatelessWidget {
   const ButtonWidget({
@@ -23,8 +23,7 @@ class ButtonWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final colorBg = color ?? Theme.of(context).colorScheme.secondary;
-    final colorText =
-        colorBg.computeLuminance() > 0.5 ? Colors.black87 : Colors.white;
+    final colorText = colorBg.computeLuminance() > 0.5 ? Colors.black87 : Colors.white;
 
     final widgetIcon = Icon(
       icon,
@@ -41,8 +40,8 @@ class ButtonWidget extends StatelessWidget {
         message: tooltip,
         child: ElevatedButton(
           style: ElevatedButton.styleFrom(
-            primary: colorBg,
-            onPrimary: colorText,
+            backgroundColor: colorBg,
+            foregroundColor: colorText,
             padding: const EdgeInsets.symmetric(
               vertical: kVerticalSpaceMedium,
               horizontal: 20,
@@ -50,7 +49,7 @@ class ButtonWidget extends StatelessWidget {
           ),
           child: widgetText,
           onPressed: () async {
-            await launch(url);
+            await launchUrlString(url);
           },
         ),
       );
@@ -60,8 +59,8 @@ class ButtonWidget extends StatelessWidget {
       message: tooltip,
       child: ElevatedButton.icon(
         style: ElevatedButton.styleFrom(
-          onPrimary: colorText,
-          primary: colorBg,
+          foregroundColor: colorText,
+          backgroundColor: colorBg,
           padding: const EdgeInsets.symmetric(
             vertical: kVerticalSpaceMedium,
             horizontal: 20,
@@ -70,7 +69,7 @@ class ButtonWidget extends StatelessWidget {
         icon: isIconTrailing ? widgetText : widgetIcon,
         label: isIconTrailing ? widgetIcon : widgetText,
         onPressed: () async {
-          await launch(url);
+          await launchUrlString(url);
         },
       ),
     );

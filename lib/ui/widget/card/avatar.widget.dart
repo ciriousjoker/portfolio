@@ -6,6 +6,7 @@ import "package:portfolio/fonts/material_icons_minified_icons.dart";
 import "package:portfolio/ui/widget/util/icon_normalized.widget.dart";
 import "package:portfolio/ui/widget/util/rounded_border.widget.dart";
 import "package:url_launcher/url_launcher.dart";
+import "package:url_launcher/url_launcher_string.dart";
 
 class AvatarWidget extends StatelessWidget {
   static const double sizeAction = 38;
@@ -52,7 +53,13 @@ class AvatarWidget extends StatelessWidget {
               tooltip: "Email",
               onTap: () {
                 try {
-                  launch("mailto:${GeneralConfig.email}");
+                  launchUrl(
+                    Uri(
+                      scheme: "mailto",
+                      path: GeneralConfig.email,
+                      queryParameters: {"body": "Hey,\n"},
+                    ),
+                  );
                 } catch (e) {
                   assert(false);
                 }
@@ -70,7 +77,7 @@ class AvatarWidget extends StatelessWidget {
               tooltip: "LinkedIn",
               onTap: () {
                 try {
-                  launch(GeneralConfig.linkedin);
+                  launchUrlString(GeneralConfig.linkedin);
                 } catch (e) {
                   assert(false);
                 }
@@ -88,7 +95,7 @@ class AvatarWidget extends StatelessWidget {
               tooltip: "Github",
               onTap: () {
                 try {
-                  launch(GeneralConfig.githubUrl);
+                  launchUrlString(GeneralConfig.githubUrl);
                 } catch (e) {
                   assert(false);
                 }
@@ -106,6 +113,7 @@ class _Action extends StatelessWidget {
   static const double sizeIcon = 18;
   static const Color colorFab = Colors.white;
   static const Color colorIcon = Colors.black87;
+  static const Color colorBackground = ColorsConfig.card;
 
   const _Action({
     Key? key,
@@ -113,16 +121,12 @@ class _Action extends StatelessWidget {
 
     /// Total size of this widget
     required this.size,
-
-    /// Color behind the action
-    this.colorBackground = ColorsConfig.card,
     this.tooltip = "",
     required this.onTap,
   }) : super(key: key);
 
   final IconData icon;
   final void Function() onTap;
-  final Color colorBackground;
   final double size;
   final String tooltip;
 
@@ -139,7 +143,7 @@ class _Action extends StatelessWidget {
           elevation: 4,
           child: Tooltip(
             message: tooltip,
-            child: Container(
+            child: ColoredBox(
               color: colorFab,
               child: Padding(
                 padding: const EdgeInsets.all(borderWidth),

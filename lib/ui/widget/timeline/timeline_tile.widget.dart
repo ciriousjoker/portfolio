@@ -78,7 +78,7 @@ class TimelineTileWidget extends StatelessWidget {
             bottom: kVerticalSpaceSmall,
           ),
           height: UIConfig.timelineIndicatorSize,
-          indicator: Container(
+          indicator: DecoratedBox(
             decoration: const BoxDecoration(
               shape: BoxShape.circle,
               boxShadow: [

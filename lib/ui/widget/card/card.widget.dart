@@ -9,7 +9,7 @@ import "package:portfolio/ui/helper/ui.helper.dart";
 import "package:portfolio/ui/widget/card/avatar.widget.dart";
 import "package:portfolio/ui/widget/util/markdown_wrapper.widget.dart";
 import "package:slimy_card/slimy_card.dart";
-import "package:url_launcher/url_launcher.dart";
+import "package:url_launcher/url_launcher_string.dart";
 
 class CardWidget extends StatefulWidget {
   const CardWidget({Key? key}) : super(key: key);
@@ -153,7 +153,7 @@ class _CardWidgetState extends State<CardWidget> {
                     onTap: () {
                       if (GeneralConfig.myersBriggsUrl != null) {
                         try {
-                          launch(GeneralConfig.myersBriggsUrl!);
+                          launchUrlString(GeneralConfig.myersBriggsUrl!);
                         } catch (e) {
                           assert(false);
                         }

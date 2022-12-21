@@ -2,7 +2,7 @@ import "package:flutter/material.dart";
 import "package:portfolio/config/tags.config.dart";
 import "package:portfolio/fonts/brand_icons_minified_icons.dart";
 import "package:portfolio/ui/helper/ui.helper.dart";
-import "package:url_launcher/url_launcher.dart";
+import "package:url_launcher/url_launcher_string.dart";
 
 class ChipWidget extends StatefulWidget {
   const ChipWidget({
@@ -38,8 +38,7 @@ class _ChipWidgetState extends State<ChipWidget> {
   @override
   Widget build(BuildContext context) {
     final Color colorBg = getColorFromColorCode(tag.colorHex);
-    final Color colorText =
-        colorBg.computeLuminance() > 0.5 ? Colors.black87 : Colors.white;
+    final Color colorText = colorBg.computeLuminance() > 0.5 ? Colors.black87 : Colors.white;
     return MouseRegion(
       cursor: SystemMouseCursors.click,
       child: GestureDetector(
@@ -93,7 +92,7 @@ class _ChipWidgetState extends State<ChipWidget> {
         ),
         onTap: () {
           try {
-            launch(tag.url);
+            launchUrlString(tag.url);
           } catch (_) {
             assert(false);
           }
