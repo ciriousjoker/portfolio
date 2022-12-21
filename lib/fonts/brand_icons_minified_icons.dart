@@ -11,7 +11,7 @@
 ///      fonts:
 ///       - asset: fonts/BrandIconsMinified.ttf
 ///
-/// 
+///
 ///
 import 'package:flutter/widgets.dart';
 

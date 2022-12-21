@@ -8,7 +8,6 @@ class ProjectsModel {
   final List<ProjectModel> projects;
 
   ProjectsModel({required this.projects});
-  factory ProjectsModel.fromJson(Map<String, dynamic> json) =>
-      _$ProjectsModelFromJson(json);
+  factory ProjectsModel.fromJson(Map<String, dynamic> json) => _$ProjectsModelFromJson(json);
   Map<String, dynamic> toJson() => _$ProjectsModelToJson(this);
 }

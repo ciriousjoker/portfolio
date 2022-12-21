@@ -44,53 +44,62 @@ class _ProjectFrontWidgetState extends State<ProjectFrontWidget> {
 
     listActions = [];
     if (hasDemo) {
-      listActions.add(ButtonWidget(
-        label: "Demo",
-        tooltip: "Try a demo on your browser",
-        url: widget.project.urlDemo!,
-      ),);
+      listActions.add(
+        ButtonWidget(
+          label: "Demo",
+          tooltip: "Try a demo on your browser",
+          url: widget.project.urlDemo!,
+        ),
+      );
     }
 
     if (hasDownload) {
-      listActions.add(ButtonWidget(
-        icon: MaterialIconsMinified.download,
-        label: "Download",
-        tooltip: "Download the latest release",
-        url: widget.project.urlDownload!,
-      ),);
+      listActions.add(
+        ButtonWidget(
+          icon: MaterialIconsMinified.download,
+          label: "Download",
+          tooltip: "Download the latest release",
+          url: widget.project.urlDownload!,
+        ),
+      );
     }
 
     if (hasPlaystore) {
-      listActions.add(ButtonWidget(
-        icon: MaterialIconsMinified.open_in_new,
-        isIconTrailing: true,
-        label: "Play Store",
-        tooltip: "Available in the Play Store",
-        url: widget.project.urlPlaystore!,
-      ),);
+      listActions.add(
+        ButtonWidget(
+          icon: MaterialIconsMinified.open_in_new,
+          isIconTrailing: true,
+          label: "Play Store",
+          tooltip: "Available in the Play Store",
+          url: widget.project.urlPlaystore!,
+        ),
+      );
     }
 
     if (hasGithub) {
-      listActions.add(ButtonWidget(
-        icon: MaterialIconsMinified.open_in_new,
-        isIconTrailing: true,
-        label: "Github",
-        tooltip: "View the source code",
-        // Github brand color
-        color: const Color(0xFF333333),
-        url:
-            "https://github.com/${GeneralConfig.github}/${widget.project.githubName}",
-      ),);
+      listActions.add(
+        ButtonWidget(
+          icon: MaterialIconsMinified.open_in_new,
+          isIconTrailing: true,
+          label: "Github",
+          tooltip: "View the source code",
+          // Github brand color
+          color: const Color(0xFF333333),
+          url: "https://github.com/${GeneralConfig.github}/${widget.project.githubName}",
+        ),
+      );
     }
 
     if (hasWebsite) {
-      listActions.add(ButtonWidget(
-        icon: MaterialIconsMinified.open_in_new,
-        isIconTrailing: true,
-        label: "Website",
-        tooltip: "This project has a website",
-        url: widget.project.urlWebsite!,
-      ),);
+      listActions.add(
+        ButtonWidget(
+          icon: MaterialIconsMinified.open_in_new,
+          isIconTrailing: true,
+          label: "Website",
+          tooltip: "This project has a website",
+          url: widget.project.urlWebsite!,
+        ),
+      );
     }
   }
 
@@ -112,8 +121,7 @@ class _ProjectFrontWidgetState extends State<ProjectFrontWidget> {
               ),
               ...widget.project.platforms.map(
                 (platformId) {
-                  final Platform platform =
-                      platforms.firstWhere((p) => p.id == platformId);
+                  final Platform platform = platforms.firstWhere((p) => p.id == platformId);
                   return Tooltip(
                     message: platform.label,
                     child: Padding(

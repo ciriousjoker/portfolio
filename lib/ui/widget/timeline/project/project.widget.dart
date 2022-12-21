@@ -64,8 +64,7 @@ class _ProjectWidgetState extends State<ProjectWidget> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding:
-          const EdgeInsets.symmetric(horizontal: kHorizontalSpaceSmall),
+      padding: const EdgeInsets.symmetric(horizontal: kHorizontalSpaceSmall),
       child: FlipCard(
         controller: _controller,
         speed: UIConfig.projectFlipDuration.inMilliseconds,

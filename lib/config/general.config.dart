@@ -13,8 +13,7 @@ class GeneralConfig {
   // About me
   static const String quote = "Code is written for humans,\nnot machines.";
 
-  static const String position =
-      "‚Computer Science and Media’ student at Technische Hochschule Nuremberg";
+  static const String position = "‚Computer Science and Media’ student at Technische Hochschule Nuremberg";
 
   static const String aboutMe = """
 I develop websites, apps and sometimes random things that spark my interest :)\n\n

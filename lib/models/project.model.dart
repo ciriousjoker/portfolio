@@ -47,7 +47,6 @@ class ProjectModel {
     this.learnings = learnings.join();
   }
 
-  factory ProjectModel.fromJson(Map<String, dynamic> json) =>
-      _$ProjectModelFromJson(json);
+  factory ProjectModel.fromJson(Map<String, dynamic> json) => _$ProjectModelFromJson(json);
   Map<String, dynamic> toJson() => _$ProjectModelToJson(this);
 }

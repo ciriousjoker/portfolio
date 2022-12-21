@@ -1,0 +1,14 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "type": "flutter",
+      "command": "flutter",
+      "args": ["format", ".", "--line-length", "120"],
+      "group": "none",
+      "problemMatcher": [],
+      "label": "Format code",
+      "detail": "Discard any changes to .g.dart files."
+    }
+  ]
+}
