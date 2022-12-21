@@ -10,10 +10,10 @@ class MarkdownWrapperWidget extends StatelessWidget {
   final TextStyle? style;
 
   const MarkdownWrapperWidget({
-    Key? key,
+    super.key,
     this.data = "",
     this.style,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

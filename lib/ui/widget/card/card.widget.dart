@@ -1,3 +1,5 @@
+// ignore_for_file: use_super_parameters
+
 import "dart:math";
 
 import "package:flutter/material.dart";

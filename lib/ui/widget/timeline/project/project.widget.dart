@@ -13,10 +13,10 @@ import "package:shared_preferences/shared_preferences.dart";
 
 class ProjectWidget extends StatefulWidget {
   const ProjectWidget({
-    Key? key,
+    super.key,
     required this.project,
     required this.index,
-  }) : super(key: key);
+  });
 
   final ProjectModel project;
   final int index;

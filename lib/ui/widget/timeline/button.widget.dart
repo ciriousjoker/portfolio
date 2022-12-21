@@ -4,14 +4,14 @@ import "package:url_launcher/url_launcher_string.dart";
 
 class ButtonWidget extends StatelessWidget {
   const ButtonWidget({
-    Key? key,
+    super.key,
     required this.label,
     required this.url,
     this.isIconTrailing = false,
     this.icon,
     required this.tooltip,
     this.color,
-  }) : super(key: key);
+  });
 
   final String label;
   final String url;

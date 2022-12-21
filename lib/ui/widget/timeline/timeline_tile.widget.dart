@@ -9,11 +9,11 @@ import "package:timeline_tile/timeline_tile.dart";
 
 class TimelineTileWidget extends StatelessWidget {
   const TimelineTileWidget({
-    Key? key,
+    super.key,
     required this.project,
     required this.index,
     required this.count,
-  }) : super(key: key);
+  });
 
   final ProjectModel project;
   final int index;

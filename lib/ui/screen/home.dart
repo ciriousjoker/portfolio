@@ -8,7 +8,7 @@ import "package:portfolio/ui/widget/card/card.widget.dart";
 import "package:portfolio/ui/widget/timeline/timeline.widget.dart";
 
 class HomeScreen extends StatefulWidget {
-  const HomeScreen({Key? key}) : super(key: key);
+  const HomeScreen({super.key});
 
   @override
   State<HomeScreen> createState() => _HomeScreenState();

@@ -5,7 +5,7 @@ import "package:portfolio/models/projects.model.dart";
 import "package:portfolio/ui/widget/timeline/timeline_tile.widget.dart";
 
 class TimelineWidget extends StatelessWidget {
-  const TimelineWidget({Key? key}) : super(key: key);
+  const TimelineWidget({super.key});
 
   @override
   Widget build(BuildContext context) {

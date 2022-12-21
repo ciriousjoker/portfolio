@@ -6,9 +6,9 @@ import "package:url_launcher/url_launcher_string.dart";
 
 class ChipWidget extends StatefulWidget {
   const ChipWidget({
-    Key? key,
+    super.key,
     required this.tagId,
-  }) : super(key: key);
+  });
 
   final String tagId;
 

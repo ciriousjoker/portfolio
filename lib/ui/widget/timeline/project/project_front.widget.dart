@@ -18,10 +18,10 @@ class ProjectFrontWidget extends StatefulWidget {
   final Widget flipHint;
 
   const ProjectFrontWidget({
-    Key? key,
+    super.key,
     required this.project,
     required this.flipHint,
-  }) : super(key: key);
+  });
 
   @override
   _ProjectFrontWidgetState createState() => _ProjectFrontWidgetState();

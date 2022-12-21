@@ -12,11 +12,11 @@ class AvatarWidget extends StatelessWidget {
   static const double sizeAction = 38;
 
   const AvatarWidget({
-    Key? key,
+    super.key,
     this.color = ColorsConfig.card,
     required this.width,
     required this.height,
-  }) : super(key: key);
+  });
 
   final Color color;
   final double width;
@@ -116,14 +116,13 @@ class _Action extends StatelessWidget {
   static const Color colorBackground = ColorsConfig.card;
 
   const _Action({
-    Key? key,
     required this.icon,
 
     /// Total size of this widget
     required this.size,
     this.tooltip = "",
     required this.onTap,
-  }) : super(key: key);
+  });
 
   final IconData icon;
   final void Function() onTap;

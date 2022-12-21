@@ -2,12 +2,12 @@ import "package:flutter/material.dart";
 
 class RoundedBorderWidget extends StatelessWidget {
   const RoundedBorderWidget({
-    Key? key,
+    super.key,
     required this.color,
     required this.child,
     required this.size,
     this.elevation = 0,
-  }) : super(key: key);
+  });
 
   final Color color;
   final Widget child;
