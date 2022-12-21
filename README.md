@@ -8,6 +8,8 @@
 
 `fvm flutter pub run build_runner build --delete-conflicting-outputs`
 
+(or use VSCode Task)
+
 ## Modify assets
 
 https://github.com/CiriousJoker/portfolio_assets
@@ -23,6 +25,6 @@ Upgrade version in `pubspec.yaml` like this: `0.9.0+1` -> `0.9.1+2`
 
 ## Deploy
 
-- Test the release: `flutter run -d chrome --release`
+- Test the release: `flutter run -d chrome --release --web-renderer canvaskit`
 - Commit the changes as `Deployed v1.2.3`
 - [Deploy it](https://github.com/CiriousJoker/portfolio/actions/workflows/deploy.yml)

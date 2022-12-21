@@ -18,6 +18,15 @@
       "problemMatcher": [],
       "label": "Run build_runner",
       "detail": "Generates and overwrites all .g.dart files."
+    },
+    {
+      "type": "flutter",
+      "command": "flutter",
+      "args": ["run", "-d", "chrome", "--release", "--web-renderer", "canvaskit"],
+      "group": "none",
+      "problemMatcher": [],
+      "label": "Test release",
+      "detail": "Runs in release mode with canvaskit. Use regular debugger during development."
     }
   ]
 }
