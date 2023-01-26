@@ -10,10 +10,10 @@ jobs:
       - name: Checkout the repository
         uses: actions/checkout@v2
 
-      - name: Install Flutter 3.3.10
+      - name: Install Flutter 3.7.0
         uses: subosito/flutter-action@v1
         with:
-          flutter-version: "3.3.10"
+          flutter-version: "3.7.0"
 
       - name: Installing dependencies
         run: flutter pub get
