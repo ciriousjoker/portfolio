@@ -115,7 +115,7 @@ class _ProjectFrontWidgetState extends State<ProjectFrontWidget> {
               Expanded(
                 child: Text(
                   widget.project.title,
-                  style: Theme.of(context).textTheme.headline5,
+                  style: Theme.of(context).textTheme.headlineSmall,
                   maxLines: 3,
                 ),
               ),
@@ -138,7 +138,7 @@ class _ProjectFrontWidgetState extends State<ProjectFrontWidget> {
           ),
           Text(
             DateFormat(UIConfig.projectDateFormat).format(date),
-            style: Theme.of(context).textTheme.caption,
+            style: Theme.of(context).textTheme.bodySmall,
           ),
           verticalSpaceSmall,
           Row(

@@ -85,7 +85,7 @@ class _CardWidgetState extends State<CardWidget> {
                         children: [
                           Text(
                             GeneralConfig.name,
-                            style: Theme.of(context).textTheme.headline4?.copyWith(
+                            style: Theme.of(context).textTheme.headlineMedium?.copyWith(
                                   color: ColorsConfig.cardText,
                                   fontWeight: FontWeight.w200,
                                   fontFamily: "Catamaran",
@@ -102,7 +102,7 @@ class _CardWidgetState extends State<CardWidget> {
                           verticalSpaceSmall,
                           Text(
                             GeneralConfig.position,
-                            style: Theme.of(context).textTheme.caption?.copyWith(
+                            style: Theme.of(context).textTheme.bodySmall?.copyWith(
                                   color: ColorsConfig.cardTextSecondary,
                                 ),
                             maxLines: 3,
@@ -148,7 +148,7 @@ class _CardWidgetState extends State<CardWidget> {
                   child: GestureDetector(
                     child: Text(
                       GeneralConfig.myersBriggs,
-                      style: Theme.of(context).textTheme.caption?.copyWith(
+                      style: Theme.of(context).textTheme.bodySmall?.copyWith(
                             color: ColorsConfig.cardTextSecondary,
                           ),
                     ),

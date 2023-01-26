@@ -48,7 +48,7 @@ class TimelineTileWidget extends StatelessWidget {
           children: [
             Text(
               "Click on the cards to view technical details and learnings",
-              style: Theme.of(context).textTheme.headline4?.copyWith(
+              style: Theme.of(context).textTheme.headlineMedium?.copyWith(
                     fontSize: 20,
                     color: ColorsConfig.timelineHint,
                   ),

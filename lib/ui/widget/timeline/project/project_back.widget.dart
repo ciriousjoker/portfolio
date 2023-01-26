@@ -39,14 +39,14 @@ class _ProjectBackWidgetState extends State<ProjectBackWidget> {
                         Expanded(
                           child: Text(
                             UIConfig.projectHeadline,
-                            style: Theme.of(context).textTheme.headline5,
+                            style: Theme.of(context).textTheme.headlineSmall,
                           ),
                         ),
                       ],
                     ),
                     Text(
                       widget.project.learningsTldr,
-                      style: Theme.of(context).textTheme.caption,
+                      style: Theme.of(context).textTheme.bodySmall,
                     ),
                     verticalSpaceSmall,
                     MarkdownWrapperWidget(

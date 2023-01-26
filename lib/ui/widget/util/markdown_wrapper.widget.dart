@@ -17,7 +17,7 @@ class MarkdownWrapperWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final styleP = style ?? Theme.of(context).textTheme.bodyText2;
+    final styleP = style ?? Theme.of(context).textTheme.bodyMedium;
 
     return MarkdownBody(
       listItemCrossAxisAlignment: MarkdownListItemCrossAxisAlignment.start,
@@ -31,10 +31,10 @@ class MarkdownWrapperWidget extends StatelessWidget {
       },
       styleSheet: MarkdownStyleSheet(
         p: styleP,
-        h3: Theme.of(context).textTheme.bodyText2?.copyWith(
+        h3: Theme.of(context).textTheme.bodyMedium?.copyWith(
               fontSize: 19,
             ),
-        h4: Theme.of(context).textTheme.bodyText2?.copyWith(
+        h4: Theme.of(context).textTheme.bodyMedium?.copyWith(
               fontSize: 17,
               fontWeight: FontWeight.w500,
               height: 1.5,
