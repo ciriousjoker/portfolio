@@ -10,10 +10,15 @@ jobs:
       - name: Checkout the repository
         uses: actions/checkout@v2
 
-      - name: Install Flutter 3.7.0
-        uses: subosito/flutter-action@v1
+      - name: Read .fvmrc
+        uses: kuhnroyal/flutter-fvm-config-action@v2
+        id: fvm-config-action
+
+      - name: Install Flutter
+        uses: subosito/flutter-action@v2
         with:
-          flutter-version: "3.7.0"
+          flutter-version: ${{ steps.fvm-config-action.outputs.FLUTTER_VERSION }}
+          channel: ${{ steps.fvm-config-action.outputs.FLUTTER_CHANNEL }}
 
       - name: Installing dependencies
         run: flutter pub get
