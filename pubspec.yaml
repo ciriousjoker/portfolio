@@ -14,7 +14,6 @@ dependencies:
   flutter:
     sdk: flutter
   flutter_markdown: ^0.7.1
-  get: ^4.6.6
   intl: ^0.19.0
   js: ^0.7.1
   json_annotation: ^4.9.0
