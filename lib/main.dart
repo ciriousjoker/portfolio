@@ -1,4 +1,6 @@
+import "package:flutter/foundation.dart";
 import "package:flutter/material.dart";
+import "package:performance/performance.dart";
 import "package:portfolio/config/colors.config.dart";
 import "package:portfolio/ui/loading/loading.dart";
 import "package:portfolio/ui/screen/home.dart";
@@ -52,7 +54,12 @@ class _MyAppState extends State<MyApp> {
         colorScheme: ColorScheme.fromSwatch().copyWith(secondary: ColorsConfig.accent),
       ),
       // home: HomeScreen(),
-      home: const HomeScreen(),
+      home: kProfileMode
+          ? const CustomPerformanceOverlay(
+              enabled: kProfileMode,
+              child: HomeScreen(),
+            )
+          : const HomeScreen(),
     );
   }
 }
