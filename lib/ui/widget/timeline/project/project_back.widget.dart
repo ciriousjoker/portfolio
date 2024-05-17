@@ -8,7 +8,7 @@ import "package:portfolio/ui/widget/util/markdown_wrapper.widget.dart";
 
 class ProjectBackWidget extends StatefulWidget {
   final ProjectModel project;
-  final Widget flipHint;
+  final Widget? flipHint;
 
   const ProjectBackWidget({
     super.key,
@@ -55,14 +55,16 @@ class _ProjectBackWidgetState extends State<ProjectBackWidget> {
                   ],
                 ),
               ),
-              horizontalSpaceSmall,
-              Container(
-                width: 1,
-                height: UIConfig.projectDividerHeight,
-                color: ColorsConfig.projectDivider,
-              ),
-              horizontalSpaceSmall,
-              widget.flipHint,
+              if (widget.flipHint != null) ...[
+                horizontalSpaceSmall,
+                Container(
+                  width: 1,
+                  height: UIConfig.projectDividerHeight,
+                  color: ColorsConfig.projectDivider,
+                ),
+                horizontalSpaceSmall,
+                widget.flipHint!,
+              ],
             ],
           ),
           verticalSpaceSmall,
