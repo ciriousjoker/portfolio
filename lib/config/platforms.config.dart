@@ -61,5 +61,5 @@ List<Platform> platforms = [
     id: "embedded",
     label: "Embedded System",
     icon: MaterialIconsMinified.developer_board,
-  )
+  ),
 ];

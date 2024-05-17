@@ -25,6 +25,8 @@ Upgrade version in `pubspec.yaml` like this: `0.9.0+1` -> `0.9.1+2`
 
 ## Deploy
 
-- Test the release: `fvm flutter run -d chrome --release --web-renderer canvaskit`
+- Test the release:
+  - `flutter build web --release --csp --dart2js-optimization O4 --wasm` (use the command from `deploy.yml` if unsure)
+  - `npx http-server ./build/web/`
 - Commit the changes as `Deployed v1.2.3`
 - [Deploy it](https://github.com/CiriousJoker/portfolio/actions/workflows/deploy.yml)

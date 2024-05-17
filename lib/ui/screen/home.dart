@@ -14,13 +14,13 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   final _controller = ScrollController();
 
-  final card = DelayedDisplay(
-    fadingDuration: const Duration(seconds: 2),
+  final card = const DelayedDisplay(
+    fadingDuration: Duration(seconds: 2),
     slidingCurve: Curves.easeOutCubic,
-    slidingBeginOffset: const Offset(0, 0.1),
+    slidingBeginOffset: Offset(0, 0.1),
     child: Column(
       mainAxisSize: MainAxisSize.min,
-      children: const [
+      children: [
         CardWidget(),
       ],
     ),

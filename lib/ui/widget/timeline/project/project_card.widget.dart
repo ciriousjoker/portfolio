@@ -23,7 +23,7 @@ class ProjectCardWidget extends StatelessWidget {
             BoxShadow(
               color: ColorsConfig.projectGlow,
               blurRadius: UIConfig.projectGlowBlurRadius,
-            )
+            ),
           ],
         ),
         // BUG: This can't be enabled without causing #495b783568

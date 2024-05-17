@@ -86,7 +86,7 @@ class TimelineTileWidget extends StatelessWidget {
                   color: ColorsConfig.timelineGlow,
                   blurRadius: UIConfig.timelineGlowBlurRadius,
                   spreadRadius: 0.5,
-                )
+                ),
               ],
             ),
             child: RoundedBorderWidget(

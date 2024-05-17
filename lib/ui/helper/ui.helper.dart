@@ -1,5 +1,4 @@
 import "package:flutter/material.dart";
-import "package:get/get.dart";
 
 // Vertical spacing constants. Adjust to your liking.
 const double kVerticalSpaceSmall = 8.0;
@@ -45,11 +44,13 @@ Color getColorFromColorCode(String code) {
 }
 
 bool isVertical(BuildContext context) {
-  return context.isPortrait || context.width < 1280;
+  final media = MediaQuery.of(context);
+  return media.orientation == Orientation.portrait || media.size.width < 1280;
 }
 
 extension WidgetExtension on Widget {
   bool isDense(BuildContext context) {
-    return isVertical(context) || context.width < 1600;
+    final media = MediaQuery.of(context);
+    return isVertical(context) || media.size.width < 1600;
   }
 }

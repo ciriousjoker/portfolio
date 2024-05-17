@@ -1,7 +1,4 @@
-@JS()
-library loading;
-
-import "package:js/js.dart";
+import "dart:js_interop";
 
 @JS("stopLoading")
 external void stopLoading();

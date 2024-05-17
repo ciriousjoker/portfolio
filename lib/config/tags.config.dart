@@ -193,5 +193,5 @@ const List<Tag> tags = [
     icon: BrandIconsMinified.adobeaftereffects,
     colorHex: "#00005b",
     url: "https://www.adobe.com/products/aftereffects",
-  )
+  ),
 ];
