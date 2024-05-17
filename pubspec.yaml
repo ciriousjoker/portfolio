@@ -5,7 +5,7 @@ publish_to: "none" # Remove this line if you wish to publish to pub.dev
 version: 1.2.3+13
 
 environment:
-  sdk: ">=2.17.0 <3.0.0"
+  sdk: ">=2.17.0 <4.0.0"
 
 dependencies:
   delayed_display: ^2.0.0
@@ -14,7 +14,7 @@ dependencies:
   flutter:
     sdk: flutter
   flutter_markdown: ^0.6.13
-  get: ^4.6.5
+  get: ^4.6.6
   intl: ^0.18.0
   js: ^0.6.4
   json_annotation: ^4.7.0
