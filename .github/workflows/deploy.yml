@@ -24,7 +24,7 @@ jobs:
         run: flutter pub get
 
       - name: Building for web
-        run: flutter build web --release --csp --dart2js-optimization O4 --web-renderer canvaskit
+        run: flutter build web --release --csp --dart2js-optimization O4 --wasm
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
