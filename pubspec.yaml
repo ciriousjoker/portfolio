@@ -10,7 +10,9 @@ environment:
 dependencies:
   delayed_display: ^2.0.0
   flip_card:
-    git: https://github.com/BrunoJurkovic/flip_card
+    git:
+      url: https://github.com/BrunoJurkovic/flip_card.git
+      ref: 061720d21bf68c802439db49c520a02f7b733076
   flutter:
     sdk: flutter
   flutter_markdown: ^0.7.1

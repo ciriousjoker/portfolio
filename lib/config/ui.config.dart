@@ -28,6 +28,6 @@ class UIConfig {
   static const String projectDateFormat = "MMM y";
   static const Duration projectFlipDuration = Duration(milliseconds: 750);
   static const Duration projectHintDelay = Duration(seconds: 2);
-  static const Duration projectFlipHintDuration = Duration(milliseconds: 300);
+  static const Duration projectFlipHintDuration = Duration(milliseconds: 500);
   static const Duration projectFlipHintTotal = Duration(milliseconds: 3500);
 }

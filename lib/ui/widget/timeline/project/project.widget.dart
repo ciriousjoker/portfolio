@@ -1,7 +1,6 @@
 import "dart:async";
 
 import "package:flip_card/flip_card.dart";
-import "package:flip_card/flip_card_controller.dart";
 import "package:flutter/material.dart";
 import "package:portfolio/config/ui.config.dart";
 import "package:portfolio/fonts/material_icons_minified_icons.dart";
@@ -47,17 +46,22 @@ class _ProjectWidgetState extends State<ProjectWidget> {
       child: IconButton(
         icon: const Icon(MaterialIconsMinified.flip_horizontal),
         color: Colors.black12,
+        mouseCursor: MouseCursor.defer,
         tooltip: "Flip",
         onPressed: () {
-          _controller.toggleCard();
+          _controller.flip();
         },
       ),
-      onEnter: (event) {
-        _skew(0.1);
-      },
-      onExit: (event) {
-        _skew(0);
-      },
+      // NOTE: Currently disabled because it seems like mouse events aren't detected properly
+      // when using Transforms. onEnter & onExit are called at the same time on every frame during the animation.
+      // Perhaps relevant:
+      // https://github.com/flutter/flutter/issues/45789
+      // onEnter: (event) {
+      //   _skew(0.1);
+      // },
+      // onExit: (event) {
+      //   _skew(0);
+      // },
     );
   }
 
@@ -67,7 +71,7 @@ class _ProjectWidgetState extends State<ProjectWidget> {
       padding: const EdgeInsets.symmetric(horizontal: kHorizontalSpaceSmall),
       child: FlipCard(
         controller: _controller,
-        speed: UIConfig.projectFlipDuration.inMilliseconds,
+        duration: UIConfig.projectFlipDuration,
         onFlip: () => isFlipping = true,
         onFlipDone: (_) => isFlipping = false,
         back: ProjectBackWidget(
@@ -90,31 +94,28 @@ class _ProjectWidgetState extends State<ProjectWidget> {
     final bool isSeen = prefs.getBool(key) ?? false;
     if (isSeen) return;
 
-    Timer(
-      UIConfig.projectHintDelay,
-      () async {
-        if (!mounted) return;
-        _controller.hint(
-          duration: UIConfig.projectFlipHintDuration,
-          total: UIConfig.projectFlipHintTotal,
-        );
-        await prefs.setBool(key, true);
-      },
+    await Future.delayed(UIConfig.projectHintDelay);
+
+    if (!mounted) return;
+    _controller.hint(
+      target: 0.15,
+      duration: UIConfig.projectFlipHintDuration,
     );
+    await prefs.setBool(key, true);
   }
 
-  void _skew(double value) {
-    if (isFlipping) return;
+  // void _skew(double value) {
+  //   if (isFlipping) return;
 
-    Timer(
-      const Duration(milliseconds: 50),
-      () {
-        _controller.skew(
-          value,
-          duration: UIConfig.projectFlipHintDuration,
-          curve: Curves.easeIn,
-        );
-      },
-    );
-  }
+  //   Timer(
+  //     const Duration(milliseconds: 50),
+  //     () {
+  //       _controller.skew(
+  //         value,
+  //         duration: UIConfig.projectFlipHintDuration,
+  //         curve: Curves.easeIn,
+  //       );
+  //     },
+  //   );
+  // }
 }
