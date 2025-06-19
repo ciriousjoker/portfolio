@@ -48,13 +48,13 @@ class MarkdownWrapperWidget extends StatelessWidget {
           ),
         ),
         em: TextStyle(
-          color: styleP?.color?.withOpacity(0.5),
+          color: styleP?.color?.withValues(alpha: 0.5),
         ),
         blockquote: TextStyle(
-          color: styleP?.color?.withOpacity(0.6),
+          color: styleP?.color?.withValues(alpha: 0.6),
         ),
         blockquoteDecoration: BoxDecoration(
-          color: Colors.black.withOpacity(0.05),
+          color: Colors.black.withValues(alpha: 0.05),
           border: const Border(
             left: BorderSide(
               color: ColorsConfig.primary,
