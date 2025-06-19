@@ -21,15 +21,9 @@
       ],
       "urlDemo": "https://allout.philippbauer.me/",
       "timestamp": 1644224585000,
-      "tags": [
-        "unity",
-        "csharp"
-      ],
+      "tags": ["unity", "csharp"],
       "icon": "allout.png",
-      "platforms": [
-        "windows",
-        "web"
-      ]
+      "platforms": ["windows", "web"]
     },
     {
       "title": "LoL Journal",
@@ -51,15 +45,9 @@
       ],
       "urlDemo": "https://loljournal.app/",
       "timestamp": 1616540400000,
-      "tags": [
-        "angular",
-        "firebase",
-        "pwa"
-      ],
+      "tags": ["angular", "firebase", "pwa"],
       "icon": "loljournal.png",
-      "platforms": [
-        "web"
-      ]
+      "platforms": ["web"]
     },
     {
       "title": "3D Gabion Configurator",
@@ -91,14 +79,9 @@
         "- **BabylonJS:** 3d engine of my choice\n"
       ],
       "timestamp": 1616540400000,
-      "tags": [
-        "angular",
-        "babylonjs"
-      ],
+      "tags": ["angular", "babylonjs"],
       "icon": "gabion_configurator.png",
-      "platforms": [
-        "web"
-      ]
+      "platforms": ["web"]
     },
     {
       "title": "Tag My Knowledge",
@@ -139,18 +122,9 @@
       "urlWebsite": "https://tagmyknowledge.com/",
       "urlPlaystore": "https://play.google.com/store/apps/details?id=com.tagmyknowledge",
       "timestamp": 1596924000000,
-      "tags": [
-        "flutter",
-        "firebase",
-        "tailwind",
-        "googletagmanager",
-        "googleanalytics"
-      ],
+      "tags": ["flutter", "firebase", "tailwind", "googletagmanager", "googleanalytics"],
       "icon": "tagmyknowledge.png",
-      "platforms": [
-        "playstore",
-        "web"
-      ]
+      "platforms": ["playstore", "web"]
     },
     {
       "title": "AlgoDat GUI",
@@ -170,13 +144,9 @@
       "urlDownload": "https://github.com/CiriousJoker/algodat_gui/releases/latest",
       "githubName": "algodat_gui",
       "timestamp": 1596751200000,
-      "tags": [
-        "csharp"
-      ],
+      "tags": ["csharp"],
       "icon": "algodat_gui.png",
-      "platforms": [
-        "windows"
-      ]
+      "platforms": ["windows"]
     },
     {
       "title": "Website Redesign for Switchboard Live",
@@ -200,16 +170,9 @@
         "\nAside from these technical details, I also improved my copywriting skills."
       ],
       "timestamp": 1584658800000,
-      "tags": [
-        "tailwind",
-        "googletagmanager",
-        "webpack",
-        "ejs"
-      ],
+      "tags": ["tailwind", "googletagmanager", "webpack", "ejs"],
       "icon": "switchboard.png",
-      "platforms": [
-        "web"
-      ]
+      "platforms": ["web"]
     },
     {
       "title": "Star Clock",
@@ -233,14 +196,9 @@
       ],
       "githubName": "star_clock",
       "timestamp": 1577055600000,
-      "tags": [
-        "flutter",
-        "adobeaftereffects"
-      ],
+      "tags": ["flutter", "adobeaftereffects"],
       "icon": "starclock.png",
-      "platforms": [
-        "playstore"
-      ]
+      "platforms": ["playstore"]
     },
     {
       "title": "Friday Night Survival",
@@ -287,17 +245,9 @@
       ],
       "urlWebsite": "https://fridaynightsurvival.philippbauer.me/",
       "timestamp": 1572735600000,
-      "tags": [
-        "unity",
-        "csharp"
-      ],
+      "tags": ["unity", "csharp"],
       "icon": "fridaynightsurvival.png",
-      "platforms": [
-        "web",
-        "windows",
-        "linux",
-        "mac"
-      ]
+      "platforms": ["web", "windows", "linux", "mac"]
     },
     {
       "title": "ShadyVault",
@@ -322,15 +272,9 @@
       ],
       "urlWebsite": "https://shadyvault.web.app/",
       "timestamp": 1555538400000,
-      "tags": [
-        "typescript",
-        "aurelia",
-        "material_design_components"
-      ],
+      "tags": ["typescript", "aurelia", "material_design_components"],
       "icon": "shadyvault.png",
-      "platforms": [
-        "chromeos"
-      ]
+      "platforms": ["chromeos"]
     },
     {
       "title": "Perfect Decision Finder",
@@ -366,14 +310,9 @@
       ],
       "urlPlaystore": "https://play.google.com/store/apps/details?id=com.ciriousjoker.perfect_decision_finder",
       "timestamp": 1567202400000,
-      "tags": [
-        "flutter",
-        "sqlite"
-      ],
+      "tags": ["flutter", "sqlite"],
       "icon": "perfectdecisionfinder.png",
-      "platforms": [
-        "playstore"
-      ]
+      "platforms": ["playstore"]
     },
     {
       "title": "Pokeroute",
@@ -391,13 +330,9 @@
       "githubName": "pokeroute",
       "urlWebsite": "https://pokeroute.web.app/",
       "timestamp": 1566770400000,
-      "tags": [
-        "flutter"
-      ],
+      "tags": ["flutter"],
       "icon": "pokeroute.png",
-      "platforms": [
-        "web"
-      ]
+      "platforms": ["web"]
     },
     {
       "title": "Am I Done Yet",
@@ -430,13 +365,8 @@
       "urlPlaystore": "https://play.google.com/store/apps/details?id=com.ciriousjoker.amidoneyet",
       "timestamp": 1552604400000,
       "icon": "amidoneyet.png",
-      "tags": [
-        "flutter",
-        "firebase"
-      ],
-      "platforms": [
-        "playstore"
-      ]
+      "tags": ["flutter", "firebase"],
+      "platforms": ["playstore"]
     },
     {
       "title": "Didactduell",
@@ -472,19 +402,8 @@
       "urlDemo": "https://didactduell.web.app/",
       "timestamp": 1535666400000,
       "icon": "didactduell.png",
-      "tags": [
-        "firebase",
-        "typescript",
-        "aurelia",
-        "webpack",
-        "java",
-        "material_design_components"
-      ],
-      "platforms": [
-        "web",
-        "playstore",
-        "ios"
-      ]
+      "tags": ["firebase", "typescript", "aurelia", "webpack", "java", "material_design_components"],
+      "platforms": ["web", "playstore", "ios"]
     },
     {
       "title": "ShufflePaper",
@@ -511,14 +430,9 @@
       "urlWebsite": "https://shufflepaper.web.app/",
       "githubName": "shufflepaper",
       "timestamp": 1488668400000,
-      "tags": [
-        "javascript",
-        "material_design_lite"
-      ],
+      "tags": ["javascript", "material_design_lite"],
       "icon": "shufflepaper.png",
-      "platforms": [
-        "chromeos"
-      ]
+      "platforms": ["chromeos"]
     },
     {
       "title": "Legacy Manager & Uploader",
@@ -542,15 +456,8 @@
       "urlDownload": "https://github.com/CiriousJoker/legacymanager/releases/latest",
       "timestamp": 1502143200000,
       "icon": "legacyxp.png",
-      "tags": [
-        "csharp",
-        "react",
-        "electron",
-        "nodejs"
-      ],
-      "platforms": [
-        "embedded"
-      ]
+      "tags": ["csharp", "react", "electron", "nodejs"],
+      "platforms": ["embedded"]
     },
     {
       "title": "NXTProject",
@@ -586,15 +493,9 @@
       ],
       "githubName": "nxtburner",
       "timestamp": 1495843200000,
-      "tags": [
-        "csharp",
-        "java"
-      ],
+      "tags": ["csharp", "java"],
       "icon": "nxtburner.png",
-      "platforms": [
-        "windows",
-        "embedded"
-      ]
+      "platforms": ["windows", "embedded"]
     },
     {
       "title": "Homing Compass",
@@ -613,12 +514,8 @@
       "githubName": "HomingCompass",
       "urlPlaystore": "https://play.google.com/store/apps/details?id=com.ciriousjoker.homingcompass",
       "timestamp": 1474636718000,
-      "tags": [
-        "java"
-      ],
-      "platforms": [
-        "playstore"
-      ],
+      "tags": ["java"],
+      "platforms": ["playstore"],
       "icon": "homingcompass.png"
     },
     {
@@ -643,13 +540,9 @@
       "githubName": "SideNote",
       "urlDownload": "https://github.com/CiriousJoker/SideNote/releases/latest",
       "timestamp": 1446332400000,
-      "tags": [
-        "csharp"
-      ],
+      "tags": ["csharp"],
       "icon": "sidenote.png",
-      "platforms": [
-        "windows"
-      ]
+      "platforms": ["windows"]
     },
     {
       "title": "nTradeAdvanced",
@@ -672,13 +565,9 @@
       "githubName": "nTradeAdvanced",
       "urlDownload": "https://github.com/CiriousJoker/nTradeAdvanced/releases/latest",
       "timestamp": 1406246400000,
-      "tags": [
-        "c"
-      ],
+      "tags": ["c"],
       "icon": "ntradeadvanced.png",
-      "platforms": [
-        "calculator"
-      ]
+      "platforms": ["calculator"]
     }
   ]
 }
