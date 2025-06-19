@@ -119,6 +119,7 @@
         "your brain doesn't get the chance to fully forget them. ",
         "Then, when it actually matters, you'll remember the advice ",
         "instead of not even knowing where to look. \n",
+        "> Never took off, eventually shut down. \n",
         "\n---\n",
         "#### Twitter bot \n",
         "Quickly save interesting tweets by replying like this:\n",
@@ -143,7 +144,6 @@
         "- **TailwindCss & Handlebars:** For building the Publii page template\n",
         "- **Google Analytics & Google Optimize**: Page & app insights\n"
       ],
-      "urlWebsite": "https://tagmyknowledge.com/",
       "urlPlaystore": "https://play.google.com/store/apps/details?id=com.tagmyknowledge",
       "timestamp": 1596924000000,
       "tags": ["flutter", "firebase", "tailwind", "googletagmanager", "googleanalytics"],
