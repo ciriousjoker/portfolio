@@ -8,7 +8,7 @@ part of 'project.model.dart';
 
 ProjectModel _$ProjectModelFromJson(Map<String, dynamic> json) => ProjectModel(
       title: json['title'] as String,
-      timestamp: json['timestamp'] as int,
+      timestamp: (json['timestamp'] as num).toInt(),
       icon: json['icon'] as String,
       githubName: json['githubName'] as String?,
       description: (json['description'] as List<dynamic>)

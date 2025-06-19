@@ -1,6 +1,6 @@
 import "package:flutter/gestures.dart";
 import "package:flutter/material.dart";
-import "package:flutter_markdown/flutter_markdown.dart";
+import "package:flutter_markdown_plus/flutter_markdown_plus.dart";
 import "package:markdown/markdown.dart" as md;
 import "package:portfolio/config/colors.config.dart";
 import "package:url_launcher/url_launcher_string.dart";
@@ -48,13 +48,13 @@ class MarkdownWrapperWidget extends StatelessWidget {
           ),
         ),
         em: TextStyle(
-          color: styleP?.color?.withOpacity(0.5),
+          color: styleP?.color?.withValues(alpha: 0.5),
         ),
         blockquote: TextStyle(
-          color: styleP?.color?.withOpacity(0.6),
+          color: styleP?.color?.withValues(alpha: 0.6),
         ),
         blockquoteDecoration: BoxDecoration(
-          color: Colors.black.withOpacity(0.05),
+          color: Colors.black.withValues(alpha: 0.05),
           border: const Border(
             left: BorderSide(
               color: ColorsConfig.primary,

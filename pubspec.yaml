@@ -12,27 +12,30 @@ dependencies:
   flip_card:
     git:
       url: https://github.com/BrunoJurkovic/flip_card.git
-      ref: 061720d21bf68c802439db49c520a02f7b733076
+      ref: 9f73195ff3fb6416bdb1ffa12260c99b634aec71
   flutter:
     sdk: flutter
-  flutter_markdown: ^0.7.1
-  intl: ^0.19.0
+  flutter_markdown_plus: ^1.0.3
+  font_awesome_flutter: ^10.8.0
+  intl: ^0.20.2
   json_annotation: ^4.9.0
-  json_serializable: ^6.8.0
-  markdown: ^7.2.2
+  json_serializable: ^6.9.5
+  markdown: ^7.3.0
   performance: ^0.1.1
-  provider: ^6.1.2
-  shared_preferences: ^2.2.3
+  provider: ^6.1.5
+  shared_preferences: ^2.5.3
   slimy_card:
-    git: https://github.com/ciriousjoker/SlimyCard-Animated-Flutter-Package.git
+    git:
+      url: https://github.com/ciriousjoker/SlimyCard-Animated-Flutter-Package.git
+      ref: 3a4339f7fe718ef64d236c0c37f73319be7991ee
   timeline_tile: ^2.0.0
-  url_launcher: ^6.2.6
+  url_launcher: ^6.3.1
 
 dev_dependencies:
-  build_runner: ^2.4.10
+  build_runner: ^2.5.2
   flutter_test:
     sdk: flutter
-  lint: ^2.3.0
+  lint: ^2.8.0
 
 flutter:
   # NOTE: ./fonts/src/README.ME
