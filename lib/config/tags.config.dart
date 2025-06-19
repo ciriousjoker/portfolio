@@ -1,4 +1,5 @@
 import "package:flutter/material.dart";
+import "package:font_awesome_flutter/font_awesome_flutter.dart";
 import "package:portfolio/fonts/brand_icons_minified_icons.dart";
 
 class Tag {
@@ -81,6 +82,13 @@ const List<Tag> tags = [
     icon: BrandIconsMinified.flutter,
     colorHex: "#1389FD",
     url: "https://flutter.dev/",
+  ),
+  Tag(
+    id: "rust",
+    label: "Rust",
+    icon: FontAwesomeIcons.rust,
+    colorHex: "#000000",
+    url: "https://www.rust-lang.org/",
   ),
   Tag(
     id: "googletagmanager",
