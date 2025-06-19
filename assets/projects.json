@@ -1,6 +1,30 @@
 {
   "projects": [
     {
+      "title": "nTradeAdvance",
+      "description": [
+        "I initially created this in 2014 (see below) as my first project.\n\n",
+        "Then in 2025 I decided to rewrite it in Rust to learn the language.\n",
+        "This now relies on an external library for the actual trading functionality,\n",
+        "so it's much more robust than previously. \n\n",
+        "Also, this is now not only available for the TI-Nspire calculators,\n",
+        "but also Linux, MacOS and Windows, because why not :)\n\n",
+        "**Supported games:** Firered/Leafgreen, Ruby/Sapphire, Emerald"
+      ],
+      "learningsTldr": "rust, custom t-ui framework, cross building",
+      "learnings": [
+        "- Developed in Rust with some custom bindings for nspireio.\n",
+        "- Basic custom \"Terminal UI framework\" heavily inspired by Flutter.\n",
+        "- Cross building for multiple platforms (TI-Nspire, Linux, MacOS, Windows)."
+      ],
+      "githubName": "nTradeAdvance",
+      "urlDownload": "https://github.com/ciriousjoker/nTradeAdvance/releases/latest",
+      "timestamp": 1749294786000,
+      "tags": ["rust"],
+      "icon": "ntradeadvance.png",
+      "platforms": ["calculator", "mac", "windows", "linux"]
+    },
+    {
       "title": "All Out? The Neverending Heist.",
       "description": [
         "This is a game which was created as part of a university project.\n\n",
